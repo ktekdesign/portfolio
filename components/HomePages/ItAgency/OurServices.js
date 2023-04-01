@@ -3,18 +3,19 @@ import Link from "next/link";
 import { servicesData } from "../../../data/services";
 
 
-const OurServices = () => {
+const OurServices = (props) => {
   return (
     <>
       <div className="pt-100 pb-70">
         <div className="container">
-          <div className="section-title">
-            <h2>Nos Services</h2>
-            <p>
-              Première iniciative de notre groupe lancée en Octobre 2015, notre objectif est d’offrir une alternative crédible aux porteurs de projets numériques qui n’ont pas le savoir-faire technique requis pour en assurer l’exécution.
-            </p>
-          </div>
-
+          {!props?.notitle &&
+            <div className="section-title">
+              <h2>Nos Services</h2>
+              <p>
+                Première iniciative de notre groupe lancée en Octobre 2015, notre objectif est d’offrir une alternative crédible aux porteurs de projets numériques qui n’ont pas le savoir-faire technique requis pour en assurer l’exécution.
+              </p>
+            </div>
+          }
           <div className="row justify-content-center">
             {servicesData?.map((value, i) => (
                 <div
@@ -27,7 +28,7 @@ const OurServices = () => {
                   <div className="service-card-one bg-fcfbfb">
                     <i className={value.iconName}></i>
                     <h3>
-                      <Link href={value.viewDetails}>{value.title}</Link>
+                      <Link href={value.viewDetails}>{value.pageTitle}</Link>
                     </h3>
                     <p>{value.shortText}</p>
                   </div>

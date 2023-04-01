@@ -8,7 +8,7 @@ const NavbarDark = () => {
   const [currentPath, setCurrentPath] = useState("");
   const router = useRouter();
   // console.log(router.asPath)
-console.log(menuData);
+
   useEffect(() => {
     setCurrentPath(router.asPath);
   }, [router]);
@@ -84,7 +84,7 @@ console.log(menuData);
                             currentPath == submenu.viewDetails && "active"
                           }`}
                         >
-                          {submenu.title}
+                          {submenu.pageTitle}
                         </Link>
                     </li>
                     )

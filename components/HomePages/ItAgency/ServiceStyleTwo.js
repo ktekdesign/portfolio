@@ -12,10 +12,7 @@ const ServiceStyleTwo = () => {
                 <div className="info-head">
                   <h2 className="title">Web & Mobile Development</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris.
+                    Que vous faut-il pour avoir plus de chance de votre côté pour réussir sur internet? Sans hésiter, nous pouvons vous dire qu'avoir de la volonté et une équipe technique qualifiée pour vous accompagner fera une grande différence.
                   </p>
                 </div>
 
@@ -96,10 +93,7 @@ const ServiceStyleTwo = () => {
                 <div className="info-head">
                   <h2 className="title">Digital Marketing</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris.
+                    Positionnez vous où se trouvent vos clients. Apparaîssez et vendez!
                   </p>
                 </div>
 
@@ -136,8 +130,8 @@ const ServiceStyleTwo = () => {
                 </div>
 
                 <div className="service-read-more">
-                  <Link href="/service-details" className="btn btn-primary">
-                    <i className="fa-solid fa-list-check"></i> Read more
+                  <Link href="/contact" className="btn btn-primary">
+                    <i className="fa-solid fa-list-check"></i> Contact
                   </Link>
                 </div>
               </div>
@@ -154,10 +148,10 @@ const ServiceStyleTwo = () => {
                 <div className="info-head">
                   <h2 className="title">Cloud Hosting Services</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris.
+                    Prenez controle du Cloud pour fournir une haute disponibilité de vos applications.
+                  </p>
+                  <p>
+                    Si vous etes une startup, vous devez passer au Cloud maintenant!
                   </p>
                 </div>
 
@@ -194,8 +188,8 @@ const ServiceStyleTwo = () => {
                 </div>
 
                 <div className="service-read-more">
-                  <Link href="/service-details" className="btn btn-primary">
-                    <i className="fa-solid fa-list-check"></i> Read more
+                  <Link href="/contact" className="btn btn-primary">
+                    <i className="fa-solid fa-list-check"></i> Contact
                   </Link>
                 </div>
               </div>

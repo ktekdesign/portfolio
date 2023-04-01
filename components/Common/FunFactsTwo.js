@@ -4,26 +4,26 @@ import Link from "next/link";
 const funFactsData = [
   {
     iconName: "fa-solid fa-circle-check",
-    number: "980+",
-    shortText: "Completed Projects",
+    number: "316+",
+    shortText: "Projets Conclus",
     aosDelay: "100",
   },
   {
     iconName: "fa-solid fa-heart",
-    number: "950+",
-    shortText: "Happy Clients",
+    number: "114+",
+    shortText: "Clients satisfaits",
     aosDelay: "200",
   },
   {
     iconName: "fa-solid fa-list-check",
-    number: "780+",
-    shortText:"Ongoing Projects",
+    number: "12+",
+    shortText:"Projets en cours",
     aosDelay: "300",
   },
   {
     iconName: "fa-solid fa-trophy",
-    number: "70+",
-    shortText:"Winning Awards",
+    number: "28+",
+    shortText:"Compétences",
     aosDelay: "400",
   },
 ];
@@ -34,10 +34,9 @@ const FunFactsTwo = () => {
       <div className="funfacts-area ptb-100 bg-fcfbfb">
         <div className="container">
           <div className="section-title">
-            <h2>We always try to understand users expectation</h2>
+            <h2>Quelles sont vos attentes?</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Nous vous faisons des recommandations en accord avec vos attentes et votre capacité d'investissement. Peu importe la taille de votre projet, prenez la peine d'échanger avec nous. Parfois, il est très difficile de savoir où commencer. Nous avons une large expérience pour vous apporter quelques conseils utiles.
             </p>
           </div>
 
@@ -67,11 +66,11 @@ const FunFactsTwo = () => {
             data-aos-duration="1200"
             data-aos-delay="500"
           >
-            <h3>Have any questions about us?</h3>
-            <p>Don't hesitate to contact us</p>
+            <h3>Avez-vous des questions?</h3>
+            <p>N'hésitez à nous contacter</p>
 
             <Link href="/contact" className="btn btn-primary">
-              Contact Us
+              Contact
             </Link>
           </div>
 

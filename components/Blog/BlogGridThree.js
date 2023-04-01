@@ -1,68 +1,6 @@
 import React from "react";
 import Link from "next/link";
-
-const blogPostData = [
-  {
-    image: "/images/blog/blog1.jpg",
-    title: "The Most Popular New top Business Apps",
-    date: "Feb 15, 2023",
-    category: "Technology",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    readMoreLink: "/blog-details",
-    aosDelay: "100",
-  },
-  {
-    image: "/images/blog/blog2.jpg",
-    title: "The Best Marketing top use Management Tools",
-    date: "Feb 16, 2023",
-    category: "Agency",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    readMoreLink: "/blog-details",
-    aosDelay: "200",
-  },
-  {
-    image: "/images/blog/blog3.jpg",
-    title: "3 WooCommerce Plugins to Boost Sales",
-    date: "Feb 17, 2023",
-    category: "IT Agency",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    readMoreLink: "/blog-details",
-    aosDelay: "300",
-  },
-  {
-    image: "/images/blog/blog4.jpg",
-    title: "Top 21 Must-Read Blogs For Creative Agencies",
-    date: "Feb 18, 2023",
-    category: "Development",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    readMoreLink: "/blog-details",
-    aosDelay: "400",
-  },
-  {
-    image: "/images/blog/blog5.jpg",
-    title: "The Most Popular New top Business Apps",
-    date: "Feb 19, 2023",
-    category: "Apps",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    readMoreLink: "/blog-details",
-    aosDelay: "500",
-  },
-  {
-    image: "/images/blog/blog6.jpg",
-    title: "The Best Marketing top use Management Tools",
-    date: "Feb 20, 2023",
-    category: "Marketing",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    readMoreLink: "/blog-details",
-    aosDelay: "600",
-  },
-];
+import { latestNewsData } from "../../data/news";
 
 const BlogGrid = () => {
   return (
@@ -70,8 +8,7 @@ const BlogGrid = () => {
       <div className="blog-area ptb-100">
         <div className="container">
           <div className="row justify-content-center">
-            {blogPostData &&
-              blogPostData.map((value, i) => (
+            {latestNewsData?.map((value, i) => (
                 <div 
                   className="col-lg-4 col-md-6" 
                   key={i}

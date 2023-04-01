@@ -1,15 +1,15 @@
 import React from "react";
-import NavbarTwo from "../components/Layouts/NavbarTwo";
+import NavbarDark from "../components/Layouts/NavbarDark";
 import PageBanner from "../components/Common/PageBanner";
 import WorksStyleOne from "../components/Portfolio/WorksStyleOne";
 import WorksStyleTwo from "../components/Portfolio/WorksStyleTwo";
 import CtaAreaTwo from "../components/Common/CtaAreaTwo";
-import Footer from "../components/Layouts/Footer";
+import Footer from "../components/Layouts/FooterDark";
 
 const Portfolio = () => {
   return (
     <>
-      <NavbarTwo />
+      <NavbarDark />
 
       <PageBanner pageTitle="Our Portfolio" BGImage="/images/page-banner3.jpg" />
 

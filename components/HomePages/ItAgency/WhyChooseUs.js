@@ -7,7 +7,7 @@ const WhyChooseUs = () => {
     <>
       <FsLightbox
         toggler={toggler}
-        sources={["https://www.youtube.com/embed/bk7McNUjWgw"]}
+        sources={["https://www.youtube.com/watch?v=mVTeauSR0IA"]}
       />
 
       <section className="about-area ptb-100">
@@ -21,41 +21,36 @@ const WhyChooseUs = () => {
                 data-aos-delay="100"
               >
                 <div className="section-title">
-                  <h2>Why Choose Us</h2>
+                  <h2>Pourquoi nous choisir</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, con se ctetur adipiscing elit.
-                    In sagittis eg esta ante, sed viverra nunc tinci dunt nec
-                    elei fend et tiram.
+                    Nous pouvons vous dire que si vous n'êtes pas satisfait vous serez automatiquement remboursé mais tous nos clients ont toujours été satisfaits alors nous allons vous énumerez d'autres raisons.
                   </p>
                 </div>
 
                 <div className="about-text">
-                  <h4>Who We Are</h4>
+                  <h4>Qui sommes-nous?</h4>
                   <p>
-                    Sed ut perspiciatis unde omnis iste natus error sit
-                    voluptatem accusantium doloremque laudantium, totam rem
-                    aperiam, eaque ipsa quae ab illo inventore veritatis et
-                    quasi architecto beatae vitae dicta sunt explicabo.
+                    Nous avons contribué à la croissance de plusieurs entreprises au plan continental ainsi qu'à l'international. Notre équipe est lidérée par <a href="https://www.linkedin.com/in/christian-kpanou/" target="_blank"><b>Christian Kpanou</b></a> qui collaborent à l'international avec plusieurs startups dont la capitalisation surpasse le milliard de dollars. 
                   </p>
                 </div>
 
                 <div className="about-text">
-                  <h4>Our History</h4>
+                  <h4>Notre Histoire</h4>
                   <p>
-                    But I must explain to you how all this mistaken idea of
-                    denouncing pleasure and praising pain was born and I will
-                    give you a complete account of the system, and expound the
-                    actual teachings of the great explorer of the truth.
+                    En 8 ans d’activité, nous avons developpé plusieurs grands projets en Afrique dont les applications web et Android TchadCarriere qui totalisent plus 25.000 téléchargements dans la PlayStore et plus de 500.000 visites par mois sur le site. Notre savoir-faire et notre réputation ne sont plus à démontrer auprès de nos clients qui sont satisfaits de nos services.
+                  </p>
+                  <p> 
+                    Et vous? Quel est votre projet? En terceriser le développement pourrait être plus avantageux aussi bien techniquement que financièrement que de recruter des developpeurs à temps plein.
                   </p>
                 </div>
 
                 <div className="about-text">
-                  <h4>Our Mission</h4>
+                  <h4>Nos Ambitions</h4>
                   <p>
-                    At vero eos et accusamus et iusto odio dignissimos ducimus
-                    qui blanditiis praesentium voluptatum deleniti atque
-                    corrupti quos dolores et quas molestias excepturi sint
-                    occaecati cupiditate non provident, similique sunt in culpa.
+                    Commencer un business en ligne est souvent beaucoup plus compliquée que ce qui est décrit par les influenceurs. Vous avez besoin d'une main d'oeuvre qualifiée.
+                  </p>
+                  <p>
+                    Notre ambition est de donner à tous les porteurs de projets l'opportunité de débuter ou continuer l'aventure du web avec des professionnels réellement qualifiés pour soutenir la croissance de leurs projets.
                   </p>
                 </div>
               </div>
@@ -69,7 +64,7 @@ const WhyChooseUs = () => {
                 data-aos-delay="300"
               >
                 <img
-                  src="/images/about-img3.jpg"
+                  src="/images/formation.jpg"
                   alt="image"
                   className="rounded-10"
                 />

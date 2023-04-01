@@ -2,45 +2,7 @@ import React, { Component } from "react";
 import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
-
-const latestNewsData = [
-  {
-    image: "/images/blog/blog7.jpg",
-    title: "The Most Popular New top Business Apps",
-    date: "Feb 15, 2023",
-    category: "Technology",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    readMoreLink: "/blog-details",
-  },
-  {
-    image: "/images/blog/blog8.jpg",
-    title: "The Best Marketing top use Management Tools",
-    date: "Feb 16, 2023",
-    category: "Agency",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    readMoreLink: "/blog-details",
-  },
-  {
-    image: "/images/blog/blog9.jpg",
-    title: "3 WooCommerce Plugins to Boost Sales",
-    date: "Feb 17, 2023",
-    category: "IT Agency",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    readMoreLink: "/blog-details",
-  },
-  {
-    image: "/images/blog/blog10.jpg",
-    title: "Top 21 Must-Read Blogs For Creative Agencies",
-    date: "Feb 18, 2023",
-    category: "Development",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    readMoreLink: "/blog-details",
-  },
-];
+import { latestNewsData } from "../../data/news";
 
 const LatestNewsSliderTwo = () => {
   return (
@@ -48,11 +10,7 @@ const LatestNewsSliderTwo = () => {
       <div className="blog-area ptb-100">
         <div className="container">
           <div className="section-title">
-            <h2>Latest News</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
+            <h2>Actualités</h2>
           </div>
 
           <Swiper
@@ -79,8 +37,7 @@ const LatestNewsSliderTwo = () => {
             modules={[Autoplay, Pagination]}
             className="blog-slides"
           >
-            {latestNewsData &&
-              latestNewsData.slice(0, 5).map((value, i) => (
+            {latestNewsData?.slice(0, 5).map((value, i) => (
                 <SwiperSlide key={i}>
                   <div className="single-blog-item">
                     <div className="blog-image">
@@ -101,7 +58,7 @@ const LatestNewsSliderTwo = () => {
 
                       <p>{value.shortText}</p>
                       <Link href={value.readMoreLink} className="read-more-btn">
-                        Read More
+                        Voir la vidéo
                         <i className="fa-solid fa-angles-right"></i>
                       </Link>
                     </div>

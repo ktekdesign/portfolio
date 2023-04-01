@@ -69,10 +69,9 @@ const Partner = () => {
       <div className="partner-area pt-100 pb-60">
         <div className="container">
           <div className="section-title">
-            <h2>Trusted By</h2>
+            <h2>De grandes marques nous font confiance</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Nous serons fiers d'exhiber votre marque dans notre liste de meilleurs clients.
             </p>
           </div>
 
