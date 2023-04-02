@@ -1,9 +1,9 @@
 import React from "react";
 import NavbarDark from "../../components/Layouts/NavbarDark";
 import PageBanner from "../../components/Common/PageBanner";
-import CtaAreaTwo from "../../components/Common/CtaAreaTwo";
 import Footer from "../../components/Layouts/FooterDark";
 import OurServices from "../../components/HomePages/ItAgency/OurServices";
+import Newsletter from "../../components/Common/Newsletter";
 
 const ServiceDetails = () => {
   
@@ -15,7 +15,7 @@ const ServiceDetails = () => {
 
       <OurServices notitle={true} />
 
-      <CtaAreaTwo />
+      <Newsletter />
 
       <Footer />
     </>
