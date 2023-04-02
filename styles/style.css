@@ -3431,7 +3431,6 @@ Subscribe CSS
 }
 .newsletter-inner-area .newsletter-content {
   position: relative;
-  max-width: 660px;
   margin: auto;
 }
 .newsletter-inner-area .newsletter-content .sub-title {
@@ -3459,10 +3458,8 @@ Subscribe CSS
   background: linear-gradient(to left top, #ff2c9c, #ff287b, #ff395a, #ff5137, #ff6a00);
   color: #ffffff;
   border: none;
-  top: 0;
-  right: 0;
   top: 5px;
-  right: 5px;
+  right: 10px;
   height: 50px;
   border-radius: 30px;
   padding: 0 30px;

@@ -118,23 +118,23 @@ const FooterDark = () => {
                 </ul>
                 <ul className="social-links">
                   <li>
-                    <a href="https://www.facebook.com/" target="_blank">
+                    <a href="https://www.facebook.com/ktekdesign" target="_blank">
                       <i className="fa-brands fa-facebook-f"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://twitter.com/" target="_blank">
-                      <i className="fa-brands fa-twitter"></i>
+                    <a href="https://youtube.com/@christiankpanou" target="_blank">
+                      <i className="fa-brands fa-youtube"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="linkedin.com" target="_blank">
+                    <a href="https://linkedin.com/in/christian-kpanou" target="_blank">
                       <i className="fa-brands fa-linkedin-in"></i>
                     </a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/" target="_blank">
-                      <i className="fa-brands fa-instagram"></i>
+                    <a href="https://www.github.com/ktekdesign" target="_blank">
+                      <i className="fa-brands fa-github"></i>
                     </a>
                   </li>
                 </ul>

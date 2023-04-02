@@ -8,7 +8,6 @@ import FunFactsTwo from "../components/Common/FunFactsTwo";
 import LatestNewsSliderTwo from "../components/Common/LatestNewsSliderTwo";
 import Newsletter from "../components/Common/Newsletter";
 import Footer from "../components/Layouts/FooterDark";
-import Partner from "../components/Common/Partner";
 
 const ItAgency = () => {
   return (
@@ -25,13 +24,9 @@ const ItAgency = () => {
 
       <FunFactsTwo />
 
-      <Partner />
-
       <LatestNewsSliderTwo />
 
-      <div className="pb-100">
-        <Newsletter />
-      </div>
+      <Newsletter />
 
       <Footer />
     </>

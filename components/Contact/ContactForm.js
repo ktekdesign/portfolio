@@ -38,8 +38,9 @@ const ContactForm = () => {
       const url = `${baseUrl}/api/contact`;
       const { name, email, number, subject, text } = contact;
       const payload = { name, email, number, subject, text };
-      const response = await axios.post(url, payload);
-      console.log(response);
+      await axios.post(url, payload);
+      const urlNewsletter = `${baseUrl}/api/newsletter`;
+      await axios.post(urlNewsletter, payload);
       setContact(INITIAL_STATE);
       alertContent();
     } catch (error) {
@@ -51,10 +52,9 @@ const ContactForm = () => {
     <>
       <div className="contact-form">
         <div className="contact-title">
-          <h2>Get In Touch</h2>
+          <h2>Contactez-nous</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Nous serons ravis de discuter de votre projet avec vous.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ const ContactForm = () => {
                     <input
                       type="text"
                       name="name"
-                      placeholder="Name"
+                      placeholder="Nom"
                       className="form-control"
                       value={contact.name}
                       onChange={handleChange}
@@ -93,7 +93,7 @@ const ContactForm = () => {
                     <input
                       type="text"
                       name="number"
-                      placeholder="Phone number"
+                      placeholder="Téléphone"
                       className="form-control"
                       value={contact.number}
                       onChange={handleChange}
@@ -106,7 +106,7 @@ const ContactForm = () => {
                     <input
                       type="text"
                       name="subject"
-                      placeholder="Subject"
+                      placeholder="Sujet"
                       className="form-control"
                       value={contact.subject}
                       onChange={handleChange}
@@ -120,7 +120,7 @@ const ContactForm = () => {
                       name="text"
                       cols="30"
                       rows="6"
-                      placeholder="Write your message..."
+                      placeholder="Votre message..."
                       className="form-control"
                       value={contact.text}
                       onChange={handleChange}
@@ -130,7 +130,7 @@ const ContactForm = () => {
                 </div>
                 <div className="col-lg-12 col-sm-12">
                   <button type="submit" className="btn btn-primary">
-                    Send Message
+                    Envoyer
                   </button>
                 </div>
               </div>

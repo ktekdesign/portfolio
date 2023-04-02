@@ -1,11 +1,42 @@
-import React from "react";
+import React, { useState } from "react";
+import baseUrl from "../../utils/baseUrl";
+import axios from "axios";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+const MySwal = withReactContent(Swal);
+
+const alertContent = (title, message) => {
+  MySwal.fire({
+    title: title,
+    text: message,
+    icon: "success",
+    timer: 2000,
+    timerProgressBar: true,
+    showConfirmButton: false,
+  });
+};
 
 const Newsletter = () => {
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  
+  const saveContact = async (e) => {
+    e.preventDefault();
+    try {
+      const url = `${baseUrl}/api/newsletter`;
+      const payload = { name, email };
+      const response = await axios.post(url, payload);
+      setEmail("");
+      setName("");
+      alertContent("Félicitations!", response.data);
+    } catch (error) {
+      alertContent("Désolé", error.response.data);
+    }
+  }
   return (
     <>
       <div className="newsletter-area">
-        <div className="container">
-          <div 
+        <div 
             className="newsletter-inner-area" 
             style={{ 
               backgroundImage: `url(/images/newsletter-bg.jpg)` 
@@ -18,7 +49,7 @@ const Newsletter = () => {
                 data-aos-duration="1200"
                 data-aos-delay="100"
               >
-                Get Started Instantly!
+                Restons en contact!
               </span>
 
               <h2
@@ -26,29 +57,48 @@ const Newsletter = () => {
                 data-aos-duration="1200"
                 data-aos-delay="200"
               >
-                Get the only new update from this newsletter
+                Ne ratez aucune de nos actualisations et promotions
               </h2>
 
               <form 
                 className="newsletter-form"
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={saveContact}
                 data-aos="fade-in"
                 data-aos-duration="1200"
                 data-aos-delay="400"
               >
-                <input
-                  type="email"
-                  className="form-control"
-                  placeholder="Enter your email"
-                  name="email"
-                  required
-                />
-                <button type="submit">Subscribe!</button>
+                <div className="container">
+                  <div className="row justify-content-center">
+                    <div className="col-lg-5 col-md-6">
+                      <input
+                        type="text"
+                        className="form-control"
+                        placeholder="Votre nome"
+                        name="name"
+                        value={name}
+                        onChange={e => setName(e.target.value)}
+                        required
+                      />
+                    </div>
+                    <div className="col-lg-7 col-md-6">
+                      <input
+                        type="email"
+                        className="form-control"
+                        placeholder="Votre email"
+                        name="email"
+                        value={email}
+                        onChange={e => setEmail(e.target.value)}
+                        required
+                      />
+                    
+                      <button type="submit">Je m'inscris!</button>
+                    </div>
+                  </div>
+                </div>
               </form>
             </div>
           </div>
         </div>
-      </div>
     </>
   );
 };

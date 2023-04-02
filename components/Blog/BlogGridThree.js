@@ -8,7 +8,7 @@ const BlogGrid = () => {
       <div className="blog-area ptb-100">
         <div className="container">
           <div className="row justify-content-center">
-            {latestNewsData?.map((value, i) => (
+            {latestNewsData?.slice(0, 3).map((value, i) => (
                 <div 
                   className="col-lg-4 col-md-6" 
                   key={i}

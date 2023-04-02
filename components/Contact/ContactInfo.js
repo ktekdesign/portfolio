@@ -11,13 +11,11 @@ const ContactInfo = () => {
                 <div className="icon">
                   <i className="pe-7s-mail"></i>
                 </div>
-                <h3>Mail Here</h3>
+                <h3>Envoyez un email à</h3>
                 <p>
-                  <a href="mailto:admin@pungent.com">admin@pungent.com</a>
+                  <a href="mailto:contact@ktekdesign.com">contact@ktekdesign.com</a>
                 </p>
-                <p>
-                  <a href="mailto:info@pungent.com">info@pungent.com</a>
-                </p>
+                
               </div>
             </div>
 
@@ -26,10 +24,31 @@ const ContactInfo = () => {
                 <div className="icon">
                   <i className="pe-7s-map-2"></i>
                 </div>
-                <h3>Visit Here</h3>
-                <p>
-                  27 Division St, New York, <br /> NY 10002, USA
-                </p>
+                <h3>Nos Réseaux sociaux</h3>
+                <div className="single-footer-widget">
+                <ul className="social-links">
+                  <li>
+                    <a href="https://www.facebook.com/ktekdesign" target="_blank">
+                      <i className="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://youtube.com/@christiankpanou" target="_blank">
+                      <i className="fa-brands fa-youtube"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://linkedin.com/in/christian-kpanou" target="_blank">
+                      <i className="fa-brands fa-linkedin-in"></i>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://www.github.com/ktekdesign" target="_blank">
+                      <i className="fa-brands fa-github"></i>
+                    </a>
+                  </li>
+                </ul>
+                </div>
               </div>
             </div>
 
@@ -38,12 +57,9 @@ const ContactInfo = () => {
                 <div className="icon">
                   <i className="pe-7s-call"></i>
                 </div>
-                <h3>Call Here</h3>
+                <h3>Whatsapp</h3>
                 <p>
-                  <a href="tel:+1234567890">+123 456 7890</a>
-                </p>
-                <p>
-                  <a href="tel:+2414524526">+241 452 4526</a>
+                  <a href="https://api.whatsapp.com/send?phone=5541997527702">+55 (41) 997-527-702</a>
                 </p>
               </div>
             </div>
