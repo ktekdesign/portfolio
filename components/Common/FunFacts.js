@@ -1,28 +1,5 @@
 import React from "react";
-
-const funFactsData = [
-  {
-    iconName: "pe-7s-like",
-    number: "799",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    aosDelay: "100",
-  },
-  {
-    iconName: "pe-7s-diamond",
-    number: "499",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    aosDelay: "200",
-  },
-  {
-    iconName: "pe-7s-portfolio",
-    number: "799",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    aosDelay: "300",
-  },
-];
+import { funFactsData } from "../../data/funfacts";
 
 const FunFacts = () => {
   return (

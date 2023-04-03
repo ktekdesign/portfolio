@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import FsLightbox from "fslightbox-react";
 import parse from 'html-react-parser';
 
@@ -18,7 +19,7 @@ const ServiceDetailsContent = (props) => {
           <div className="row">
             <div className="col-lg-12 col-md-12">
               <div className="services-details-image">
-                {props?.image && <img src={props.image} alt="image" />}
+                {props?.image && <Image src={props.image} alt="image" />}
                 {props?.video &&
                   <div className="video-box">
                     <div

@@ -1,53 +1,6 @@
 import React from "react";
 import Link from "next/link";
-
-const latestNewsData = [
-  {
-    image: "/images/blog/blog1.jpg",
-    title: "How to Become a Successful Entry Level UX Designer",
-    admin: "Admin",
-    category: "Web Development",
-    date: "Feb 15, 2023",
-    viewDetails: "/blog-details",
-    aosDelay: "100",
-  },
-  {
-    image: "/images/blog/blog2.jpg",
-    title: "How to Become a Successful Entry Level ReactJS Designer",
-    admin: "Admin",
-    category: "ReactJS",
-    date: "Feb 16, 2023",
-    viewDetails: "/blog-details",
-    aosDelay: "150",
-  },
-  {
-    image: "/images/blog/blog3.jpg",
-    title: "The Guide to Running a Client Discovery Process",
-    admin: "Admin",
-    category: "Angular JS",
-    date: "Feb 17, 2023",
-    viewDetails: "/blog-details",
-    aosDelay: "200",
-  },
-  {
-    image: "/images/blog/blog4.jpg",
-    title: "3 Ways to Get Client Approval for Scope Changes",
-    admin: "Admin",
-    category: "Design",
-    date: "Feb 18, 2023",
-    viewDetails: "/blog-details",
-    aosDelay: "250",
-  },
-  {
-    image: "/images/blog/blog5.jpg",
-    title: "Top 21 Must-Read Blogs For Creative Agencies",
-    admin: "Admin",
-    category: "Development",
-    date: "Feb 19, 2023",
-    viewDetails: "/blog-details",
-    aosDelay: "300",
-  },
-];
+import { latestNewsData } from "../../data/news";
 
 const LatestNews = () => {
   return (
@@ -74,7 +27,7 @@ const LatestNews = () => {
                   >
                     <div className="post-image">
                       <Link href={value.viewDetails}>
-                        <img src={value.image} alt="image" />
+                        <Image src={value.image} alt="image" />
                       </Link>
                     </div>
 
@@ -117,7 +70,7 @@ const LatestNews = () => {
                         <div className="col-lg-4 col-md-3 col-sm-4">
                           <div className="post-image">
                             <Link href={value.viewDetails}>
-                              <img src={value.image} alt="image" />
+                              <Image src={value.image} alt="image" />
                             </Link>
                           </div>
                         </div>

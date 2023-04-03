@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 
 const NavbarTwo = () => {
   // Add active class
@@ -40,8 +41,8 @@ const NavbarTwo = () => {
         <nav className="navbar navbar-expand-md navbar-light">
           <div className="container-fluid">
             <Link href="/" className="navbar-brand">
-              <img src="/images/logo.png" className="black-logo" alt="logo" />
-              <img
+              <Image src="/images/logo.png" className="black-logo" alt="logo" />
+              <Image
                 src="/images/logo-white.png"
                 className="white-logo"
                 alt="logo"

@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const ServiceStyleTwo = () => {
   return (
@@ -58,13 +59,15 @@ const ServiceStyleTwo = () => {
 
             <div className="col-lg-6">
               <div
-                className="service-right-img"
+                className="service-right-Image"
                 data-aos="zoom-in"
                 data-aos-duration="1200"
               >
-                <img
+                <Image
                   src="/images/services/it-service1.png"
                   alt="Service Image"
+                  width={676}
+                  height={511}
                 />
               </div>
             </div>
@@ -77,13 +80,15 @@ const ServiceStyleTwo = () => {
           <div className="row align-items-center">
             <div className="col-lg-6">
               <div
-                className="service-left-img"
+                className="service-left-Image"
                 data-aos="zoom-in"
                 data-aos-duration="1200"
               >
-                <img
+                <Image
                   src="/images/services/it-service2.png"
                   alt="Service Image"
+                  width={676}
+                  height={460}
                 />
               </div>
             </div>
@@ -197,13 +202,15 @@ const ServiceStyleTwo = () => {
 
             <div className="col-lg-6">
               <div
-                className="service-right-img"
+                className="service-right-Image"
                 data-aos="zoom-in"
                 data-aos-duration="1200"
               >
-                <img
+                <Image
                   src="/images/services/it-service3.png"
                   alt="Service Image"
+                  width={676}
+                  height={440}
                 />
               </div>
             </div>

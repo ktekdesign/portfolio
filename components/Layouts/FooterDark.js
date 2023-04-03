@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Logo from "../Common/Logo";
 
 const FooterDark = () => {
   const currentYear = new Date().getFullYear();
@@ -16,15 +17,12 @@ const FooterDark = () => {
                 data-aos-delay="100"
               >
                 <div className="logo">
-                  <Link href="/">
-                    <img src="/images/logo-white.png" alt="Logo" />
-                  </Link>
+                  <Logo />
                 </div>
 
                 <p>
                 Vous êtes indépendant, petite, moyenne ou grande entreprise ? Vous êtes au bon endroit. Laissez nous vous émerveiller avec la qualité de nos services en facilitant la croissance de votre entreprise.
                 </p>
-
                 
               </div>
             </div>

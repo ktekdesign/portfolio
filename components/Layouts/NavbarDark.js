@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Logo from "../Common/Logo";
 import { menuData } from "../../data/menu";
 
 const NavbarDark = () => {
@@ -40,13 +41,7 @@ const NavbarDark = () => {
       <div id="navbar" className="navbar-area dark-navbar">
         <nav className="navbar navbar-expand-md">
           <div className="container-fluid">
-            <Link href="/" className="navbar-brand">
-              <img
-                src="/images/logo-white.png"
-                className="white-logo"
-                alt="logo"
-              />
-            </Link>
+            <Logo className="navbar-brand" />
 
             {/* Toggle navigation */}
             <button

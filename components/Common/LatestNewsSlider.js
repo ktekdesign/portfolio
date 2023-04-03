@@ -1,46 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
-
-const latestNewsSliderData = [
-  {
-    image: "/images/blog/blog1.jpg",
-    title: "The Most Popular New top Business Apps",
-    date: "Feb 15, 2023",
-    category: "Technology",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    readMoreLink: "/blog-details",
-  },
-  {
-    image: "/images/blog/blog2.jpg",
-    title: "The Best Marketing top use Management Tools",
-    date: "Feb 16, 2023",
-    category: "Agency",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    readMoreLink: "/blog-details",
-  },
-  {
-    image: "/images/blog/blog3.jpg",
-    title: "3 WooCommerce Plugins to Boost Sales",
-    date: "Feb 17, 2023",
-    category: "IT Agency",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    readMoreLink: "/blog-details",
-  },
-  {
-    image: "/images/blog/blog4.jpg",
-    title: "Top 21 Must-Read Blogs For Creative Agencies",
-    date: "Feb 18, 2023",
-    category: "Development",
-    shortText:
-      "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-    readMoreLink: "/blog-details",
-  },
-];
+import { latestNewsData } from "../../data/news";
 
 const LatestNewsSlider = () => {
   return (
@@ -82,13 +45,13 @@ const LatestNewsSlider = () => {
             data-aos-duration="1200"
             data-aos-delay="200"
           >
-            {latestNewsSliderData &&
-              latestNewsSliderData.slice(0, 5).map((value, i) => (
+            {latestNewsData &&
+              latestNewsData.slice(0, 5).map((value, i) => (
                 <SwiperSlide key={i}>
                   <div className="single-blog-item">
                     <div className="blog-image">
                       <Link href={value.readMoreLink}>
-                        <img src={value.image} alt="image" />
+                        <Image src={value.image} alt="image" />
                       </Link>
 
                       <div className="post-tag">

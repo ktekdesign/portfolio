@@ -1,123 +1,6 @@
 import React from "react";
-
-const teamMemberData = [
-  {
-    image: "/images/team/circle-team1.jpg",
-    name: "James White",
-    designation: "CEO & Founder",
-    aosDelay: "100",
-
-    socialLinks: [
-      {
-        iconName: "fa-brands fa-linkedin-in",
-        url: "https://linkedin.com/",
-      },
-      {
-        iconName: "fa-brands fa-twitter",
-        url: "https://twitter.com/",
-      },
-      {
-        iconName: "fa-brands fa-facebook-f",
-        url: "https://facebook.com/",
-      },
-      {
-        iconName: "fa-brands fa-instagram",
-        url: "https://instagram.com/",
-      },
-      {
-        iconName: "fa-brands fa-dribbble",
-        url: "https://dribbble.com/",
-      },
-    ],
-  },
-  {
-    image: "/images/team/circle-team2.jpg",
-    name: "Johnson Lee",
-    designation: "Backend Specialist",
-    aosDelay: "200",
-
-    socialLinks: [
-      {
-        iconName: "fa-brands fa-linkedin-in",
-        url: "https://linkedin.com/",
-      },
-      {
-        iconName: "fa-brands fa-twitter",
-        url: "https://twitter.com/",
-      },
-      {
-        iconName: "fa-brands fa-facebook-f",
-        url: "https://facebook.com/",
-      },
-      {
-        iconName: "fa-brands fa-instagram",
-        url: "https://instagram.com/",
-      },
-      {
-        iconName: "fa-brands fa-dribbble",
-        url: "https://dribbble.com/",
-      },
-    ],
-  },
-  {
-    image: "/images/team/circle-team3.jpg",
-    name: "Williams Smith",
-    designation: "Front-end Specialist",
-    aosDelay: "300",
-
-    socialLinks: [
-      {
-        iconName: "fa-brands fa-linkedin-in",
-        url: "https://linkedin.com/",
-      },
-      {
-        iconName: "fa-brands fa-twitter",
-        url: "https://twitter.com/",
-      },
-      {
-        iconName: "fa-brands fa-facebook-f",
-        url: "https://facebook.com/",
-      },
-      {
-        iconName: "fa-brands fa-instagram",
-        url: "https://instagram.com/",
-      },
-      {
-        iconName: "fa-brands fa-dribbble",
-        url: "https://dribbble.com/",
-      },
-    ],
-  },
-  {
-    image: "/images/team/circle-team4.jpg",
-    name: "David Miller",
-    designation: "Reactjs Specialist",
-    aosDelay: "400",
-
-    socialLinks: [
-      {
-        iconName: "fa-brands fa-linkedin-in",
-        url: "https://linkedin.com/",
-      },
-      {
-        iconName: "fa-brands fa-twitter",
-        url: "https://twitter.com/",
-      },
-      {
-        iconName: "fa-brands fa-facebook-f",
-        url: "https://facebook.com/",
-      },
-      {
-        iconName: "fa-brands fa-instagram",
-        url: "https://instagram.com/",
-      },
-      {
-        iconName: "fa-brands fa-dribbble",
-        url: "https://dribbble.com/",
-      },
-    ],
-  },
-];
+import Image from "next/image";
+import { teamMemberData } from "../../data/team";
 
 const Team = () => {
   return (
@@ -142,7 +25,7 @@ const Team = () => {
                     data-aos-duration="1200"
                     data-aos-delay={value.aosDelay}
                   >
-                    <img
+                    <Image
                       src={value.image}
                       alt="Image"
                       className="rounded-circle"

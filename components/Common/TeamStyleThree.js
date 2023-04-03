@@ -1,149 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
+import Image from "next/image";
+import { teamMemberData } from "../../data/team";
 
-const teamMemberData = [
-  {
-    image: "/images/team/team9.jpg",
-    name: "James White",
-    designation: "CEO & Founder",
-
-    socialLinks: [
-      {
-        iconName: "fa-brands fa-linkedin-in",
-        url: "https://linkedin.com/",
-      },
-      {
-        iconName: "fa-brands fa-twitter",
-        url: "https://twitter.com/",
-      },
-      {
-        iconName: "fa-brands fa-facebook-f",
-        url: "https://facebook.com/",
-      },
-      {
-        iconName: "fa-brands fa-instagram",
-        url: "https://instagram.com/",
-      },
-      {
-        iconName: "fa-brands fa-dribbble",
-        url: "https://dribbble.com/",
-      },
-    ],
-  },
-  {
-    image: "/images/team/team10.jpg",
-    name: "Johnson Lee",
-    designation: "Backend Specialist",
-
-    socialLinks: [
-      {
-        iconName: "fa-brands fa-linkedin-in",
-        url: "https://linkedin.com/",
-      },
-      {
-        iconName: "fa-brands fa-twitter",
-        url: "https://twitter.com/",
-      },
-      {
-        iconName: "fa-brands fa-facebook-f",
-        url: "https://facebook.com/",
-      },
-      {
-        iconName: "fa-brands fa-instagram",
-        url: "https://instagram.com/",
-      },
-      {
-        iconName: "fa-brands fa-dribbble",
-        url: "https://dribbble.com/",
-      },
-    ],
-  },
-  {
-    image: "/images/team/team11.jpg",
-    name: "Williams Smith",
-    designation: "Front-end Specialist",
-
-    socialLinks: [
-      {
-        iconName: "fa-brands fa-linkedin-in",
-        url: "https://linkedin.com/",
-      },
-      {
-        iconName: "fa-brands fa-twitter",
-        url: "https://twitter.com/",
-      },
-      {
-        iconName: "fa-brands fa-facebook-f",
-        url: "https://facebook.com/",
-      },
-      {
-        iconName: "fa-brands fa-instagram",
-        url: "https://instagram.com/",
-      },
-      {
-        iconName: "fa-brands fa-dribbble",
-        url: "https://dribbble.com/",
-      },
-    ],
-  },
-  {
-    image: "/images/team/team12.jpg",
-    name: "David Miller",
-    designation: "Reactjs Specialist",
-
-    socialLinks: [
-      {
-        iconName: "fa-brands fa-linkedin-in",
-        url: "https://linkedin.com/",
-      },
-      {
-        iconName: "fa-brands fa-twitter",
-        url: "https://twitter.com/",
-      },
-      {
-        iconName: "fa-brands fa-facebook-f",
-        url: "https://facebook.com/",
-      },
-      {
-        iconName: "fa-brands fa-instagram",
-        url: "https://instagram.com/",
-      },
-      {
-        iconName: "fa-brands fa-dribbble",
-        url: "https://dribbble.com/",
-      },
-    ],
-  },
-  {
-    image: "/images/team/team13.jpg",
-    name: "Thomas",
-    designation: "Office Manager",
-
-    socialLinks: [
-      {
-        iconName: "fa-brands fa-linkedin-in",
-        url: "https://linkedin.com/",
-      },
-      {
-        iconName: "fa-brands fa-twitter",
-        url: "https://twitter.com/",
-      },
-      {
-        iconName: "fa-brands fa-facebook-f",
-        url: "https://facebook.com/",
-      },
-      {
-        iconName: "fa-brands fa-instagram",
-        url: "https://instagram.com/",
-      },
-      {
-        iconName: "fa-brands fa-dribbble",
-        url: "https://dribbble.com/",
-      },
-    ],
-  },
-];
 
 const TeamStyleThree = () => {
   return (
@@ -184,8 +44,8 @@ const TeamStyleThree = () => {
               teamMemberData.map((value, i) => (
                 <SwiperSlide key={i}>
                   <div className="team-card text-center">
-                    <div className="team-img">
-                      <img src={value.image} alt="Image" />
+                    <div className="team-Image">
+                      <Image src={value.image} alt="Image" />
 
                       <div className="social-links">
                         <div className="d-table">

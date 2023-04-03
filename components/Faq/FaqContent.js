@@ -6,6 +6,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
+import Image from "next/image";
 
 const FaqContent = () => {
   return (
@@ -14,8 +15,8 @@ const FaqContent = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-6">
-              <div className="faq-img">
-                <img src="/images/faq-img.jpg" alt="Image" />
+              <div className="faq-Image">
+                <Image src="/images/faq-Image.jpg" alt="Image" />
               </div>
             </div>
 

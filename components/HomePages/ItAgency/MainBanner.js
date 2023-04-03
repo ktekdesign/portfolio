@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
 import Link from 'next/link';
+import Image from "next/image";
 
 const MainBanner = () => {
   const [toggler, setToggler] = useState(false);
@@ -36,7 +37,7 @@ const MainBanner = () => {
                       data-aos-duration="1200"
                       data-aos-delay="200"
                     >
-                      Depuis 8 ans, nous nous sommes imposés comme étant la meilleure agence digitale en Afrique Francophone.
+                      Agence Web Digitale
                     </p>
 
                     <Link 
@@ -67,9 +68,11 @@ const MainBanner = () => {
                     data-aos="fade-left"
                     data-aos-duration="1200"
                   >
-                    <img
+                    <Image
                       src="/images/christian-kpanou.png"
                       alt="Animate image"
+                      width={636}
+                      height={635}
                     />
                   </div>
                 </div>

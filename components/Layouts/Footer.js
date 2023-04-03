@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -17,7 +18,7 @@ const Footer = () => {
               >
                 <div className="logo dark-logo">
                   <Link href="/">
-                    <img src="/images/logo.png" alt="Logo" />
+                    <Image src="/images/logo.png" alt="Logo" />
                   </Link>
                 </div>
 

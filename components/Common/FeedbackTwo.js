@@ -1,27 +1,7 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
-
-const feedbacskData = [
-  {
-    name: "Steve Jobs",
-    designation: "Co-founder of Apple, Inc.",
-    feedbacskText:
-      "Design is not just what it looks like and feels like. Design is how it works.",
-  },
-  {
-    name: "Charlie",
-    designation: "Co-founder of 3S, Inc.",
-    feedbacskText:
-      "Design is not just what it looks like and feels like. Design is how it works.",
-  },
-  {
-    name: "Amelia",
-    designation: "Co-founder of Envato, Inc.",
-    feedbacskText:
-      "Design is not just what it looks like and feels like. Design is how it works.",
-  },
-];
+import { feedbacskData } from "../../data/feedbacks";
 
 const FeedbackTwo = () => {
   return (

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
+import Image from "next/image";
 
 const WhyChooseUs = () => {
   const [toggler, setToggler] = useState(false);
@@ -68,8 +69,8 @@ const WhyChooseUs = () => {
                 data-aos-duration="1200"
                 data-aos-delay="400"
               >
-                <img
-                  src="/images/about-img3.jpg"
+                <Image
+                  src="/images/about-Image3.jpg"
                   alt="image"
                   className="rounded-10"
                 />

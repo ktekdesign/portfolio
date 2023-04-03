@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 
 const NavbarThree = () => {
   // Add active class
@@ -40,7 +41,7 @@ const NavbarThree = () => {
         <nav className="navbar navbar-expand-md navbar-light">
           <div className="container">
             <Link href="/" className="navbar-brand">
-              <img src="/images/logo.png" alt="logo" />
+              <Image src="/images/logo.png" alt="logo" />
             </Link>
 
             {/* Toggle navigation */}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
 import Link from 'next/link';
+import Image from "next/image";
 
 const MainBanner = () => {
   const [toggler, setToggler] = useState(false);
@@ -66,8 +67,8 @@ const MainBanner = () => {
                       data-aos="zoom-in"
                       data-aos-duration="1200"
                     >
-                      <img
-                        src="/images/animate-banner-img2.jpg"
+                      <Image
+                        src="/images/animate-banner-Image2.jpg"
                         alt="Animate image"
                       />
                     </div>
@@ -78,7 +79,7 @@ const MainBanner = () => {
           </div>
 
           <div className="oval-shape">
-            <img 
+            <Image 
               src="/images/oval-shape.png" 
               alt="Shape" 
             />

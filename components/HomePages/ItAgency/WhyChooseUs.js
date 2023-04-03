@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
+import Image from "next/image";
 
 const WhyChooseUs = () => {
   const [toggler, setToggler] = useState(false);
@@ -63,10 +64,12 @@ const WhyChooseUs = () => {
                 data-aos-duration="1200"
                 data-aos-delay="300"
               >
-                <img
+                <Image
                   src="/images/formation.jpg"
                   alt="image"
                   className="rounded-10"
+                  width={526}
+                  height={316}
                 />
 
                 <div className="video-box">

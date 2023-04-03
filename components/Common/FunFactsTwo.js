@@ -1,32 +1,7 @@
 import React from "react";
 import Link from "next/link";
-
-const funFactsData = [
-  {
-    iconName: "fa-solid fa-circle-check",
-    number: "316+",
-    shortText: "Projets Conclus",
-    aosDelay: "100",
-  },
-  {
-    iconName: "fa-solid fa-heart",
-    number: "114+",
-    shortText: "Clients satisfaits",
-    aosDelay: "200",
-  },
-  {
-    iconName: "fa-solid fa-list-check",
-    number: "12+",
-    shortText:"Projets en cours",
-    aosDelay: "300",
-  },
-  {
-    iconName: "fa-solid fa-trophy",
-    number: "28+",
-    shortText:"Compétences",
-    aosDelay: "400",
-  },
-];
+import Image from "next/image";
+import { funFactsData } from "../../data/funfacts";
 
 const FunFactsTwo = () => {
   return (
@@ -75,7 +50,7 @@ const FunFactsTwo = () => {
           </div>
 
           <div className="map-bg">
-            <img src="/images/map.png" alt="map" />
+            <Image src="/images/map.png" alt="map" width={910} height={443} />
           </div>
         </div>
       </div>

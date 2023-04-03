@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
 import { latestNewsData } from "../../data/news";
@@ -48,7 +49,7 @@ const LatestNewsSliderTwo = () => {
                         />
                       :
                         <Link href={value.readMoreLink}>
-                          <img src={value.image} alt="image" />
+                          <Image src={value.image} alt="image" />
                         </Link>
                       }
                       <div className="post-tag">
