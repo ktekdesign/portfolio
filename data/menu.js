@@ -9,10 +9,10 @@ export const menuData = [
         name: "Services",
         children: servicesData
     },
-    {
+    /*{
         href: "/portfolio",
         name: "Portfolio"
-    },
+    }, */
     {
         href: "/blog",
         name: "Blog"

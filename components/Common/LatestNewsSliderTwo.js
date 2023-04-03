@@ -41,10 +41,16 @@ const LatestNewsSliderTwo = () => {
                 <SwiperSlide key={i}>
                   <div className="single-blog-item">
                     <div className="blog-image">
-                      <Link href={value.readMoreLink}>
-                        <img src={value.image} alt="image" />
-                      </Link>
-
+                      {value?.video ?
+                        <iframe width="100%" height="250"
+                          src={value.video} 
+                          title={value.title}
+                        />
+                      :
+                        <Link href={value.readMoreLink}>
+                          <img src={value.image} alt="image" />
+                        </Link>
+                      }
                       <div className="post-tag">
                         <Link href={value.readMoreLink}>{value.category}</Link>
                       </div>

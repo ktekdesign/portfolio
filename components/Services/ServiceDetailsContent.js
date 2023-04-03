@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
+import parse from 'html-react-parser';
 
 const ServiceDetailsContent = (props) => {
   const [toggler, setToggler] = useState(false);
@@ -31,19 +32,20 @@ const ServiceDetailsContent = (props) => {
               </div>
             </div>
 
-            <div className="col-lg-8 col-md-12">
+            <div className={`col-lg-${props.method ? "8" : "12"} col-md-12`}>
               <div className="services-details-desc">
                 <h2>Description</h2>
-                {props.description}
+                {parse(props.description)}
               </div>
             </div>
-
-            <div className="col-lg-4 col-md-12">
-              <div className="services-details-info">
-                <h3>Notre méthodologie</h3>
-                {props.method}
+            {props?.method &&
+              <div className="col-lg-4 col-md-12">
+                <div className="services-details-info">
+                  <h3>Notre méthodologie</h3>
+                  {parse(props.method)}
+                </div>
               </div>
-            </div>
+            }
           </div>
         </div>
       </div>

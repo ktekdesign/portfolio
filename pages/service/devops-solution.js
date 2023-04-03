@@ -4,7 +4,7 @@ import PageBanner from "../../components/Common/PageBanner";
 import ServiceDetailsContent from "../../components/Services/ServiceDetailsContent";
 import Footer from "../../components/Layouts/FooterDark";
 import { servicesData } from "../../data/services";
-import Newsletter from "../../components/Common/Newsletter";
+import CtaAreaThree from "../../components/Common/CtaAreaThree";
 
 const ServiceDetails = () => {
   const [,,,,service,] = servicesData;
@@ -17,7 +17,7 @@ const ServiceDetails = () => {
 
       <ServiceDetailsContent {...service} />
 
-      <Newsletter />
+      <CtaAreaThree />
 
       <Footer />
     </>

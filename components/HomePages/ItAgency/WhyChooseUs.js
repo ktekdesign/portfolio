@@ -30,7 +30,7 @@ const WhyChooseUs = () => {
                 <div className="about-text">
                   <h4>Qui sommes-nous?</h4>
                   <p>
-                    Nous avons contribué à la croissance de plusieurs entreprises au plan continental ainsi qu'à l'international. Notre équipe est lidérée par <a href="https://www.linkedin.com/in/christian-kpanou/" target="_blank"><b>Christian Kpanou</b></a> qui collaborent à l'international avec plusieurs startups dont la capitalisation surpasse le milliard de dollars. 
+                    Nous avons contribué à la croissance de plusieurs entreprises au plan continental ainsi qu'à l'international. Notre équipe est lidérée par <a href="https://www.linkedin.com/in/christian-kpanou/" target="_blank"><b>Christian Kpanou</b></a> qui collabore à l'international avec plusieurs startups dont la capitalisation surpasse le milliard de dollars. 
                   </p>
                 </div>
 

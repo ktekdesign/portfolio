@@ -12,8 +12,8 @@ const CtaAreaThree = () => {
             data-aos-duration="1200"
             data-aos-delay="200"
           >
-            <span>So What is Next?</span>
-            <h3>Are You Ready? Let's get to work!</h3>
+            <span>Quelle est la prochaîne étape?</span>
+            <h3>Êtes-vous prêt? Réalisons ensemble votre projet!</h3>
           </div>
 
           <div
@@ -23,7 +23,7 @@ const CtaAreaThree = () => {
             data-aos-delay="400"
           >
             <Link href="/contact" className="default-btn-two">
-              Contact Us <i className="fa-solid fa-chevron-right"></i>
+              Solliciter une réunion <i className="fa-solid fa-chevron-right"></i>
             </Link>
           </div>
         </div>

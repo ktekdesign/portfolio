@@ -1,14 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import { latestNewsData } from "../../data/news";
 
 const BlogGrid = () => {
+  const [posts, setPosts] = useState([]);
+  const [page, setPage] = useState(1);
+  const postsPerPage = 6;
+  const totalPage = Math.ceil(latestNewsData.length / postsPerPage);
+  const pages = [];
+  for (let index = 1; index <= totalPage; index++) {
+    pages.push(index);  
+  }
+  const router = useRouter();
+
+  useEffect(() => {
+    const path = router.asPath.split("/");
+    path.pop();
+    const current = parseInt(path.pop());
+    if (Number.isInteger(current)) setPage(current);
+  }, [router]);
+
+  useEffect(() => {
+    const end = page * postsPerPage;
+    const start = end - postsPerPage;
+    setPosts(latestNewsData?.slice(start, end));
+  }, [page]);
   return (
     <>
       <div className="blog-area ptb-100">
         <div className="container">
           <div className="row justify-content-center">
-            {latestNewsData?.slice(0, 3).map((value, i) => (
+            {posts.map((value, i) => (
                 <div 
                   className="col-lg-4 col-md-6" 
                   key={i}
@@ -18,10 +41,16 @@ const BlogGrid = () => {
                 >
                   <div className="single-blog-item">
                     <div className="blog-image">
-                      <Link href={value.readMoreLink}>
-                        <img src={value.image} alt="image" />
-                      </Link>
-
+                      {value?.video ?
+                          <iframe width="100%" height="250"
+                            src={value.video} 
+                            title={value.title}
+                          />
+                        :
+                          <Link href={value.readMoreLink}>
+                            <img src={value.image} alt="image" />
+                          </Link>
+                        }
                       <div className="post-tag">
                         <Link href={value.readMoreLink}>{value.category}</Link>
                       </div>
@@ -36,7 +65,7 @@ const BlogGrid = () => {
                       <p>{value.shortText}</p>
 
                       <Link href={value.readMoreLink} className="read-more-btn">
-                        Read More
+                        Voir la vidéo
                         <i className="fa-solid fa-angles-right"></i>
                       </Link>
                     </div>
@@ -47,21 +76,32 @@ const BlogGrid = () => {
             <div className="col-lg-12 col-md-12">
               {/* Pagination */}
               <div className="pagination-area">
-                <a className="prev page-numbers">
-                  <i className="fa-solid fa-angles-left"></i>
-                </a>
+                {page > 1 && 
+                  <a className="prev page-numbers"
+                    href={`/blog/${page == 2 ? "" : page - 1}`}
+                  >
+                    <i className="fa-solid fa-angles-left"></i>
+                  </a>
+                }
+                {pages.map(value => 
+                  page==value ?
+                    <span key={value} className="page-numbers current">{value}</span>
+                  :
+                    <a className="page-numbers"
+                      href={`/blog/${value > 1 ? value : ""}`}
+                      key={value}>
+                        {value}
+                    </a>
+                )   
+                }
 
-                <a className="page-numbers">1</a>
-
-                <span className="page-numbers current">2</span>
-
-                <a className="page-numbers">3</a>
-
-                <a className="page-numbers">4</a>
-
-                <a className="next page-numbers">
-                  <i className="fa-solid fa-angles-right"></i>
-                </a>
+                {page < totalPage && 
+                  <a className="next page-numbers"
+                    href={`/blog/${page + 1}`} 
+                  >
+                    <i className="fa-solid fa-angles-right"></i>
+                  </a>
+                }
               </div>
             </div>
           </div>

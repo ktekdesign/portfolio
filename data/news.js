@@ -1,38 +1,26 @@
 export const latestNewsData = [
     {
-      image: "/images/blog/blog7.jpg",
-      title: "The Most Popular New top Business Apps",
-      date: "Feb 15, 2023",
-      category: "Technology",
-      shortText:
-        "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-      readMoreLink: "/blog-details",
+      title: "Clean Architecture: Principes S.O.L.I.D dans la pratique",
+      date: "26 Mars 2023",
+      video: "https://www.youtube.com/embed/8mfGzXPNiQw",
+      category: "Clean Architecture",
+      shortText: "Dans cette vidéo, nous appliquons les principes S.O.L.I.D pour développer le back-end de notre application EAD.",
+      readMoreLink: "https://www.youtube.com/watch?v=8mfGzXPNiQw",
     },
     {
-      image: "/images/blog/blog8.jpg",
-      title: "The Best Marketing top use Management Tools",
-      date: "Feb 16, 2023",
-      category: "Agency",
-      shortText:
-        "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-      readMoreLink: "/blog-details",
+      title: "Configuration de docker et utilisation de Express",
+      date: "17 Mars 2023",
+      video: "https://www.youtube.com/embed/PAm7YvLbfP4",
+      category: "Docker",
+      shortText: "Dans cette video, nous embarquons notre projet dans un conteneur Docker.",
+      readMoreLink: "https://www.youtube.com/watch?v=PAm7YvLbfP4",
     },
     {
-      image: "/images/blog/blog9.jpg",
-      title: "3 WooCommerce Plugins to Boost Sales",
-      date: "Feb 17, 2023",
-      category: "IT Agency",
-      shortText:
-        "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-      readMoreLink: "/blog-details",
-    },
-    {
-      image: "/images/blog/blog10.jpg",
-      title: "Top 21 Must-Read Blogs For Creative Agencies",
-      date: "Feb 18, 2023",
-      category: "Development",
-      shortText:
-        "But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete",
-      readMoreLink: "/blog-details",
-    },
+      title: "Initialisation du projet de cours en ligne avec Typescript.",
+      date: "15 Mars 2023",
+      video: "https://www.youtube.com/embed/QKdxeHlbpHQ",
+      category: "Node.js",
+      shortText: "Dans cette video, nous utilisons Node.js et Typescript pour initier un projet backend.",
+      readMoreLink: "https://www.youtube.com/watch?v=QKdxeHlbpHQ",
+    }
   ];
