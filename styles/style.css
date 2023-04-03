@@ -3191,7 +3191,7 @@ CTA CSS
 }
 
 .cta-area-two {
-  background-image: url("/images/cta-bg.jpg");
+  position: relative;
   background-position: center center;
   background-size: cover;
   text-align: center;
@@ -5364,5 +5364,23 @@ span.new {
 }
 .dark-logo img {
   background-color: #000000;
+}
+.hero-banner-img, .newsletter-background, .page-title-img, .cta-area-two-img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+.hero-banner.it-banner::before{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.newsletter-area {
+  position: relative;
 }
 /*# sourceMappingURL=style.css.map */

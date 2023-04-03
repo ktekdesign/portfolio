@@ -13,11 +13,9 @@ const MainBanner = () => {
       />
 
 			<div 
-        className="hero-banner it-banner overly" 
-        style={{ 
-          backgroundImage: `url(/images/webagency-computer.jpg)` 
-        }}
+        className="hero-banner it-banner overly"
       >
+        <Image src="/images/webagency-computer.jpg" className="hero-banner-img" width={1000} height={500} />
         <div className="d-table">
           <div className="d-table-cell">
             <div className="container">

@@ -11,7 +11,7 @@ const Contact = () => {
     <>
       <NavbarDark />
 
-      <PageBanner pageTitle="Contact" BGImage="/images/page-banner3.jpg" />
+      <PageBanner pageTitle="Contact" BGImage="/images/hero-banner6.jpg" />
 
       <ContactInfo />
 

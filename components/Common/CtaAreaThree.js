@@ -1,10 +1,12 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 const CtaAreaThree = () => {
   return (
     <>
       <div className="cta-area-two dark-style ptb-100">
+        <Image src="/images/cta-bg.jpg" className="cta-area-two-img" width={1024} height={500} />
         <div className="container">
           <div 
             className="cta-content"

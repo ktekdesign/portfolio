@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Image from "next/image";
 import baseUrl from "../../utils/baseUrl";
 import axios from "axios";
 import Swal from "sweetalert2";
@@ -37,12 +38,8 @@ const Newsletter = () => {
   return (
     <>
       <div className="newsletter-area">
-        <div 
-            className="newsletter-inner-area" 
-            style={{ 
-              backgroundImage: `url(/images/newsletter-bg.jpg)` 
-            }}
-          >
+        <Image src="/images/newsletter-bg.jpg" className="newsletter-background" width={1024} height={300} />
+        <div className="newsletter-inner-area">
             <div className="newsletter-content">
               <span 
                 className="sub-title"

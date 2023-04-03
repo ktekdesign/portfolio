@@ -6,7 +6,7 @@ export const servicesData = [
       viewDetails: "/service/creation-site-web/",
       aosDelay: "200",
       pageTitle: "Création de site web",
-      BGImage: "/images/hero-banner1.jpg",
+      BGImage: "/images/hero-banner3.jpg",
       method: "<p>Nos services de création de sites web comprennent :</p> \
         <ul> \
         <li>Analyse des besoins : Nous travaillons avec vous pour comprendre vos objectifs commerciaux et identifier les fonctionnalités clés de votre site web</li> \
@@ -27,7 +27,7 @@ export const servicesData = [
       viewDetails: "/service/application-android-et-ios/",
       aosDelay: "400",
       pageTitle: "Application Android et iOS",
-      BGImage: "/images/hero-banner1.jpg",
+      BGImage: "/images/hero-banner4.jpg",
       method: "<p>Nos services de conception d'applications mobiles comprennent :</p> \
       <ul> \
       <li>Analyse des besoins : Nous travaillons avec vous pour comprendre vos objectifs commerciaux et identifier les fonctionnalités clés de votre application mobile</li> \
@@ -47,7 +47,7 @@ export const servicesData = [
       viewDetails: "/service/e-commerce/",
       aosDelay: "500",
       pageTitle: "E-Commerce",
-      BGImage: "/images/hero-banner1.jpg",
+      BGImage: "/images/hero-banner10.jpg",
       method: "<p>Nos services de création de sites e-commerce comprennent :</p> \
       <ul> \
       <li>Analyse des besoins : Nous travaillons avec vous pour comprendre vos besoins commerciaux et identifier les fonctionnalités clés de votre boutique en ligne</li> \
@@ -69,7 +69,7 @@ export const servicesData = [
       viewDetails: "/service/marketing-digital/",
       aosDelay: "300",
       pageTitle: "Marketing Digital",
-      BGImage: "/images/hero-banner1.jpg",
+      BGImage: "/images/hero-banner12.jpg",
       method: "<p>Nos services de marketing digital comprennent :</p> \
         <ul> \
         <li>Optimisation des moteurs de recherche (SEO) : Nous améliorons la visibilité de votre site web sur les moteurs de recherche en optimisant le contenu et la structure de votre site web.</li> \
@@ -90,7 +90,7 @@ export const servicesData = [
       viewDetails: "/service/devops-solution/",
       aosDelay: "100",
       pageTitle: "DevOps Solution",
-      BGImage: "/images/hero-banner1.jpg",
+      BGImage: "/images/hero-banner14.jpg",
       method: "<p>Nos experts en DevOps vous aideront à :</p> \
       <ul> \
       <li>Mettre en place des processus de développement agiles et des pratiques DevOps</li> \
@@ -113,7 +113,7 @@ export const servicesData = [
       viewDetails: "/service/hebergement-web/",
       aosDelay: "600",
       pageTitle: "Hébergement web",
-      BGImage: "/images/hero-banner1.jpg",
+      BGImage: "/images/hero-banner9.jpg",
       method: "<p>Nos services d'hébergement web comprennent :</p> \
       <ul> \
       <li>Hébergement partagé : Idéal pour les sites web de petite à moyenne taille qui ne nécessitent pas de ressources importantes</li> \

@@ -10,7 +10,7 @@ const Blog = () => {
     <>
       <NavbarDark />
 
-      <PageBanner pageTitle="Blog" BGImage="/images/page-banner3.jpg" />
+      <PageBanner pageTitle="Blog" BGImage="/images/hero-banner5.jpg" />
 
       <BlogGridThree />
 
