@@ -33,10 +33,12 @@ import "../styles/responsive.css";
 
 import Head from "next/head";
 import GoTop from "../components/Layouts/GoTop";
+import TagManager from 'react-gtm-module';
 
 function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
     AOS.init();
+    TagManager.initialize({ gtmId: 'GTM-P29VFML' });
   }, []);
   return (
     <>
@@ -44,7 +46,7 @@ function MyApp({ Component, pageProps }) {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>
-          KTEKDESIGN - IT Agency
+          KTEKDESIGN - Agence Web Digitale
         </title>
       </Head>
 
