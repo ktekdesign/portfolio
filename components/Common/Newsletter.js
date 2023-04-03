@@ -24,7 +24,8 @@ const Newsletter = () => {
     e.preventDefault();
     try {
       const url = `${baseUrl}/api/newsletter`;
-      const payload = { name, email };
+      const list = "d81b5b46-1c22-4ca2-9335-522510a54f82";
+      const payload = { name, email, list };
       const response = await axios.post(url, payload);
       setEmail("");
       setName("");

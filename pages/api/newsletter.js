@@ -4,6 +4,7 @@ export default async (req, res) => {
     client.setApiKey(process.env.sendgridKey);
 
     const data = {
+        "list_ids": [req.body.list],
         "contacts": [
             {
             "email": req.body.email,

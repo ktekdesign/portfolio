@@ -7,10 +7,10 @@ import baseUrl from "../../utils/baseUrl";
 
 const alertContent = () => {
   MySwal.fire({
-    title: "Congratulations!",
-    text: "Your message was successfully send and will back to you soon",
+    title: "Félicitation!",
+    text: "Nous avons reçu votre message. Nous vous répondrons dans le plus bref délai",
     icon: "success",
-    timer: 2000,
+    timer: 10000,
     timerProgressBar: true,
     showConfirmButton: false,
   });
@@ -36,8 +36,9 @@ const ContactForm = () => {
     e.preventDefault();
     try {
       const url = `${baseUrl}/api/contact`;
+      const list = "c4f0db4f-5164-4de0-8bf9-63a23e09e2bd";
       const { name, email, number, subject, text } = contact;
-      const payload = { name, email, number, subject, text };
+      const payload = { name, email, number, subject, text, list };
       await axios.post(url, payload);
       const urlNewsletter = `${baseUrl}/api/newsletter`;
       await axios.post(urlNewsletter, payload);
