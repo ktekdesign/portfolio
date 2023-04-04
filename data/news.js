@@ -9,12 +9,12 @@ export const latestNewsData = [
       readMoreLink: "https://www.youtube.com/watch?v=8mfGzXPNiQw",
     },
     {
-      title: "Configuration de docker et utilisation de Express",
+      title: "Configuration de docker avec PostgreSQL et utilisation de Express",
       image: "/images/code.jpg",
       date: "17 Mars 2023",
       video: "https://www.youtube.com/embed/PAm7YvLbfP4",
       category: "Docker",
-      shortText: "Dans cette video, nous embarquons notre projet dans un conteneur Docker.",
+      shortText: "Dans cette video, nous embarquons notre projet dans un conteneur Docker avec PostgreSQL.",
       readMoreLink: "https://www.youtube.com/watch?v=PAm7YvLbfP4",
     },
     {

@@ -49,7 +49,7 @@ const WhyChooseUs = () => {
                 <div className="about-text">
                   <h3 className={saira.className}>Nos Ambitions</h3>
                   <p>
-                    Commencer un business en ligne est souvent beaucoup plus compliquée que ce qui est décrit par les influenceurs. Vous avez besoin d'une main d'oeuvre qualifiée.
+                    Commencer un business en ligne est souvent beaucoup plus compliqué que ce qui est décrit par les influenceurs. Vous avez besoin d'une main d'oeuvre qualifiée.
                   </p>
                   <p>
                     Notre ambition est de donner à tous les porteurs de projets l'opportunité de débuter ou continuer l'aventure du web avec des professionnels réellement qualifiés pour soutenir la croissance de leurs projets.

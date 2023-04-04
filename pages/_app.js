@@ -6,7 +6,7 @@ import "../styles/animate.min.css";
 import "animate.css";
 import "../styles/all.min.css";
 import "../styles/pe-icon-7-stroke.css";
-import "react-accessible-accordion/dist/fancy-example.css";
+//import "react-accessible-accordion/dist/fancy-example.css";
 import "swiper/css";
 import "swiper/css/bundle";
 
@@ -49,11 +49,13 @@ function MyApp({ Component, pageProps }) {
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="KTEKDESIGN SARL"/>
+        <meta name='description' content="Nous sommes spécialisés dans la création de sites web, de stratégies de marketing digital et de développement d'applications mobiles" />
         <title>
           KTEKDESIGN - Agence Web Digitale
         </title>
       </Head>
-      <main className={`${openSans.className} font-sans`}>
+      <main className={openSans.className}>
         <Component {...pageProps} />
       </main>
       <GoTop />

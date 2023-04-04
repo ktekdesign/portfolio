@@ -5386,4 +5386,10 @@ span.new {
 .blog-image img {
   z-index: -1;
 }
+.mt-10 {
+  margin-top: 10px;
+}
+.pos-rel {
+  position: relative;
+}
 /*# sourceMappingURL=style.css.map */

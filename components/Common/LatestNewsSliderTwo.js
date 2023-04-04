@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import Link from "next/link";
-import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
 import { latestNewsData } from "../../data/news";

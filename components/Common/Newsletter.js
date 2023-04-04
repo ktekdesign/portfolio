@@ -73,7 +73,7 @@ const Newsletter = () => {
               >
                 <div className="container">
                   <div className="row justify-content-center">
-                    <div className="col-lg-5 col-md-6">
+                    <div className="col-lg-5 col-md-6 mt-10">
                       <input
                         type="text"
                         className="form-control"
@@ -84,7 +84,7 @@ const Newsletter = () => {
                         required
                       />
                     </div>
-                    <div className="col-lg-7 col-md-6">
+                    <div className="col-lg-7 col-md-6 pos-rel mt-10">
                       <input
                         type="email"
                         className="form-control"

@@ -50,7 +50,7 @@ const MainBanner = () => {
                       data-aos-duration="1200"
                       data-aos-delay="300"
                     >
-                      Discutez avec nous
+                      Prendre Rendez-vous
                     </Link>
 
                     <button

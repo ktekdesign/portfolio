@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import Link from "next/link";
-import Image from "next/image";
 import { latestNewsData } from "../../data/news";
 import FsLightbox from "fslightbox-react";
 import BlogPost from "./BlogPost";
