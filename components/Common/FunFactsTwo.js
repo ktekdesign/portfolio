@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { funFactsData } from "../../data/funfacts";
+import { saira } from "../../utils/fonts";
 
 const FunFactsTwo = () => {
   return (
@@ -9,7 +10,7 @@ const FunFactsTwo = () => {
       <div className="funfacts-area ptb-100 bg-fcfbfb">
         <div className="container">
           <div className="section-title">
-            <h2>Quelles sont vos attentes?</h2>
+            <h2 className={saira.className}>Quelles sont vos attentes?</h2>
             <p>
               Nous vous faisons des recommandations en accord avec vos attentes et votre capacité d'investissement. Peu importe la taille de votre projet, prenez la peine d'échanger avec nous. Parfois, il est très difficile de savoir où commencer. Nous avons une large expérience pour vous apporter quelques conseils utiles.
             </p>
@@ -26,7 +27,7 @@ const FunFactsTwo = () => {
                     data-aos-delay={value.aosDelay}
                   >
                     <i className={value.iconName}></i>
-                    <h3>
+                    <h3 className={saira.className}>
                       {value.number}
                     </h3>
                     <p>{value.shortText}</p>
@@ -41,7 +42,7 @@ const FunFactsTwo = () => {
             data-aos-duration="1200"
             data-aos-delay="500"
           >
-            <h3>Avez-vous des questions?</h3>
+            <h3 className={saira.className}>Avez-vous des questions?</h3>
             <p>N'hésitez à nous contacter</p>
 
             <Link href="/contact" className="btn btn-primary">

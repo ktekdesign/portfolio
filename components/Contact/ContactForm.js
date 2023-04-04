@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 const MySwal = withReactContent(Swal);
 import baseUrl from "../../utils/baseUrl";
+import { saira } from "../../utils/fonts";
 
 const alertContent = () => {
   MySwal.fire({
@@ -53,7 +54,7 @@ const ContactForm = () => {
     <>
       <div className="contact-form">
         <div className="contact-title">
-          <h2>Contactez-nous</h2>
+          <h2 className={saira.className}>Contactez-nous</h2>
           <p>
             Nous serons ravis de discuter de votre projet avec vous.
           </p>

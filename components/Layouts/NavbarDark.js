@@ -41,7 +41,7 @@ const NavbarDark = () => {
       <div id="navbar" className="navbar-area dark-navbar">
         <nav className="navbar navbar-expand-md">
           <div className="container-fluid">
-            <Logo className="navbar-brand" />
+            <Logo className="navbar-brand" priority />
 
             {/* Toggle navigation */}
             <button

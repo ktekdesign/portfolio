@@ -2247,10 +2247,7 @@ Portfolio Details CSS
   font-size: 30px;
   margin-bottom: 15px;
 }
-.services-details-desc h2 {
-  font-size: 26px;
-  margin-bottom: 15px;
-}
+
 .services-details-desc h3 {
   font-size: 24px;
   margin-bottom: 15px;
@@ -5382,5 +5379,8 @@ span.new {
 }
 .newsletter-area {
   position: relative;
+}
+.page-title {
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */

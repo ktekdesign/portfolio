@@ -1,4 +1,5 @@
 import React from "react";
+import { saira } from "../../utils/fonts";
 
 const ContactInfo = () => {
   return (
@@ -11,7 +12,7 @@ const ContactInfo = () => {
                 <div className="icon">
                   <i className="pe-7s-mail"></i>
                 </div>
-                <h3>Envoyez un email à</h3>
+                <h3 className={saira.className}>Envoyez un email à</h3>
                 <p>
                   <a href="mailto:contact@ktekdesign.com">contact@ktekdesign.com</a>
                 </p>
@@ -24,7 +25,7 @@ const ContactInfo = () => {
                 <div className="icon">
                   <i className="pe-7s-map-2"></i>
                 </div>
-                <h3>Nos Réseaux sociaux</h3>
+                <h3 className={saira.className}>Nos Réseaux sociaux</h3>
                 <div className="single-footer-widget">
                 <ul className="social-links">
                   <li>
@@ -57,7 +58,7 @@ const ContactInfo = () => {
                 <div className="icon">
                   <i className="pe-7s-call"></i>
                 </div>
-                <h3>Whatsapp</h3>
+                <h3 className={saira.className}>Whatsapp</h3>
                 <p>
                   <a href="https://api.whatsapp.com/send?phone=5541997527702">+55 (41) 997-527-702</a>
                 </p>

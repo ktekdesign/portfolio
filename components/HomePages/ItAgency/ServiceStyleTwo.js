@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { saira } from "../../../utils/fonts";
 
 const ServiceStyleTwo = () => {
   return (
@@ -11,7 +12,7 @@ const ServiceStyleTwo = () => {
             <div className="col-lg-6">
               <div className="service-info pr-50">
                 <div className="info-head">
-                  <h2 className="title">Web & Mobile Development</h2>
+                  <h2 className={`title ${saira.className}`}>Web & Mobile Development</h2>
                   <p>
                     Que vous faut-il pour avoir plus de chance de votre côté pour réussir sur internet? Sans hésiter, nous pouvons vous dire qu'avoir de la volonté et une équipe technique qualifiée pour vous accompagner fera une grande différence.
                   </p>
@@ -96,7 +97,7 @@ const ServiceStyleTwo = () => {
             <div className="col-lg-6">
               <div className="service-info pl-50">
                 <div className="info-head">
-                  <h2 className="title">Digital Marketing</h2>
+                  <h2 className={`title ${saira.className}`}>Digital Marketing</h2>
                   <p>
                     Positionnez vous où se trouvent vos clients. Apparaîssez et vendez!
                   </p>
@@ -151,7 +152,7 @@ const ServiceStyleTwo = () => {
             <div className="col-lg-6">
               <div className="service-info pr-50">
                 <div className="info-head">
-                  <h2 className="title">Cloud Hosting Services</h2>
+                  <h2 className={`title ${saira.className}`}>Cloud Hosting Services</h2>
                   <p>
                     Prenez controle du Cloud pour fournir une haute disponibilité de vos applications.
                   </p>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
 import Link from 'next/link';
 import Image from "next/image";
+import { saira } from "../../../utils/fonts";
 
 const MainBanner = () => {
   const [toggler, setToggler] = useState(false);
@@ -12,10 +13,13 @@ const MainBanner = () => {
         sources={["https://www.youtube.com/watch?v=mVTeauSR0IA"]}
       />
 
-			<div 
-        className="hero-banner it-banner overly"
-      >
-        <Image src="/images/webagency-computer.jpg" className="hero-banner-img" width={1000} height={500} />
+			<div className="hero-banner it-banner overly">
+        <Image src="/images/webagency-computer.jpg"
+          alt="laptop"
+          className="hero-banner-img"
+          width={1000}
+          height={500}
+          priority />
         <div className="d-table">
           <div className="d-table-cell">
             <div className="container">
@@ -26,6 +30,7 @@ const MainBanner = () => {
                       data-aos="fade-in"
                       data-aos-duration="1200"
                       data-aos-delay="100"
+                      className={saira.className}
                     >
                       Bienvenue à KTEKDESIGN
                     </h1>
@@ -68,9 +73,10 @@ const MainBanner = () => {
                   >
                     <Image
                       src="/images/christian-kpanou.png"
-                      alt="Animate image"
+                      alt="Christian Kpanou"
                       width={636}
                       height={635}
+                      priority
                     />
                   </div>
                 </div>

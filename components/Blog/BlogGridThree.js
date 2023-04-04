@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { latestNewsData } from "../../data/news";
 import FsLightbox from "fslightbox-react";
+import BlogPost from "./BlogPost";
 
 const BlogGrid = () => {
   const [video, setVideo] = useState([]);
@@ -47,53 +48,7 @@ const BlogGrid = () => {
                   data-aos-duration="1200"
                   data-aos-delay={value.aosDelay}
                 >
-                  <div className="single-blog-item">
-                    <div className="blog-image">
-                      {value?.video ?
-                        <>
-                          <Image
-                            src={value.image}
-                            alt={value.title}
-                            width={500}
-                            height={300}
-                            className="rounded-10"
-                          />
-                          <div className="video-box">
-                            <div
-                              className="video-btn"
-                              onClick={() => {
-                                setVideo([value.video]);
-                                setToggler(!toggler);
-                              }}
-                            >
-                              <i className="fa-solid fa-play"></i>
-                            </div>
-                          </div>
-                        </>
-                      :
-                        <Link href={value.readMoreLink}>
-                          <img src={value.image} alt="image" />
-                        </Link>
-                      }
-                      <div className="post-tag">
-                        <Link href={value.readMoreLink}>{value.category}</Link>
-                      </div>
-                    </div>
-
-                    <div className="blog-post-content">
-                      <span className="date">{value.date}</span>
-                      <h3>
-                        <Link href={value.readMoreLink}>{value.title}</Link>
-                      </h3>
-
-                      <p>{value.shortText}</p>
-
-                      <Link href={value.readMoreLink} className="read-more-btn">
-                        Voir la vidéo
-                        <i className="fa-solid fa-angles-right"></i>
-                      </Link>
-                    </div>
-                  </div>
+                  <BlogPost {...value} />
                 </div>
               ))}
 

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { saira } from "../../utils/fonts";
 
 const CtaAreaThree = () => {
   return (
@@ -15,7 +16,7 @@ const CtaAreaThree = () => {
             data-aos-delay="200"
           >
             <span>Quelle est la prochaîne étape?</span>
-            <h3>Êtes-vous prêt? Réalisons ensemble votre projet!</h3>
+            <h3 className={saira.className}>Êtes-vous prêt? Réalisons ensemble votre projet!</h3>
           </div>
 
           <div

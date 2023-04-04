@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import { saira } from "../../utils/fonts";
 
 const PageBanner = ({ pageTitle, BGImage }) => {
   return (
@@ -9,7 +10,7 @@ const PageBanner = ({ pageTitle, BGImage }) => {
         <div className="d-table">
           <div className="d-table-cell">
             <div className="container">
-              <h2>{pageTitle}</h2>
+              <h1 className={`page-title ${saira.className}`}>{pageTitle}</h1>
             </div>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import FsLightbox from "fslightbox-react";
 import Image from "next/image";
+import { saira } from "../../../utils/fonts";
 
 const WhyChooseUs = () => {
   const [toggler, setToggler] = useState(false);
@@ -22,21 +23,21 @@ const WhyChooseUs = () => {
                 data-aos-delay="100"
               >
                 <div className="section-title">
-                  <h2>Pourquoi nous choisir</h2>
+                  <h2 className={saira.className}>Pourquoi nous choisir?</h2>
                   <p>
                     Nous pouvons vous dire que si vous n'êtes pas satisfait vous serez automatiquement remboursé mais tous nos clients ont toujours été satisfaits alors nous allons vous énumerez d'autres raisons.
                   </p>
                 </div>
 
                 <div className="about-text">
-                  <h4>Qui sommes-nous?</h4>
+                  <h3 className={saira.className}>Qui sommes-nous?</h3>
                   <p>
                     Nous avons contribué à la croissance de plusieurs entreprises au plan continental ainsi qu'à l'international. Notre équipe est lidérée par <a href="https://www.linkedin.com/in/christian-kpanou/" target="_blank"><b>Christian Kpanou</b></a> qui collabore à l'international avec plusieurs startups dont la capitalisation surpasse le milliard de dollars. 
                   </p>
                 </div>
 
                 <div className="about-text">
-                  <h4>Notre Histoire</h4>
+                  <h3 className={saira.className}>Notre Histoire</h3>
                   <p>
                     En 8 ans d’activité, nous avons developpé plusieurs grands projets en Afrique dont les applications web et Android TchadCarriere qui totalisent plus 25.000 téléchargements dans la PlayStore et plus de 500.000 visites par mois sur le site. Notre savoir-faire et notre réputation ne sont plus à démontrer auprès de nos clients qui sont satisfaits de nos services.
                   </p>
@@ -46,7 +47,7 @@ const WhyChooseUs = () => {
                 </div>
 
                 <div className="about-text">
-                  <h4>Nos Ambitions</h4>
+                  <h3 className={saira.className}>Nos Ambitions</h3>
                   <p>
                     Commencer un business en ligne est souvent beaucoup plus compliquée que ce qui est décrit par les influenceurs. Vous avez besoin d'une main d'oeuvre qualifiée.
                   </p>

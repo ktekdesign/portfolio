@@ -4,6 +4,7 @@ import baseUrl from "../../utils/baseUrl";
 import axios from "axios";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
+import { saira } from "../../utils/fonts";
 const MySwal = withReactContent(Swal);
 
 const alertContent = (title, message) => {
@@ -38,7 +39,11 @@ const Newsletter = () => {
   return (
     <>
       <div className="newsletter-area">
-        <Image src="/images/newsletter-bg.jpg" className="newsletter-background" width={1024} height={300} />
+        <Image src="/images/newsletter-bg.jpg"
+          className="newsletter-background"
+          alt="Newsletter image de fond"
+          width={1024}
+          height={300} />
         <div className="newsletter-inner-area">
             <div className="newsletter-content">
               <span 
@@ -54,6 +59,7 @@ const Newsletter = () => {
                 data-aos="fade-in"
                 data-aos-duration="1200"
                 data-aos-delay="200"
+                className={saira.className}
               >
                 Ne ratez aucune de nos actualisations et promotions
               </h2>

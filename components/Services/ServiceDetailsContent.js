@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Image from "next/image";
 import FsLightbox from "fslightbox-react";
 import parse from 'html-react-parser';
+import { saira } from "../../utils/fonts";
 
 const ServiceDetailsContent = (props) => {
   const [toggler, setToggler] = useState(false);
@@ -35,14 +36,14 @@ const ServiceDetailsContent = (props) => {
 
             <div className={`col-lg-${props.method ? "8" : "12"} col-md-12`}>
               <div className="services-details-desc">
-                <h2>Description</h2>
+                <h2 className={saira.className}>Description</h2>
                 {parse(props.description)}
               </div>
             </div>
             {props?.method &&
               <div className="col-lg-4 col-md-12">
                 <div className="services-details-info">
-                  <h3>Notre méthodologie</h3>
+                  <h2 className={saira.className}>Notre méthodologie</h2>
                   {parse(props.method)}
                 </div>
               </div>

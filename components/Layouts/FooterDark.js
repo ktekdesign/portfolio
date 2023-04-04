@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Logo from "../Common/Logo";
+import { saira } from "../../utils/fonts";
 
 const FooterDark = () => {
   const currentYear = new Date().getFullYear();
@@ -34,7 +35,7 @@ const FooterDark = () => {
                 data-aos-duration="1200" 
                 data-aos-delay="200"
               >
-                <h3>Nos Entreprises</h3>
+                <h3 className={saira.className}>Nos Entreprises</h3>
 
                 <ul className="list">
                   <li>
@@ -73,7 +74,7 @@ const FooterDark = () => {
                 data-aos-duration="1200" 
                 data-aos-delay="300"
               >
-                <h3>Publications Récentes</h3>
+                <h3 className={saira.className}>Publications Récentes</h3>
 
                 <ul className="list">
                   <li>
@@ -102,7 +103,7 @@ const FooterDark = () => {
                 data-aos-duration="1200" 
                 data-aos-delay="400"
               >
-                <h3>Contact</h3>
+                <h3 className={saira.className}>Contact</h3>
 
                 <ul className="get-in-touch">
                   <li className="pt-2">

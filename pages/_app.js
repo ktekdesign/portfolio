@@ -34,6 +34,10 @@ import "../styles/responsive.css";
 import Head from "next/head";
 import GoTop from "../components/Layouts/GoTop";
 import TagManager from 'react-gtm-module';
+import { Open_Sans } from 'next/font/google';
+
+export const openSans = Open_Sans({ subsets: ['latin'] });
+
 
 function MyApp({ Component, pageProps }) {
   React.useEffect(() => {
@@ -49,9 +53,9 @@ function MyApp({ Component, pageProps }) {
           KTEKDESIGN - Agence Web Digitale
         </title>
       </Head>
-
-      <Component {...pageProps} />
-
+      <main className={`${openSans.className} font-sans`}>
+        <Component {...pageProps} />
+      </main>
       <GoTop />
     </>
   );

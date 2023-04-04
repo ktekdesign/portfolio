@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { servicesData } from "../../../data/services";
+import { saira } from "../../../utils/fonts";
 
 const OurServices = (props) => {
   return (
@@ -9,7 +10,7 @@ const OurServices = (props) => {
         <div className="container">
           {!props?.notitle &&
             <div className="section-title">
-              <h2>Nos Services</h2>
+              <h2 className={saira.className}>Nos Services</h2>
               <p>
                 Première iniciative de notre groupe lancée en Octobre 2015, notre objectif est d’offrir une alternative crédible aux porteurs de projets numériques qui n’ont pas le savoir-faire technique requis pour en assurer l’exécution.
               </p>
@@ -26,7 +27,7 @@ const OurServices = (props) => {
                 >
                   <div className="service-card-one bg-fcfbfb">
                     <i className={value.iconName}></i>
-                    <h3>
+                    <h3 className={saira.className}>
                       <Link href={value.viewDetails}>{value.pageTitle}</Link>
                     </h3>
                     <p>{value.shortText}</p>
