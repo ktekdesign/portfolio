@@ -48,7 +48,7 @@ const BlogGrid = () => {
                   data-aos-duration="1200"
                   data-aos-delay={value.aosDelay}
                 >
-                  <BlogPost {...value} />
+                  <BlogPost toggler={toggler} setToggler={setToggler} setVideo={setVideo} {...value} />
                 </div>
               ))}
 

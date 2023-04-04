@@ -4,15 +4,16 @@ import Image from "next/image";
 import { saira } from "../../utils/fonts";
 
 const BlogPost = (props) => {
+  const {toggler, setToggler, setVideo, ...value} = props;
   return (
     <>
       <div className="single-blog-item bg-fcfbfb">
         <div className="blog-image">
-          {props?.video ?
+          {value?.video ?
             <>
               <Image
-                src={props.image}
-                alt={props.title}
+                src={value.image}
+                alt={value.title}
                 width={500}
                 height={300}
                 className="rounded-10"
@@ -21,7 +22,7 @@ const BlogPost = (props) => {
                 <div
                   className="video-btn"
                   onClick={() => {
-                    setVideo([props.video]);
+                    setVideo([value.video]);
                     setToggler(!toggler);
                   }}
                 >
@@ -30,24 +31,24 @@ const BlogPost = (props) => {
               </div>
             </>
           :
-            <Link href={props.readMoreLink}>
-              <img src={props.image} alt="image" />
+            <Link href={value.readMoreLink}>
+              <img src={value.image} alt="image" />
             </Link>
           }
           <div className="post-tag">
-            <Link href={props.readMoreLink}>{props.category}</Link>
+            <Link href={value.readMoreLink}>{value.category}</Link>
           </div>
         </div>
 
         <div className="blog-post-content">
-          <span>{props.date}</span>
+          <span>{value.date}</span>
           <h3 className={saira.className}>
-            <Link href={props.readMoreLink}>{props.title}</Link>
+            <Link href={value.readMoreLink}>{value.title}</Link>
           </h3>
 
-          <p>{props.shortText}</p>
+          <p>{value.shortText}</p>
 
-          <Link href={props.readMoreLink} className="read-more-btn feature-list">
+          <Link href={value.readMoreLink} className="read-more-btn feature-list">
             Voir la vidéo
             <i className="fa-solid fa-angles-right"></i>
           </Link>
