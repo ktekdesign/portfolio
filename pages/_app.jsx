@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "../node_modules/aos/dist/aos.css";
 import "../styles/bootstrap.min.css";
@@ -6,26 +6,8 @@ import "../styles/animate.min.css";
 import "animate.css";
 import "../styles/all.min.css";
 import "../styles/pe-icon-7-stroke.css";
-//import "react-accessible-accordion/dist/fancy-example.css";
 import "swiper/css";
 import "swiper/css/bundle";
-
-// Software Startup Home Style
-//import "../styles/software-home-page.css";
-// App Showcase Home Style
-//import "../styles/app-home-page.css";
-// Digital Marketing Home Page Style
-//import "../styles/digital-marketing-home-page.css";
-// Personal Portfolio Home Style
-//import "../styles/personal-portfolio-home-page.css";
-// Business Consulting Home Page Style
-//import "../styles/business-consulting-home-page.css";
-// SaaS Startup Home Page Style
-//import "../styles/saas-startup-home-page.css";
-// Freelancer Portfolio Home Page Style
-//import "../styles/freelancer-portfolio-home-page.css";
-// Cyber Security Agency Home Page Style
-//import "../styles/cyber-security-agency-home-page.css";
 
 // Global Style
 import "../styles/style.css";
@@ -33,17 +15,15 @@ import "../styles/responsive.css";
 
 import Head from "next/head";
 import GoTop from "../components/Layouts/GoTop";
-import TagManager from 'react-gtm-module';
 import { Open_Sans } from 'next/font/google';
-
-export const openSans = Open_Sans({ subsets: ['latin'] });
-
+const openSans = Open_Sans({ subsets: ['latin'] });
 
 function MyApp({ Component, pageProps }) {
-  React.useEffect(() => {
+  useEffect(() => {
     AOS.init();
-    TagManager.initialize({ gtmId: 'GTM-P29VFML' });
+    (import('react-gtm-module')).then(TagManager => TagManager.initialize({ gtmId: 'GTM-P29VFML' }));
   }, []);
+  
   return (
     <>
       <Head>
@@ -51,6 +31,8 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="KTEKDESIGN SARL" />
         <meta name='description' content="Nous sommes spécialisés dans la création de sites web, de stratégies de marketing digital et de développement d'applications mobiles" />
+        <link rel="preconnect" href="https://connect.facebook.net"></link>
+        <link rel="preconnect" href="https://www.googletagmanager.com"></link>
         <title>
           KTEKDESIGN - Agence Web Digitale
         </title>
