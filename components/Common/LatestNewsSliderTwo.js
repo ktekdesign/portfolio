@@ -1,13 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination } from "swiper";
 import { latestNewsData } from "../../data/news";
+import FsLightbox from "fslightbox-react";
 
 const LatestNewsSliderTwo = () => {
+  const [video, setVideo] = useState([]);
+  const [toggler, setToggler] = useState(false);
+
   return (
     <>
+      <FsLightbox
+        toggler={toggler}
+        sources={video}
+      />
       <div className="blog-area ptb-100">
         <div className="container">
           <div className="section-title">
@@ -43,13 +51,29 @@ const LatestNewsSliderTwo = () => {
                   <div className="single-blog-item">
                     <div className="blog-image">
                       {value?.video ?
-                        <iframe width="100%" height="250"
-                          src={value.video} 
-                          title={value.title}
-                        />
+                        <>
+                          <Image
+                            src={value.image}
+                            alt={value.title}
+                            width={500}
+                            height={300}
+                            className="rounded-10"
+                          />
+                          <div className="video-box">
+                            <div
+                              className="video-btn"
+                              onClick={() => {
+                                setVideo([value.video]);
+                                setToggler(!toggler);
+                              }}
+                            >
+                              <i className="fa-solid fa-play"></i>
+                            </div>
+                          </div>
+                        </>
                       :
                         <Link href={value.readMoreLink}>
-                          <Image src={value.image} alt="image" />
+                          <Image src={value.image} alt={value.title} width={300} height={250} />
                         </Link>
                       }
                       <div className="post-tag">

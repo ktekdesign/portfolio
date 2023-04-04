@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import Image from "next/image";
 import { latestNewsData } from "../../data/news";
+import FsLightbox from "fslightbox-react";
 
 const BlogGrid = () => {
+  const [video, setVideo] = useState([]);
+  const [toggler, setToggler] = useState(false);
   const [posts, setPosts] = useState([]);
   const [page, setPage] = useState(1);
   const postsPerPage = 6;
@@ -28,6 +32,10 @@ const BlogGrid = () => {
   }, [page]);
   return (
     <>
+      <FsLightbox
+        toggler={toggler}
+        sources={video}
+      />
       <div className="blog-area ptb-100">
         <div className="container">
           <div className="row justify-content-center">
@@ -42,15 +50,31 @@ const BlogGrid = () => {
                   <div className="single-blog-item">
                     <div className="blog-image">
                       {value?.video ?
-                          <iframe width="100%" height="250"
-                            src={value.video} 
-                            title={value.title}
+                        <>
+                          <Image
+                            src={value.image}
+                            alt={value.title}
+                            width={500}
+                            height={300}
+                            className="rounded-10"
                           />
-                        :
-                          <Link href={value.readMoreLink}>
-                            <img src={value.image} alt="image" />
-                          </Link>
-                        }
+                          <div className="video-box">
+                            <div
+                              className="video-btn"
+                              onClick={() => {
+                                setVideo([value.video]);
+                                setToggler(!toggler);
+                              }}
+                            >
+                              <i className="fa-solid fa-play"></i>
+                            </div>
+                          </div>
+                        </>
+                      :
+                        <Link href={value.readMoreLink}>
+                          <img src={value.image} alt="image" />
+                        </Link>
+                      }
                       <div className="post-tag">
                         <Link href={value.readMoreLink}>{value.category}</Link>
                       </div>

@@ -94,7 +94,7 @@ const NavbarDark = () => {
 
               <div className="others-options">
                 <Link href="/contact/" className="btn btn-primary">
-                  Discutez avec nous
+                  Prendre Rendez-vous
                 </Link>
               </div>
             </div>

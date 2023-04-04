@@ -2,7 +2,7 @@ import { servicesData } from "./services";
 export const menuData = [
     {
         href: "/",
-        name: "Home"
+        name: "Accueil"
     },
     {
         href: "/service",

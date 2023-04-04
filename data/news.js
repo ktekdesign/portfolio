@@ -1,6 +1,7 @@
 export const latestNewsData = [
     {
       title: "Clean Architecture: Principes S.O.L.I.D dans la pratique",
+      image: "/images/code.jpg",
       date: "26 Mars 2023",
       video: "https://www.youtube.com/embed/8mfGzXPNiQw",
       category: "Clean Architecture",
@@ -9,6 +10,7 @@ export const latestNewsData = [
     },
     {
       title: "Configuration de docker et utilisation de Express",
+      image: "/images/code.jpg",
       date: "17 Mars 2023",
       video: "https://www.youtube.com/embed/PAm7YvLbfP4",
       category: "Docker",
@@ -17,6 +19,7 @@ export const latestNewsData = [
     },
     {
       title: "Initialisation du projet de cours en ligne avec Typescript.",
+      image: "/images/code.jpg",
       date: "15 Mars 2023",
       video: "https://www.youtube.com/embed/QKdxeHlbpHQ",
       category: "Node.js",
