@@ -3680,7 +3680,6 @@ Blog CSS
 /* Blog style two */
 .single-blog-item {
   margin-bottom: 30px;
-  background-color: #ffffff;
   box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.06);
 }
 .single-blog-item .blog-image {
@@ -5371,16 +5370,20 @@ span.new {
   z-index: -1;
   object-fit: cover;
 }
-.hero-banner.it-banner::before{
+.hero-banner.it-banner::before, .blog-image::before{
   position: absolute;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
+  content: "";
 }
 .newsletter-area {
   position: relative;
 }
 .page-title {
   color: #ffffff;
+}
+.blog-image img {
+  z-index: -1;
 }
 /*# sourceMappingURL=style.css.map */

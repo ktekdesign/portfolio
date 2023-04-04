@@ -1,5 +1,6 @@
 import React from "react";
 import { saira } from "../../utils/fonts";
+import SocialLinks from "../Layouts/SocialLinks";
 
 const ContactInfo = () => {
   return (
@@ -27,28 +28,7 @@ const ContactInfo = () => {
                 </div>
                 <h3 className={saira.className}>Nos Réseaux sociaux</h3>
                 <div className="single-footer-widget">
-                <ul className="social-links">
-                  <li>
-                    <a href="https://www.facebook.com/ktekdesign" target="_blank">
-                      <i className="fa-brands fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://youtube.com/@christiankpanou" target="_blank">
-                      <i className="fa-brands fa-youtube"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://linkedin.com/in/christian-kpanou" target="_blank">
-                      <i className="fa-brands fa-linkedin-in"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.github.com/ktekdesign" target="_blank">
-                      <i className="fa-brands fa-github"></i>
-                    </a>
-                  </li>
-                </ul>
+                  <SocialLinks />
                 </div>
               </div>
             </div>

@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Logo from "../Common/Logo";
 import { saira } from "../../utils/fonts";
+import SocialLinks from "./SocialLinks";
 
 const FooterDark = () => {
   const currentYear = new Date().getFullYear();
@@ -115,28 +116,7 @@ const FooterDark = () => {
                     <a href="mailto:hello@pungent.com">contact@ktekdesign.com</a>
                   </li>
                 </ul>
-                <ul className="social-links">
-                  <li>
-                    <a href="https://www.facebook.com/ktekdesign" target="_blank">
-                      <i className="fa-brands fa-facebook-f"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://youtube.com/@christiankpanou" target="_blank">
-                      <i className="fa-brands fa-youtube"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://linkedin.com/in/christian-kpanou" target="_blank">
-                      <i className="fa-brands fa-linkedin-in"></i>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="https://www.github.com/ktekdesign" target="_blank">
-                      <i className="fa-brands fa-github"></i>
-                    </a>
-                  </li>
-                </ul>
+                <SocialLinks />
               </div>
             </div>
           </div>

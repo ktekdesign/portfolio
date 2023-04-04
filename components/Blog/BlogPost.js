@@ -6,7 +6,7 @@ import { saira } from "../../utils/fonts";
 const BlogPost = (props) => {
   return (
     <>
-      <div className="single-blog-item">
+      <div className="single-blog-item bg-fcfbfb">
         <div className="blog-image">
           {props?.video ?
             <>
@@ -40,14 +40,14 @@ const BlogPost = (props) => {
         </div>
 
         <div className="blog-post-content">
-          <span className="date">{props.date}</span>
+          <span>{props.date}</span>
           <h3 className={saira.className}>
             <Link href={props.readMoreLink}>{props.title}</Link>
           </h3>
 
           <p>{props.shortText}</p>
 
-          <Link href={props.readMoreLink} className="read-more-btn">
+          <Link href={props.readMoreLink} className="read-more-btn feature-list">
             Voir la vidéo
             <i className="fa-solid fa-angles-right"></i>
           </Link>
