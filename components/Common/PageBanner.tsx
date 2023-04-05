@@ -9,6 +9,7 @@ const PageBanner: FC<{pageTitle:string, BGImage:string}> = ({ pageTitle, BGImage
       className="page-title-img"
       fill
       alt="Banner Background"
+      priority
     />
     <div className="d-table">
       <div className="d-table-cell">

@@ -1,4 +1,3 @@
-import { AppContext } from "next/app";
 import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document";
 
 class MyDocument extends Document {
@@ -8,7 +7,7 @@ class MyDocument extends Document {
   }
   render() {
     return (
-      <Html lang="fr_FR">
+      <Html lang="fr-FR">
         <Head>
           <link rel="icon" type="image/png" href="/favicon.png"></link>
         </Head>
