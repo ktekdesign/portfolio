@@ -41,15 +41,15 @@ const BlogGrid = () => {
       <div className="blog-area ptb-100">
         <div className="container">
           <div className="row justify-content-center">
-            {posts?.map((value, i) => (
+            {posts?.map((post, i) => (
                 <div 
                   className="col-lg-4 col-md-6" 
                   key={i}
                   data-aos="fade-in"
                   data-aos-duration="1200"
-                  data-aos-delay={value?.aosDelay}
+                  data-aos-delay={post?.aosDelay}
                 >
-                  <BlogPost toggler={toggler} setToggler={setToggler} setVideo={setVideo} {...value} />
+                  <BlogPost toggler={toggler} setToggler={setToggler} setVideo={setVideo} post={post} />
                 </div>
               ))}
               <Pagination page={page} pages={pages} totalPage={totalPage} />

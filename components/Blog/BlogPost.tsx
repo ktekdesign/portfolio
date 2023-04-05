@@ -1,19 +1,20 @@
-import React from "react";
+import React, { Dispatch, FC, SetStateAction } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { saira } from "../../utils/fonts";
+import { Post } from "../../data/interfaces/Post";
 
-const BlogPost = ({toggler, setToggler, setVideo, ...post}) => {
-  
+const BlogPost: FC<{toggler:boolean, setToggler:Dispatch<SetStateAction<boolean>>, setVideo:Dispatch<SetStateAction<string[]>>, post:Post}> = ({toggler, setToggler, setVideo, post}) => {
+  const { video, image, title, readMoreLink, category, date, shortText } = post;
   return (
     <>
       <div className="single-blog-item bg-fcfbfb">
         <div className="blog-image">
-          {post?.video ?
+          {video ?
             <>
               <Image
-                src={post.image}
-                alt={post.title}
+                src={image}
+                alt={title}
                 width={500}
                 height={300}
                 className="rounded-10"
@@ -22,7 +23,7 @@ const BlogPost = ({toggler, setToggler, setVideo, ...post}) => {
                 <div
                   className="video-btn"
                   onClick={() => {
-                    setVideo([post.video]);
+                    setVideo([video]);
                     setToggler(!toggler);
                   }}
                 >
@@ -31,24 +32,24 @@ const BlogPost = ({toggler, setToggler, setVideo, ...post}) => {
               </div>
             </>
           :
-            <Link href={post.readMoreLink}>
-              <img src={post.image} alt="image" />
+            <Link href={readMoreLink}>
+              <img src={image} alt="image" />
             </Link>
           }
           <div className="post-tag">
-            <Link href={post.readMoreLink}>{post.category}</Link>
+            <Link href={readMoreLink}>{category}</Link>
           </div>
         </div>
 
         <div className="blog-post-content">
-          <span>{post.date}</span>
+          <span>{date}</span>
           <h3 className={saira.className}>
-            <Link href={post.readMoreLink}>{post.title}</Link>
+            <Link href={readMoreLink}>{title}</Link>
           </h3>
 
-          <p>{post.shortText}</p>
+          <p>{shortText}</p>
 
-          <Link href={post.readMoreLink} className="read-more-btn feature-list">
+          <Link href={readMoreLink} className="read-more-btn feature-list">
             Voir la vidéo
             <i className="fa-solid fa-angles-right"></i>
           </Link>

@@ -48,7 +48,7 @@ const LatestNewsSliderTwo = () => {
           >
             {latestNewsData?.slice(0, 5).map((post, i) => (
               <SwiperSlide key={i}>
-                <BlogPost toggler={toggler} setToggler={setToggler} setVideo={setVideo} {...post} />
+                <BlogPost toggler={toggler} setToggler={setToggler} setVideo={setVideo} post={post} />
               </SwiperSlide>
             ))}
           </Swiper>

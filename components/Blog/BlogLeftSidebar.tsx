@@ -60,7 +60,7 @@ const BlogLeftSidebar = () => {
                     data-aos-duration="1200"
                     data-aos-delay={post?.aosDelay}
                   >
-                    <BlogPost toggler={toggler} setToggler={setToggler} setVideo={setVideo} {...post} />
+                    <BlogPost toggler={toggler} setToggler={setToggler} setVideo={setVideo} post={post} />
                   </div>
                 ))}
                 <Pagination 
