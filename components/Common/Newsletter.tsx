@@ -97,7 +97,7 @@ const Newsletter = () => {
                         required
                       />
                     
-                      <button type="submit">Je m'inscris!</button>
+                      <button type="submit">Je m&apos;inscris!</button>
                     </div>
                   </div>
                 </div>

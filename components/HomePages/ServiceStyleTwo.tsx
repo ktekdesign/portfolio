@@ -13,7 +13,7 @@ const ServiceStyleTwo = () =>
               <div className="info-head">
                 <h2 className={`title ${saira.className}`}>Web & Mobile Development</h2>
                 <p>
-                  Que vous faut-il pour avoir plus de chance de votre côté pour réussir sur internet? Sans hésiter, nous pouvons vous dire qu'avoir de la volonté et une équipe technique qualifiée pour vous accompagner fera une grande différence.
+                  Que vous faut-il pour avoir plus de chance de votre côté pour réussir sur internet? Sans hésiter, nous pouvons vous dire qu&apos;avoir de la volonté et une équipe technique qualifiée pour vous accompagner fera une grande différence.
                 </p>
               </div>
 

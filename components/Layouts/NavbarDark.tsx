@@ -71,8 +71,8 @@ const NavbarDark = () => {
                       {item.name} <i className={`fa-solid ${item?.children && "fa-angle-down"}`}></i>
                     </Link>
                     {item?.children && 
-                      <ul className="dropdown-menu">
-                        {item.children.map((submenu, key) =>
+                      <ul className="dropdown-menu">             
+                        {Object.entries(item.children).map(([key, submenu]) =>
                           <li className="nav-item" key={key}>
                             <Link
                               href={submenu.viewDetails}

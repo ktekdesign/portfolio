@@ -15,10 +15,10 @@ const OurServices = ({title=false}) =>
         </div>
       }
       <div className="row justify-content-center">
-        {servicesData?.map((service, i) => (
+        {Object.entries(servicesData).map(([key, service]) =>
           <div
             className="col-lg-4 col-sm-6"
-            key={i}
+            key={key}
             data-aos="fade-in"
             data-aos-duration="1200"
             data-aos-delay={service.aosDelay}
@@ -33,7 +33,7 @@ const OurServices = ({title=false}) =>
               <p>{service.shortText}</p>
             </div>
           </div>
-        ))}
+        )}
       </div>
     </div>
   </div>

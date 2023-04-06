@@ -18,8 +18,9 @@ import Head from "next/head";
 import GoTop from "../components/Layouts/GoTop";
 import TagManager from "react-gtm-module";
 import { Open_Sans } from 'next/font/google';
-const openSans = Open_Sans({ subsets: ['latin'] });
 
+const openSans = Open_Sans({ subsets: ['latin'] });
+  
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   useEffect(() => {
     AOS.init();

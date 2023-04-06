@@ -1,4 +1,4 @@
-import React, { ChangeEvent, Dispatch, FormEvent, SetStateAction, useState } from "react";
+import React, { Dispatch, FormEvent, SetStateAction, useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
@@ -6,11 +6,11 @@ const MySwal = withReactContent(Swal);
 import baseUrl from "../../utils/baseUrl";
 import { saira } from "../../utils/fonts";
 
-const alertContent = () => {
+const alertContent = (title: string, text: string, icon?: string) => {
   MySwal.fire({
-    title: "Félicitation!",
-    text: "Nous avons reçu votre message. Nous vous répondrons dans le plus bref délai",
-    icon: "success",
+    title: title,
+    text: text,
+    icon: icon === "error" ? "error" : "success",
     timer: 10000,
     timerProgressBar: true,
     showConfirmButton: false,
@@ -36,7 +36,6 @@ const INITIAL_STATE: FormData = {
 const ContactForm = () => {
   const [contact, setContact]: [FormData, Dispatch<SetStateAction<FormData>>]  = useState(INITIAL_STATE);
   const handleChange = (e: FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    console.log(e.target);
     const { name, value } = e.currentTarget;
     setContact((prevState) => ({ ...prevState, [name]: value }));
   };
@@ -51,9 +50,9 @@ const ContactForm = () => {
       const urlNewsletter = `${baseUrl}/api/newsletter`;
       await axios.post(urlNewsletter, payload);
       setContact(INITIAL_STATE);
-      alertContent();
+      alertContent("Félicitation!", "Nous avons reçu votre message. Nous vous répondrons dans le plus bref délai", );
     } catch (error) {
-      console.log(error);
+      alertContent("Dommage", "Il s'est produit une erreur. Veuillez tenter plus tard.", "error");
     }
   };
 

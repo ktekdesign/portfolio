@@ -90,7 +90,7 @@ const FooterDark = () => {
                   </li>
                   <li>
                     <Link href="https://www.youtube.com/watch?v=QKdxeHlbpHQ" target="_blank">
-                      Initialisation d'un projet Node.js
+                      Initialisation d&apos;un projet Node.js
                     </Link>
                   </li>
                 </ul>

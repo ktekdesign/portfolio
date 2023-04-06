@@ -7,28 +7,29 @@ import { Post } from "../../data/interfaces/Post";
 import Pagination from "./Pagination";
 
 const BlogGrid = () => {
+  const router: NextRouter = useRouter();
+  const POSTS_PER_PAGE = 6;
+  const totalPage = Math.ceil(latestNewsData.length / POSTS_PER_PAGE);
+  const pages: number[] = [];
   const [video, setVideo]: [string[], Dispatch<SetStateAction<string[]>>] = useState([""]);
   const [toggler, setToggler]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(false);
   const [posts, setPosts]: [Post[] | undefined, Dispatch<SetStateAction<Post[] | undefined>>] = useState();
   const [page, setPage]: [number, Dispatch<SetStateAction<number>>] = useState(1);
-  const postsPerPage: number = 6;
-  const totalPage: number = Math.ceil(latestNewsData.length / postsPerPage);
-  const pages: number[] = [];
-  for (let index:number = 1; index <= totalPage; index++) {
+  
+  for (let index = 1; index <= totalPage; index++) {
     pages.push(index);  
   }
-  const router: NextRouter = useRouter();
-
+  
   useEffect(() => {
     const path: string[] = router.asPath.split("/");
-    path.pop();
-    const current: number = parseInt(path?.pop() || '1');
-    if (Number.isInteger(current)) setPage(current);
+    path.map(value => {
+      if (Number.isInteger(value)) setPage(parseInt(value, 10));
+    });
   }, [router]);
 
   useEffect(() => {
-    const end: number = page * postsPerPage;
-    const start: number = end - postsPerPage;
+    const end = page * POSTS_PER_PAGE;
+    const start = end - POSTS_PER_PAGE;
     setPosts(latestNewsData?.slice(start, end));
   }, [page]);
 

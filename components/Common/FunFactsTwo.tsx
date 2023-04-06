@@ -13,7 +13,7 @@ const FunFactsTwo = () => {
           <div className="section-title">
             <h2 className={saira.className}>Quelles sont vos attentes?</h2>
             <p>
-              Nous vous faisons des recommandations en accord avec vos attentes et votre capacité d'investissement. Peu importe la taille de votre projet, prenez la peine d'échanger avec nous. Parfois, il est très difficile de savoir où commencer. Nous avons une large expérience pour vous apporter quelques conseils utiles.
+              Nous vous faisons des recommandations en accord avec vos attentes et votre capacité d&apos;investissement. Peu importe la taille de votre projet, prenez la peine d&apos;échanger avec nous. Parfois, il est très difficile de savoir où commencer. Nous avons une large expérience pour vous apporter quelques conseils utiles.
             </p>
           </div>
 
@@ -43,7 +43,7 @@ const FunFactsTwo = () => {
             data-aos-delay="500"
           >
             <h3 className={saira.className}>Avez-vous des questions?</h3>
-            <p>N'hésitez à nous contacter</p>
+            <p>N&apos;hésitez à nous contacter</p>
             <Link href="/contact" className="btn btn-primary">
               Contact
             </Link>

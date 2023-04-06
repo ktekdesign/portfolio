@@ -33,7 +33,13 @@ const BlogPost: FC<{toggler:boolean, setToggler:Dispatch<SetStateAction<boolean>
             </>
           :
             <Link href={readMoreLink}>
-              <img src={image} alt="image" />
+              <Image
+                src={image}
+                alt={title}
+                width={500}
+                height={300}
+                className="rounded-10"
+              />
             </Link>
           }
           <div className="post-tag">

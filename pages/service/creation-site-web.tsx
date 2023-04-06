@@ -1,8 +1,8 @@
 import React from "react";
-import ServiceDetails from "../../components/Layouts/ServiceDetails";
 import { servicesData } from "../../data/services";
+import ServiceDetails from "../../components/Layouts/ServiceDetails";
 
-const ServicePage = () => 
-  <ServiceDetails {...servicesData[0]} />
+const ServicePage = () =>
+  <ServiceDetails service={servicesData.site_web} />
 
 export default ServicePage;

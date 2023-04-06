@@ -20,5 +20,5 @@ export const menuData = [
     {
         href: "/contact",
         name: "Contact"
-    },
+    }
 ];
