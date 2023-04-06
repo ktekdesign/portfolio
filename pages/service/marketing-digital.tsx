@@ -1,8 +1,9 @@
-import React from "react";
-import { servicesData } from "../../data/services";
-import ServiceDetails from "../../components/Layouts/ServiceDetails";
+import React from 'react'
+import { servicesData } from '../../data/services'
+import ServiceDetails from '../../components/Layouts/ServiceDetails'
 
-const ServicePage = () =>
+const ServicePage = () => (
   <ServiceDetails service={servicesData.digital_marketing} />
+)
 
-export default ServicePage;
+export default ServicePage

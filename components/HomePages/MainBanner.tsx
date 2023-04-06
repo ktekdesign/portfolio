@@ -1,21 +1,23 @@
-import React, { Dispatch, SetStateAction, useState } from "react";
-import FsLightbox from "fslightbox-react";
-import Link from 'next/link';
-import Image from "next/image";
-import { saira } from "../../utils/fonts";
+import React, { Dispatch, SetStateAction, useState } from 'react'
+import FsLightbox from 'fslightbox-react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { saira } from '../../utils/fonts'
 
 const MainBanner = () => {
-  const [toggler, setToggler]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(false);
-  
+  const [toggler, setToggler]: [boolean, Dispatch<SetStateAction<boolean>>] =
+    useState(false)
+
   return (
-		<>
+    <>
       <FsLightbox
         toggler={toggler}
-        sources={["https://www.youtube.com/watch?v=mVTeauSR0IA"]}
+        sources={['https://www.youtube.com/watch?v=mVTeauSR0IA']}
       />
 
-			<div className="hero-banner it-banner overly">
-        <Image src="/images/webagency-computer.jpg"
+      <div className="hero-banner it-banner overly">
+        <Image
+          src="/images/webagency-computer.jpg"
           alt="laptop"
           className="hero-banner-img"
           fill
@@ -43,8 +45,8 @@ const MainBanner = () => {
                       Agence Web Digitale
                     </p>
 
-                    <Link 
-                      href="/contact" 
+                    <Link
+                      href="/contact"
                       className="btn btn-primary"
                       data-aos="fade-in"
                       data-aos-duration="1200"
@@ -85,8 +87,8 @@ const MainBanner = () => {
           </div>
         </div>
       </div>
-		</>
+    </>
   )
 }
 
-export default MainBanner;
+export default MainBanner

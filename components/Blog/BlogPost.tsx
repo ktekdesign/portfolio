@@ -1,16 +1,21 @@
-import React, { Dispatch, FC, SetStateAction } from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { saira } from "../../utils/fonts";
-import { Post } from "../../data/interfaces/Post";
+import React, { Dispatch, FC, SetStateAction } from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { saira } from '../../utils/fonts'
+import { Post } from '../../data/interfaces/Post'
 
-const BlogPost: FC<{toggler:boolean, setToggler:Dispatch<SetStateAction<boolean>>, setVideo:Dispatch<SetStateAction<string[]>>, post:Post}> = ({toggler, setToggler, setVideo, post}) => {
-  const { video, image, title, readMoreLink, category, date, shortText } = post;
+const BlogPost: FC<{
+  toggler: boolean
+  setToggler: Dispatch<SetStateAction<boolean>>
+  setVideo: Dispatch<SetStateAction<string[]>>
+  post: Post
+}> = ({ toggler, setToggler, setVideo, post }) => {
+  const { video, image, title, readMoreLink, category, date, shortText } = post
   return (
     <>
       <div className="single-blog-item bg-fcfbfb">
         <div className="blog-image">
-          {video ?
+          {video ? (
             <>
               <Image
                 src={image}
@@ -23,15 +28,15 @@ const BlogPost: FC<{toggler:boolean, setToggler:Dispatch<SetStateAction<boolean>
                 <div
                   className="video-btn"
                   onClick={() => {
-                    setVideo([video]);
-                    setToggler(!toggler);
+                    setVideo([video])
+                    setToggler(!toggler)
                   }}
                 >
                   <i className="fa-solid fa-play"></i>
                 </div>
               </div>
             </>
-          :
+          ) : (
             <Link href={readMoreLink}>
               <Image
                 src={image}
@@ -41,7 +46,7 @@ const BlogPost: FC<{toggler:boolean, setToggler:Dispatch<SetStateAction<boolean>
                 className="rounded-10"
               />
             </Link>
-          }
+          )}
           <div className="post-tag">
             <Link href={readMoreLink}>{category}</Link>
           </div>
@@ -62,7 +67,7 @@ const BlogPost: FC<{toggler:boolean, setToggler:Dispatch<SetStateAction<boolean>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default BlogPost;
+export default BlogPost

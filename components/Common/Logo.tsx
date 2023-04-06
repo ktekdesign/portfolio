@@ -1,10 +1,11 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
+import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 
-const Logo = ({priority=false, ...linkProps}) =>
+const Logo = ({ priority = false, ...linkProps }) => (
   <Link href="/" {...linkProps}>
-    <Image src="/images/logo-white.png" 
+    <Image
+      src="/images/logo-white.png"
       className="white-logo"
       width={100}
       height={56}
@@ -12,5 +13,6 @@ const Logo = ({priority=false, ...linkProps}) =>
       alt="Logo"
     />
   </Link>
+)
 
-export default Logo;
+export default Logo

@@ -1,9 +1,9 @@
-import React from "react";
-import Link from "next/link";
-import Image from "next/image";
-import { saira } from "../../utils/fonts";
+import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
+import { saira } from '../../utils/fonts'
 
-const ServiceStyleTwo = () =>
+const ServiceStyleTwo = () => (
   <>
     <div className="service-style-two ptb-100 bg-fcfbfb">
       <div className="container">
@@ -11,9 +11,14 @@ const ServiceStyleTwo = () =>
           <div className="col-lg-6">
             <div className="service-info pr-50">
               <div className="info-head">
-                <h2 className={`title ${saira.className}`}>Web & Mobile Development</h2>
+                <h2 className={`title ${saira.className}`}>
+                  Web & Mobile Development
+                </h2>
                 <p>
-                  Que vous faut-il pour avoir plus de chance de votre côté pour réussir sur internet? Sans hésiter, nous pouvons vous dire qu&apos;avoir de la volonté et une équipe technique qualifiée pour vous accompagner fera une grande différence.
+                  Que vous faut-il pour avoir plus de chance de votre côté pour
+                  réussir sur internet? Sans hésiter, nous pouvons vous dire
+                  qu&apos;avoir de la volonté et une équipe technique qualifiée
+                  pour vous accompagner fera une grande différence.
                 </p>
               </div>
 
@@ -96,9 +101,12 @@ const ServiceStyleTwo = () =>
           <div className="col-lg-6">
             <div className="service-info pl-50">
               <div className="info-head">
-                <h2 className={`title ${saira.className}`}>Digital Marketing</h2>
+                <h2 className={`title ${saira.className}`}>
+                  Digital Marketing
+                </h2>
                 <p>
-                  Positionnez vous où se trouvent vos clients. Apparaîssez et vendez!
+                  Positionnez vous où se trouvent vos clients. Apparaîssez et
+                  vendez!
                 </p>
               </div>
 
@@ -151,12 +159,16 @@ const ServiceStyleTwo = () =>
           <div className="col-lg-6">
             <div className="service-info pr-50">
               <div className="info-head">
-                <h2 className={`title ${saira.className}`}>Cloud Hosting Services</h2>
+                <h2 className={`title ${saira.className}`}>
+                  Cloud Hosting Services
+                </h2>
                 <p>
-                  Prenez controle du Cloud pour fournir une haute disponibilité de vos applications.
+                  Prenez controle du Cloud pour fournir une haute disponibilité
+                  de vos applications.
                 </p>
                 <p>
-                  Si vous etes une startup, vous devez passer au Cloud maintenant!
+                  Si vous etes une startup, vous devez passer au Cloud
+                  maintenant!
                 </p>
               </div>
 
@@ -218,4 +230,5 @@ const ServiceStyleTwo = () =>
       </div>
     </div>
   </>
-export default ServiceStyleTwo;
+)
+export default ServiceStyleTwo

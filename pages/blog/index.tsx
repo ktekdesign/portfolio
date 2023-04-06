@@ -1,11 +1,11 @@
-import React from "react";
-import NavbarDark from "../../components/Layouts/NavbarDark";
-import PageBanner from "../../components/Common/PageBanner";
-import BlogGridThree from "../../components/Blog/BlogGridThree";
-import Footer from "../../components/Layouts/FooterDark";
-import Newsletter from "../../components/Common/Newsletter";
+import React from 'react'
+import NavbarDark from '../../components/Layouts/NavbarDark'
+import PageBanner from '../../components/Common/PageBanner'
+import BlogGridThree from '../../components/Blog/BlogGridThree'
+import Footer from '../../components/Layouts/FooterDark'
+import Newsletter from '../../components/Common/Newsletter'
 
-const Blog = () =>
+const Blog = () => (
   <>
     <NavbarDark />
 
@@ -17,5 +17,6 @@ const Blog = () =>
 
     <Footer />
   </>
+)
 
-export default Blog;
+export default Blog

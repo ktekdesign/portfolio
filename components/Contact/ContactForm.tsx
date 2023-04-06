@@ -1,69 +1,77 @@
-import React, { Dispatch, FormEvent, SetStateAction, useState } from "react";
-import axios from "axios";
-import Swal from "sweetalert2";
-import withReactContent from "sweetalert2-react-content";
-const MySwal = withReactContent(Swal);
-import baseUrl from "../../utils/baseUrl";
-import { saira } from "../../utils/fonts";
+import React, { Dispatch, FormEvent, SetStateAction, useState } from 'react'
+import axios from 'axios'
+import Swal from 'sweetalert2'
+import withReactContent from 'sweetalert2-react-content'
+const MySwal = withReactContent(Swal)
+import baseUrl from '../../utils/baseUrl'
+import { saira } from '../../utils/fonts'
 
 const alertContent = (title: string, text: string, icon?: string) => {
   MySwal.fire({
     title: title,
     text: text,
-    icon: icon === "error" ? "error" : "success",
+    icon: icon === 'error' ? 'error' : 'success',
     timer: 10000,
     timerProgressBar: true,
     showConfirmButton: false,
-  });
-};
+  })
+}
 
 type FormData = {
-  name: string,
-  email: string,
-  number: string,
-  subject: string,
+  name: string
+  email: string
+  number: string
+  subject: string
   text: string
 }
 // Form initial state
 const INITIAL_STATE: FormData = {
-  name: "",
-  email: "",
-  number: "",
-  subject: "",
-  text: "",
-};
+  name: '',
+  email: '',
+  number: '',
+  subject: '',
+  text: '',
+}
 
 const ContactForm = () => {
-  const [contact, setContact]: [FormData, Dispatch<SetStateAction<FormData>>]  = useState(INITIAL_STATE);
-  const handleChange = (e: FormEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.currentTarget;
-    setContact((prevState) => ({ ...prevState, [name]: value }));
-  };
+  const [contact, setContact]: [FormData, Dispatch<SetStateAction<FormData>>] =
+    useState(INITIAL_STATE)
+  const handleChange = (
+    e: FormEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.currentTarget
+    setContact((prevState) => ({ ...prevState, [name]: value }))
+  }
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
     try {
-      const url = `${baseUrl}/api/contact`;
-      const list = "c4f0db4f-5164-4de0-8bf9-63a23e09e2bd";
-      const { name, email, number, subject, text } = contact;
-      const payload = { name, email, number, subject, text, list };
-      await axios.post(url, payload);
-      const urlNewsletter = `${baseUrl}/api/newsletter`;
-      await axios.post(urlNewsletter, payload);
-      setContact(INITIAL_STATE);
-      alertContent("Félicitation!", "Nous avons reçu votre message. Nous vous répondrons dans le plus bref délai", );
+      const url = `${baseUrl}/api/contact`
+      const list = 'c4f0db4f-5164-4de0-8bf9-63a23e09e2bd'
+      const { name, email, number, subject, text } = contact
+      const payload = { name, email, number, subject, text, list }
+      await axios.post(url, payload)
+      const urlNewsletter = `${baseUrl}/api/newsletter`
+      await axios.post(urlNewsletter, payload)
+      setContact(INITIAL_STATE)
+      alertContent(
+        'Félicitation!',
+        'Nous avons reçu votre message. Nous vous répondrons dans le plus bref délai'
+      )
     } catch (error) {
-      alertContent("Dommage", "Il s'est produit une erreur. Veuillez tenter plus tard.", "error");
+      alertContent(
+        'Dommage',
+        "Il s'est produit une erreur. Veuillez tenter plus tard.",
+        'error'
+      )
     }
-  };
+  }
 
   return (
     <>
       <div className="contact-form">
         <div className="contact-title">
           <h2 className={saira.className}>Contactez-nous</h2>
-          <p>
-            Nous serons ravis de discuter de votre projet avec vous.
-          </p>
+          <p>Nous serons ravis de discuter de votre projet avec vous.</p>
         </div>
 
         <form onSubmit={handleSubmit}>
@@ -147,7 +155,7 @@ const ContactForm = () => {
         </form>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ContactForm;
+export default ContactForm

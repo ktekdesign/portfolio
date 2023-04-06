@@ -1,11 +1,11 @@
-import React from "react";
-import NavbarDark from "../../components/Layouts/NavbarDark";
-import PageBanner from "../../components/Common/PageBanner";
-import Footer from "../../components/Layouts/FooterDark";
-import OurServices from "../../components/HomePages/OurServices";
-import Newsletter from "../../components/Common/Newsletter";
+import React from 'react'
+import NavbarDark from '../../components/Layouts/NavbarDark'
+import PageBanner from '../../components/Common/PageBanner'
+import Footer from '../../components/Layouts/FooterDark'
+import OurServices from '../../components/HomePages/OurServices'
+import Newsletter from '../../components/Common/Newsletter'
 
-const ServicesPage = () =>
+const ServicesPage = () => (
   <>
     <NavbarDark />
 
@@ -17,5 +17,6 @@ const ServicesPage = () =>
 
     <Footer />
   </>
+)
 
-export default ServicesPage;
+export default ServicesPage

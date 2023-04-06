@@ -1,41 +1,45 @@
-import React, { useState, useEffect, Dispatch, SetStateAction } from "react";
-import { NextRouter, useRouter } from "next/router";
-import Link from "next/link";
-import Logo from "../Common/Logo";
-import { menuData } from "../../data/menu";
+import React, { useState, useEffect, Dispatch, SetStateAction } from 'react'
+import { NextRouter, useRouter } from 'next/router'
+import Link from 'next/link'
+import Logo from '../Common/Logo'
+import { menuData } from '../../data/menu'
 
 const NavbarDark = () => {
   // Add active class
-  const [currentPath, setCurrentPath]: [string, Dispatch<SetStateAction<string>>] = useState("");
-  const router: NextRouter = useRouter();
+  const [currentPath, setCurrentPath]: [
+    string,
+    Dispatch<SetStateAction<string>>
+  ] = useState('')
+  const router: NextRouter = useRouter()
   // console.log(router.asPath)
 
   useEffect(() => {
-    setCurrentPath(router.asPath);
-  }, [router]);
-  
-  const [menu, setMenu]: [boolean, Dispatch<SetStateAction<boolean>>] = useState(true);
+    setCurrentPath(router.asPath)
+  }, [router])
+
+  const [menu, setMenu]: [boolean, Dispatch<SetStateAction<boolean>>] =
+    useState(true)
   const toggleNavbar = () => {
-    setMenu(!menu);
-  };
+    setMenu(!menu)
+  }
 
   useEffect(() => {
-    const elementId = document.getElementById("navbar");
-    document.addEventListener("scroll", () => {
+    const elementId = document.getElementById('navbar')
+    document.addEventListener('scroll', () => {
       if (window.scrollY > 170) {
-        elementId?.classList.add("is-sticky");
+        elementId?.classList.add('is-sticky')
       } else {
-        elementId?.classList.remove("is-sticky");
+        elementId?.classList.remove('is-sticky')
       }
-    });
-  });
+    })
+  })
 
   const classOne = menu
-    ? "collapse navbar-collapse mean-menu"
-    : "collapse navbar-collapse show";
+    ? 'collapse navbar-collapse mean-menu'
+    : 'collapse navbar-collapse show'
   const classTwo = menu
-    ? "navbar-toggler navbar-toggler-right collapsed"
-    : "navbar-toggler navbar-toggler-right";
+    ? 'navbar-toggler navbar-toggler-right collapsed'
+    : 'navbar-toggler navbar-toggler-right'
 
   return (
     <>
@@ -62,33 +66,39 @@ const NavbarDark = () => {
 
             <div className={classOne} id="navbarSupportedContent">
               <ul className="navbar-nav">
-                {menuData.map((item, i) =>
+                {menuData.map((item, i) => (
                   <li className="nav-item" key={i}>
                     <Link
                       href={item.href}
-                      className={`nav-link ${currentPath == item.href && "active"}`}
+                      className={`nav-link ${
+                        currentPath == item.href && 'active'
+                      }`}
                     >
-                      {item.name} <i className={`fa-solid ${item?.children && "fa-angle-down"}`}></i>
+                      {item.name}{' '}
+                      <i
+                        className={`fa-solid ${
+                          item?.children && 'fa-angle-down'
+                        }`}
+                      ></i>
                     </Link>
-                    {item?.children && 
-                      <ul className="dropdown-menu">             
-                        {Object.entries(item.children).map(([key, submenu]) =>
+                    {item?.children && (
+                      <ul className="dropdown-menu">
+                        {Object.entries(item.children).map(([key, submenu]) => (
                           <li className="nav-item" key={key}>
                             <Link
                               href={submenu.viewDetails}
                               className={`nav-link ${
-                                currentPath == submenu.viewDetails && "active"
+                                currentPath == submenu.viewDetails && 'active'
                               }`}
                             >
                               {submenu.pageTitle}
                             </Link>
-                        </li>
-                        )
-                        }
+                          </li>
+                        ))}
                       </ul>
-                    }
+                    )}
                   </li>
-                )}
+                ))}
               </ul>
 
               <div className="others-options">
@@ -101,7 +111,7 @@ const NavbarDark = () => {
         </nav>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default NavbarDark;
+export default NavbarDark

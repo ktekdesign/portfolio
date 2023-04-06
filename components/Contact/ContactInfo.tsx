@@ -1,8 +1,8 @@
-import React from "react";
-import { saira } from "../../utils/fonts";
-import SocialLinks from "../Layouts/SocialLinks";
+import React from 'react'
+import { saira } from '../../utils/fonts'
+import SocialLinks from '../Layouts/SocialLinks'
 
-const ContactInfo = () =>
+const ContactInfo = () => (
   <div className="contact-info-area pt-100 pb-70">
     <div className="container">
       <div className="row justify-content-center">
@@ -15,7 +15,6 @@ const ContactInfo = () =>
             <p>
               <a href="mailto:contact@ktekdesign.com">contact@ktekdesign.com</a>
             </p>
-            
           </div>
         </div>
 
@@ -38,12 +37,15 @@ const ContactInfo = () =>
             </div>
             <h3 className={saira.className}>Whatsapp</h3>
             <p>
-              <a href="https://api.whatsapp.com/send?phone=5541997527702">+55 (41) 997-527-702</a>
+              <a href="https://api.whatsapp.com/send?phone=5541997527702">
+                +55 (41) 997-527-702
+              </a>
             </p>
           </div>
         </div>
       </div>
     </div>
   </div>
+)
 
-export default ContactInfo;
+export default ContactInfo

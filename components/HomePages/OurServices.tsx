@@ -1,21 +1,24 @@
-import React from "react";
-import Link from "next/link";
-import { servicesData } from "../../data/services";
-import { saira } from "../../utils/fonts";
+import React from 'react'
+import Link from 'next/link'
+import { servicesData } from '../../data/services'
+import { saira } from '../../utils/fonts'
 
-const OurServices = ({title=false}) =>
+const OurServices = ({ title = false }) => (
   <div className="pt-100 pb-70">
     <div className="container">
-      {title &&
+      {title && (
         <div className="section-title">
           <h2 className={saira.className}>Nos Services</h2>
           <p>
-            Première iniciative de notre groupe lancée en Octobre 2015, notre objectif est d’offrir une alternative crédible aux porteurs de projets numériques qui n’ont pas le savoir-faire technique requis pour en assurer l’exécution.
+            Première iniciative de notre groupe lancée en Octobre 2015, notre
+            objectif est d’offrir une alternative crédible aux porteurs de
+            projets numériques qui n’ont pas le savoir-faire technique requis
+            pour en assurer l’exécution.
           </p>
         </div>
-      }
+      )}
       <div className="row justify-content-center">
-        {Object.entries(servicesData).map(([key, service]) =>
+        {Object.entries(servicesData).map(([key, service]) => (
           <div
             className="col-lg-4 col-sm-6"
             key={key}
@@ -26,16 +29,15 @@ const OurServices = ({title=false}) =>
             <div className="service-card-one bg-fcfbfb">
               <i className={service.iconName}></i>
               <h3 className={saira.className}>
-                <Link href={service.viewDetails}>
-                  {service.pageTitle}
-                </Link>
+                <Link href={service.viewDetails}>{service.pageTitle}</Link>
               </h3>
               <p>{service.shortText}</p>
             </div>
           </div>
-        )}
+        ))}
       </div>
     </div>
   </div>
-  
-export default OurServices;
+)
+
+export default OurServices
