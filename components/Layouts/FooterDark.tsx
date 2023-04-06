@@ -72,16 +72,13 @@ const FooterDark = () => {
               >
                 <h3 className={saira.className}>Publications Récentes</h3>
                 <ul className="list">
-                  {latestNewsData?.map((post, key) =>
+                  {latestNewsData?.map((post, key) => (
                     <li key={key}>
-                      <Link
-                        href={post.readMoreLink}
-                        target="_blank"
-                      >
+                      <Link href={post.readMoreLink} target="_blank">
                         {post.title}
                       </Link>
                     </li>
-                  )}
+                  ))}
                 </ul>
               </div>
             </div>
