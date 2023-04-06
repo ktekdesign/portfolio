@@ -1,15 +1,14 @@
-import React, { Dispatch, FC, SetStateAction } from 'react'
+import React, { FC, useContext } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { saira } from '../../utils/fonts'
 import { Post } from '../../data/interfaces/Post'
+import LightBoxContext from '../context/lightBoxContext'
 
 const BlogPost: FC<{
-  toggler: boolean
-  setToggler: Dispatch<SetStateAction<boolean>>
-  setVideo: Dispatch<SetStateAction<string[]>>
   post: Post
-}> = ({ toggler, setToggler, setVideo, post }) => {
+}> = ({ post }) => {
+  const { toggler, setToggler, setVideo } = useContext(LightBoxContext)
   const { video, image, title, readMoreLink, category, date, shortText } = post
   return (
     <>

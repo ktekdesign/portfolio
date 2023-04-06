@@ -9,7 +9,7 @@ import LatestNewsSliderTwo from '../components/Common/LatestNewsSliderTwo'
 import Newsletter from '../components/Common/Newsletter'
 import Footer from '../components/Layouts/FooterDark'
 
-const Home = () => (
+const Home = () =>
   <>
     <NavbarDark />
 
@@ -29,6 +29,5 @@ const Home = () => (
 
     <Footer />
   </>
-)
 
 export default Home

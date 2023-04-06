@@ -5,7 +5,7 @@ import Footer from '../../components/Layouts/FooterDark'
 import OurServices from '../../components/HomePages/OurServices'
 import Newsletter from '../../components/Common/Newsletter'
 
-const ServicesPage = () => (
+const ServicesPage = () =>
   <>
     <NavbarDark />
 
@@ -17,6 +17,5 @@ const ServicesPage = () => (
 
     <Footer />
   </>
-)
 
 export default ServicesPage

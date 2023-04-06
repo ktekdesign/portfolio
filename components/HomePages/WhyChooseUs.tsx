@@ -1,19 +1,13 @@
-import React, { Dispatch, SetStateAction, useState } from 'react'
-import FsLightbox from 'fslightbox-react'
+import React, { useContext } from 'react'
 import Image from 'next/image'
 import { saira } from '../../utils/fonts'
+import LightBoxContext from '../context/lightBoxContext'
 
 const WhyChooseUs = () => {
-  const [toggler, setToggler]: [boolean, Dispatch<SetStateAction<boolean>>] =
-    useState(false)
-
+  const { toggler, setToggler, setVideo } = useContext(LightBoxContext)
+  
   return (
     <>
-      <FsLightbox
-        toggler={toggler}
-        sources={['https://www.youtube.com/watch?v=mVTeauSR0IA']}
-      />
-
       <section className="about-area ptb-100">
         <div className="container">
           <div className="row align-items-center">
@@ -104,7 +98,10 @@ const WhyChooseUs = () => {
 
                 <div className="video-box">
                   <div
-                    onClick={() => setToggler(!toggler)}
+                    onClick={() => {
+                      setVideo(['https://www.youtube.com/watch?v=mVTeauSR0IA'])
+                      setToggler(!toggler)
+                    }}
                     className="video-btn"
                   >
                     <i className="fa-solid fa-play"></i>

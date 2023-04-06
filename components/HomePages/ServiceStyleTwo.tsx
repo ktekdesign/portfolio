@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { saira } from '../../utils/fonts'
 
-const ServiceStyleTwo = () => (
+const ServiceStyleTwo = () =>
   <>
     <div className="service-style-two ptb-100 bg-fcfbfb">
       <div className="container">
@@ -230,5 +230,5 @@ const ServiceStyleTwo = () => (
       </div>
     </div>
   </>
-)
+
 export default ServiceStyleTwo

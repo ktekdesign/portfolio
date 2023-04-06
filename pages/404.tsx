@@ -4,7 +4,7 @@ import PageBanner from '../components/Common/PageBanner'
 import ErrorContent from '../components/Error/ErrorContent'
 import Footer from '../components/Layouts/FooterDark'
 
-const Error = () => (
+const Error = () =>
   <>
     <NavbarDark />
 
@@ -14,6 +14,5 @@ const Error = () => (
 
     <Footer />
   </>
-)
 
 export default Error

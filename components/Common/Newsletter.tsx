@@ -1,42 +1,29 @@
-import React, { Dispatch, FormEvent, SetStateAction, useState } from 'react'
+import React from 'react'
+import { useForm, SubmitHandler } from "react-hook-form"
 import Image from 'next/image'
-import baseUrl from '../../utils/baseUrl'
+import { newsletterUrl } from '../../utils/urls'
 import axios from 'axios'
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
 import { saira } from '../../utils/fonts'
-const MySwal = withReactContent(Swal)
+import alertContent from '../../utils/alertContent'
 
-const alertContent = (title: string, message: string) => {
-  MySwal.fire({
-    title: title,
-    text: message,
-    icon: 'success',
-    timer: 2000,
-    timerProgressBar: true,
-    showConfirmButton: false,
-  })
+type Inputs = {
+  name: string,
+  email: string
 }
-
+      
 const Newsletter = () => {
-  const [email, setEmail]: [string, Dispatch<SetStateAction<string>>] =
-    useState('')
-  const [name, setName]: [string, Dispatch<SetStateAction<string>>] =
-    useState('')
-
-  const saveContact = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = async(data) => {
     try {
-      const url = `${baseUrl}/api/newsletter`
-      const list = 'd81b5b46-1c22-4ca2-9335-522510a54f82'
-      const payload = { name, email, list }
-      const response = await axios.post(url, payload)
-      setEmail('')
-      setName('')
-      alertContent('Félicitations!', response.data)
+      const response = await axios.post(newsletterUrl, data)
+      alertContent("Félicitations!", response.data)
+      reset({
+        name: '',
+        email: ''
+      })
     } catch (error) {
       if (error instanceof Error) {
-        alertContent('Désolé', error.message)
+        alertContent("Désolé", error.message, "error")
       }
     }
   }
@@ -71,7 +58,7 @@ const Newsletter = () => {
 
             <form
               className="newsletter-form"
-              onSubmit={saveContact}
+              onSubmit={handleSubmit(onSubmit)}
               data-aos="fade-in"
               data-aos-duration="1200"
               data-aos-delay="400"
@@ -83,23 +70,18 @@ const Newsletter = () => {
                       type="text"
                       className="form-control"
                       placeholder="Votre nome"
-                      name="name"
-                      value={name}
-                      onChange={(e) => setName(e.target.value)}
-                      required
+                      {...register("name", { required: true })}
                     />
+                    {errors.name && <span className='error'>Veuillez remplir ce champ</span>}
                   </div>
                   <div className="col-lg-7 col-md-6 pos-rel mt-10">
                     <input
                       type="email"
                       className="form-control"
                       placeholder="Votre email"
-                      name="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                      required
+                      {...register("email", { required: true })}
                     />
-
+                    {errors.email && <span className='error'>Veuillez remplir ce champ</span>}
                     <button type="submit">Je m&apos;inscris!</button>
                   </div>
                 </div>

@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 
-const Logo = ({ priority = false, ...linkProps }) => (
+const Logo = ({ priority = false, ...linkProps }) =>
   <Link href="/" {...linkProps}>
     <Image
       src="/images/logo-white.png"
@@ -13,6 +13,5 @@ const Logo = ({ priority = false, ...linkProps }) => (
       alt="Logo"
     />
   </Link>
-)
 
 export default Logo

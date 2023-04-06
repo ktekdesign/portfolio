@@ -1,71 +1,52 @@
-import React, { Dispatch, FormEvent, SetStateAction, useState } from 'react'
+import React, { useEffect } from 'react'
+import { useForm, SubmitHandler } from "react-hook-form"
 import axios from 'axios'
-import Swal from 'sweetalert2'
-import withReactContent from 'sweetalert2-react-content'
-const MySwal = withReactContent(Swal)
-import baseUrl from '../../utils/baseUrl'
+import { newsletterUrl, contactUrl } from '../../utils/urls'
 import { saira } from '../../utils/fonts'
+import alertContent from '../../utils/alertContent'
 
-const alertContent = (title: string, text: string, icon?: string) => {
-  MySwal.fire({
-    title: title,
-    text: text,
-    icon: icon === 'error' ? 'error' : 'success',
-    timer: 10000,
-    timerProgressBar: true,
-    showConfirmButton: false,
-  })
-}
-
-type FormData = {
-  name: string
-  email: string
-  number: string
-  subject: string
+type Inputs = {
+  name: string,
+  email: string,
+  number: string,
+  subject: string,
   text: string
-}
-// Form initial state
-const INITIAL_STATE: FormData = {
-  name: '',
-  email: '',
-  number: '',
-  subject: '',
-  text: '',
 }
 
 const ContactForm = () => {
-  const [contact, setContact]: [FormData, Dispatch<SetStateAction<FormData>>] =
-    useState(INITIAL_STATE)
-  const handleChange = (
-    e: FormEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.currentTarget
-    setContact((prevState) => ({ ...prevState, [name]: value }))
-  }
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+  const { register, handleSubmit, reset, formState: { errors } } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = async(data) => { 
     try {
-      const url = `${baseUrl}/api/contact`
-      const list = 'c4f0db4f-5164-4de0-8bf9-63a23e09e2bd'
-      const { name, email, number, subject, text } = contact
-      const payload = { name, email, number, subject, text, list }
-      await axios.post(url, payload)
-      const urlNewsletter = `${baseUrl}/api/newsletter`
-      await axios.post(urlNewsletter, payload)
-      setContact(INITIAL_STATE)
+      const contact = {
+        ...data,
+        list: "contact"
+      }
+      
+      await axios.post(contactUrl, contact)
+      await axios.post(newsletterUrl, contact)
+      
       alertContent(
         'Félicitation!',
         'Nous avons reçu votre message. Nous vous répondrons dans le plus bref délai'
       )
+      reset({
+        name: '',
+        email: '',
+        number: '',
+        subject: '',
+        text: ''
+      })
     } catch (error) {
-      alertContent(
-        'Dommage',
-        "Il s'est produit une erreur. Veuillez tenter plus tard.",
-        'error'
-      )
+      if (error instanceof Error) {
+        alertContent(
+          `Dommage! Votre demande de contact n'a pas été envoyé à ${contactUrl}`,
+          error.message,
+          'error'
+        )
+      }
     }
   }
-
+  
   return (
     <>
       <div className="contact-form">
@@ -74,7 +55,7 @@ const ContactForm = () => {
           <p>Nous serons ravis de discuter de votre projet avec vous.</p>
         </div>
 
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="container">
             <div className="contact-form-box">
               <div className="row">
@@ -82,38 +63,31 @@ const ContactForm = () => {
                   <div className="form-group">
                     <input
                       type="text"
-                      name="name"
                       placeholder="Nom"
                       className="form-control"
-                      value={contact.name}
-                      onChange={handleChange}
-                      required
+                      {...register("name", { required: true })}
                     />
+                    {errors.name && <span className='error'>Veuillez remplir ce champ</span>}
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="form-group">
                     <input
                       type="text"
-                      name="email"
                       placeholder="Email"
                       className="form-control"
-                      value={contact.email}
-                      onChange={handleChange}
-                      required
+                      {...register("email", { required: true })}
                     />
+                    {errors.email && <span>Veuillez remplir ce champ</span>}
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="form-group">
                     <input
                       type="text"
-                      name="number"
                       placeholder="Téléphone"
                       className="form-control"
-                      value={contact.number}
-                      onChange={handleChange}
-                      required
+                      {...register("number")}
                     />
                   </div>
                 </div>
@@ -121,27 +95,23 @@ const ContactForm = () => {
                   <div className="form-group">
                     <input
                       type="text"
-                      name="subject"
                       placeholder="Sujet"
                       className="form-control"
-                      value={contact.subject}
-                      onChange={handleChange}
-                      required
+                      {...register("subject", { required: true })}
                     />
+                    {errors.subject && <span>Veuillez remplir ce champ</span>}
                   </div>
                 </div>
                 <div className="col-lg-12 col-md-12">
                   <div className="form-group">
                     <textarea
-                      name="text"
                       cols={30}
                       rows={6}
                       placeholder="Votre message..."
                       className="form-control"
-                      value={contact.text}
-                      onChange={handleChange}
-                      required
+                      {...register("text", { required: true })}
                     />
+                    {errors.text && <span>Veuillez remplir ce champ</span>}
                   </div>
                 </div>
                 <div className="col-lg-12 col-sm-12">

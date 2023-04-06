@@ -18,6 +18,7 @@ import Head from 'next/head'
 import GoTop from '../components/Layouts/GoTop'
 import TagManager from 'react-gtm-module'
 import { Open_Sans } from 'next/font/google'
+import LightBoxContextProvider from '../components/context/lightBoxContextProvider'
 
 const openSans = Open_Sans({ subsets: ['latin'] })
 
@@ -42,7 +43,9 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <title>KTEKDESIGN - Agence Web Digitale</title>
       </Head>
       <main className={openSans.className}>
-        <Component {...pageProps} />
+        <LightBoxContextProvider>
+          <Component {...pageProps} />
+        </LightBoxContextProvider>
       </main>
       <GoTop />
     </>

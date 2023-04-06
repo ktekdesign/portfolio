@@ -1,21 +1,14 @@
-import React, { Dispatch, SetStateAction, useState } from 'react'
-import FsLightbox from 'fslightbox-react'
+import React, { useContext } from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { saira } from '../../utils/fonts'
+import LightBoxContext from '../context/lightBoxContext'
 
 const MainBanner = () => {
-  const [toggler, setToggler]: [boolean, Dispatch<SetStateAction<boolean>>] =
-    useState(false)
+  const { toggler, setToggler, setVideo } = useContext(LightBoxContext)
 
   return (
-    <>
-      <FsLightbox
-        toggler={toggler}
-        sources={['https://www.youtube.com/watch?v=mVTeauSR0IA']}
-      />
-
-      <div className="hero-banner it-banner overly">
+    <div className="hero-banner it-banner overly">
         <Image
           src="/images/webagency-computer.jpg"
           alt="laptop"
@@ -56,7 +49,10 @@ const MainBanner = () => {
                     </Link>
 
                     <button
-                      onClick={() => setToggler(!toggler)}
+                      onClick={() => {
+                        setVideo(["https://www.youtube.com/embed/mVTeauSR0IA"])
+                        setToggler(!toggler)
+                      }}
                       className="btn btn-secondary"
                       data-aos="fade-in"
                       data-aos-duration="1200"
@@ -87,7 +83,6 @@ const MainBanner = () => {
           </div>
         </div>
       </div>
-    </>
   )
 }
 

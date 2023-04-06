@@ -4,7 +4,7 @@ const Pagination: FC<{ page: number; pages: number[]; totalPage: number }> = ({
   page,
   pages,
   totalPage,
-}) => (
+}) =>
   <div className="col-lg-12 col-md-12">
     <div className="pagination-area">
       {page > 1 && (
@@ -38,6 +38,5 @@ const Pagination: FC<{ page: number; pages: number[]; totalPage: number }> = ({
       )}
     </div>
   </div>
-)
 
 export default Pagination

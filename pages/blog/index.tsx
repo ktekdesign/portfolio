@@ -5,7 +5,7 @@ import BlogGridThree from '../../components/Blog/BlogGridThree'
 import Footer from '../../components/Layouts/FooterDark'
 import Newsletter from '../../components/Common/Newsletter'
 
-const Blog = () => (
+const Blog = () =>
   <>
     <NavbarDark />
 
@@ -17,6 +17,5 @@ const Blog = () => (
 
     <Footer />
   </>
-)
 
 export default Blog

@@ -5,7 +5,7 @@ import { saira } from '../../utils/fonts'
 const PageBanner: FC<{ pageTitle: string; BGImage: string }> = ({
   pageTitle,
   BGImage,
-}) => (
+}) =>
   <div className="page-title-area">
     <Image
       src={BGImage}
@@ -22,6 +22,5 @@ const PageBanner: FC<{ pageTitle: string; BGImage: string }> = ({
       </div>
     </div>
   </div>
-)
 
 export default PageBanner

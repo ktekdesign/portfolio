@@ -5,7 +5,7 @@ import ContactInfo from '../components/Contact/ContactInfo'
 import ContactForm from '../components/Contact/ContactForm'
 import Footer from '../components/Layouts/FooterDark'
 
-const Contact = () => (
+const Contact = () =>
   <>
     <NavbarDark />
 
@@ -17,6 +17,5 @@ const Contact = () => (
 
     <Footer />
   </>
-)
 
 export default Contact

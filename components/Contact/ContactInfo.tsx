@@ -2,7 +2,7 @@ import React from 'react'
 import { saira } from '../../utils/fonts'
 import SocialLinks from '../Layouts/SocialLinks'
 
-const ContactInfo = () => (
+const ContactInfo = () =>
   <div className="contact-info-area pt-100 pb-70">
     <div className="container">
       <div className="row justify-content-center">
@@ -46,6 +46,5 @@ const ContactInfo = () => (
       </div>
     </div>
   </div>
-)
 
 export default ContactInfo
