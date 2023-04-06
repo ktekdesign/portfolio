@@ -6,8 +6,8 @@ import SocialLinks from "./SocialLinks"
 import { latestNewsData } from "../../data/news"
 
 const currentYear = new Date().getFullYear()
-  
-const FooterDark = () =>
+
+const FooterDark = () => (
   <>
     <footer className="footer-area footer-dark">
       <div className="container">
@@ -25,9 +25,9 @@ const FooterDark = () =>
 
               <p>
                 Vous êtes indépendant, petite, moyenne ou grande entreprise ?
-                Vous êtes au bon endroit. Laissez nous vous émerveiller avec
-                la qualité de nos services en facilitant la croissance de
-                votre entreprise.
+                Vous êtes au bon endroit. Laissez nous vous émerveiller avec la
+                qualité de nos services en facilitant la croissance de votre
+                entreprise.
               </p>
             </div>
           </div>
@@ -101,9 +101,7 @@ const FooterDark = () =>
                 </li>
                 <li className="pt-2">
                   <i className="fa-solid fa-envelope"></i>
-                  <a href="mailto:hello@pungent.com">
-                    contact@ktekdesign.com
-                  </a>
+                  <a href="mailto:hello@pungent.com">contact@ktekdesign.com</a>
                 </li>
               </ul>
               <SocialLinks />
@@ -125,5 +123,6 @@ const FooterDark = () =>
       </div>
     </footer>
   </>
+)
 
 export default React.memo(FooterDark)

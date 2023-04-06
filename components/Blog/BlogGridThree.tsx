@@ -10,10 +10,8 @@ const BlogGrid = () => {
   const POSTS_PER_PAGE = 6
   const totalPage = Math.ceil(latestNewsData.length / POSTS_PER_PAGE)
   const pages: number[] = []
-  const [posts, setPosts]: [
-    Post[],
-    Dispatch<SetStateAction<Post[]>>
-  ] = useState([{} as Post])
+  const [posts, setPosts]: [Post[], Dispatch<SetStateAction<Post[]>>] =
+    useState([{} as Post])
   const [page, setPage]: [number, Dispatch<SetStateAction<number>>] =
     useState(1)
 

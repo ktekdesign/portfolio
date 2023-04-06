@@ -5,7 +5,7 @@ import { latestNewsData } from "../../data/news"
 import { saira } from "../../utils/fonts"
 import BlogPost from "../Blog/BlogPost"
 
-const LatestNewsSliderTwo = () =>
+const LatestNewsSliderTwo = () => (
   <>
     <div className="blog-area ptb-100">
       <div className="container">
@@ -46,5 +46,6 @@ const LatestNewsSliderTwo = () =>
       </div>
     </div>
   </>
+)
 
 export default React.memo(LatestNewsSliderTwo)
