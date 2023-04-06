@@ -1,52 +1,57 @@
-import React, { useEffect } from 'react'
+import React from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
-import axios from 'axios'
-import { newsletterUrl, contactUrl } from '../../utils/urls'
-import { saira } from '../../utils/fonts'
-import alertContent from '../../utils/alertContent'
+import axios from "axios"
+import { newsletterUrl, contactUrl } from "../../utils/urls"
+import { saira } from "../../utils/fonts"
+import alertContent from "../../utils/alertContent"
 
 type Inputs = {
-  name: string,
-  email: string,
-  number: string,
-  subject: string,
+  name: string
+  email: string
+  number: string
+  subject: string
   text: string
 }
 
 const ContactForm = () => {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = async(data) => { 
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<Inputs>()
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
       const contact = {
         ...data,
-        list: "contact"
+        list: "contact",
       }
-      
+
       await axios.post(contactUrl, contact)
       await axios.post(newsletterUrl, contact)
-      
+
       alertContent(
-        'Félicitation!',
-        'Nous avons reçu votre message. Nous vous répondrons dans le plus bref délai'
+        "Félicitation!",
+        "Nous avons reçu votre message. Nous vous répondrons dans le plus bref délai"
       )
       reset({
-        name: '',
-        email: '',
-        number: '',
-        subject: '',
-        text: ''
+        name: "",
+        email: "",
+        number: "",
+        subject: "",
+        text: "",
       })
     } catch (error) {
       if (error instanceof Error) {
         alertContent(
           `Dommage! Votre demande de contact n'a pas été envoyé à ${contactUrl}`,
           error.message,
-          'error'
+          "error"
         )
       }
     }
   }
-  
+
   return (
     <>
       <div className="contact-form">
@@ -67,7 +72,9 @@ const ContactForm = () => {
                       className="form-control"
                       {...register("name", { required: true })}
                     />
-                    {errors.name && <span className='error'>Veuillez remplir ce champ</span>}
+                    {errors.name && (
+                      <span className="error">Veuillez remplir ce champ</span>
+                    )}
                   </div>
                 </div>
                 <div className="col-lg-6">

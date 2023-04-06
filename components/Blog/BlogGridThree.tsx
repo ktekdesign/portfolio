@@ -1,9 +1,9 @@
-import React, { useState, useEffect, SetStateAction, Dispatch } from 'react'
-import { NextRouter, useRouter } from 'next/router'
-import { latestNewsData } from '../../data/news'
-import BlogPost from './BlogPost'
-import { Post } from '../../data/interfaces/Post'
-import Pagination from './Pagination'
+import React, { useState, useEffect, SetStateAction, Dispatch } from "react"
+import { NextRouter, useRouter } from "next/router"
+import { latestNewsData } from "../../data/news"
+import BlogPost from "./BlogPost"
+import { Post } from "../../data/interfaces/Post"
+import Pagination from "./Pagination"
 
 const BlogGrid = () => {
   const router: NextRouter = useRouter()
@@ -22,7 +22,7 @@ const BlogGrid = () => {
   }
 
   useEffect(() => {
-    const path: string[] = router.asPath.split('/')
+    const path: string[] = router.asPath.split("/")
     path.map((value) => {
       if (Number.isInteger(value)) setPage(parseInt(value, 10))
     })
@@ -47,9 +47,7 @@ const BlogGrid = () => {
                 data-aos-duration="1200"
                 data-aos-delay={post?.aosDelay}
               >
-                <BlogPost
-                  post={post}
-                />
+                <BlogPost post={post} />
               </div>
             ))}
             <Pagination page={page} pages={pages} totalPage={totalPage} />

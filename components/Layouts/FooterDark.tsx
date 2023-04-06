@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
-import Logo from '../Common/Logo'
-import { saira } from '../../utils/fonts'
-import SocialLinks from './SocialLinks'
-import { latestNewsData } from '../../data/news'
+import React from "react"
+import Link from "next/link"
+import Logo from "../Common/Logo"
+import { saira } from "../../utils/fonts"
+import SocialLinks from "./SocialLinks"
+import { latestNewsData } from "../../data/news"
 
 const FooterDark = () => {
   const currentYear = new Date().getFullYear()
@@ -115,8 +115,8 @@ const FooterDark = () => {
         <div className="copyright-area">
           <div className="container">
             <p>
-              Tous Droits Réservés. Copyright &copy; 2015 - {currentYear}{' '}
-              Développé par :{' '}
+              Tous Droits Réservés. Copyright &copy; 2015 - {currentYear}{" "}
+              Développé par :{" "}
               <a href="https://ktekdesign.com" target="_blank">
                 KTEKDESIGN
               </a>

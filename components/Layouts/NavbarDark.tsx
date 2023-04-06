@@ -1,15 +1,15 @@
-import React, { useState, useEffect, Dispatch, SetStateAction } from 'react'
-import { NextRouter, useRouter } from 'next/router'
-import Link from 'next/link'
-import Logo from '../Common/Logo'
-import { menuData } from '../../data/menu'
+import React, { useState, useEffect, Dispatch, SetStateAction } from "react"
+import { NextRouter, useRouter } from "next/router"
+import Link from "next/link"
+import Logo from "../Common/Logo"
+import { menuData } from "../../data/menu"
 
 const NavbarDark = () => {
   // Add active class
   const [currentPath, setCurrentPath]: [
     string,
     Dispatch<SetStateAction<string>>
-  ] = useState('')
+  ] = useState("")
   const router: NextRouter = useRouter()
   // console.log(router.asPath)
 
@@ -24,22 +24,22 @@ const NavbarDark = () => {
   }
 
   useEffect(() => {
-    const elementId = document.getElementById('navbar')
-    document.addEventListener('scroll', () => {
+    const elementId = document.getElementById("navbar")
+    document.addEventListener("scroll", () => {
       if (window.scrollY > 170) {
-        elementId?.classList.add('is-sticky')
+        elementId?.classList.add("is-sticky")
       } else {
-        elementId?.classList.remove('is-sticky')
+        elementId?.classList.remove("is-sticky")
       }
     })
   })
 
   const classOne = menu
-    ? 'collapse navbar-collapse mean-menu'
-    : 'collapse navbar-collapse show'
+    ? "collapse navbar-collapse mean-menu"
+    : "collapse navbar-collapse show"
   const classTwo = menu
-    ? 'navbar-toggler navbar-toggler-right collapsed'
-    : 'navbar-toggler navbar-toggler-right'
+    ? "navbar-toggler navbar-toggler-right collapsed"
+    : "navbar-toggler navbar-toggler-right"
 
   return (
     <>
@@ -71,13 +71,13 @@ const NavbarDark = () => {
                     <Link
                       href={item.href}
                       className={`nav-link ${
-                        currentPath == item.href && 'active'
+                        currentPath == item.href && "active"
                       }`}
                     >
-                      {item.name}{' '}
+                      {item.name}{" "}
                       <i
                         className={`fa-solid ${
-                          item?.children && 'fa-angle-down'
+                          item?.children && "fa-angle-down"
                         }`}
                       ></i>
                     </Link>
@@ -88,7 +88,7 @@ const NavbarDark = () => {
                             <Link
                               href={submenu.viewDetails}
                               className={`nav-link ${
-                                currentPath == submenu.viewDetails && 'active'
+                                currentPath == submenu.viewDetails && "active"
                               }`}
                             >
                               {submenu.pageTitle}

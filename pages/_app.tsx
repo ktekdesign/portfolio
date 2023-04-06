@@ -1,31 +1,31 @@
-import React, { FC, useEffect } from 'react'
-import { AppProps } from 'next/app'
-import AOS from 'aos'
-import '../node_modules/aos/dist/aos.css'
-import '../styles/bootstrap.min.css'
-import '../styles/animate.min.css'
-import 'animate.css'
-import '../styles/all.min.css'
-import '../styles/pe-icon-7-stroke.css'
-import 'swiper/css'
-import 'swiper/css/bundle'
+import React, { FC, useEffect } from "react"
+import { AppProps } from "next/app"
+import AOS from "aos"
+import "../node_modules/aos/dist/aos.css"
+import "../styles/bootstrap.min.css"
+import "../styles/animate.min.css"
+import "animate.css"
+import "../styles/all.min.css"
+import "../styles/pe-icon-7-stroke.css"
+import "swiper/css"
+import "swiper/css/bundle"
 
 // Global Style
-import '../styles/style.css'
-import '../styles/responsive.css'
+import "../styles/style.css"
+import "../styles/responsive.css"
 
-import Head from 'next/head'
-import GoTop from '../components/Layouts/GoTop'
-import TagManager from 'react-gtm-module'
-import { Open_Sans } from 'next/font/google'
-import LightBoxContextProvider from '../components/context/lightBoxContextProvider'
+import Head from "next/head"
+import GoTop from "../components/Layouts/GoTop"
+import TagManager from "react-gtm-module"
+import { Open_Sans } from "next/font/google"
+import LightBoxContextProvider from "../components/context/lightBoxContextProvider"
 
-const openSans = Open_Sans({ subsets: ['latin'] })
+const openSans = Open_Sans({ subsets: ["latin"] })
 
 const App: FC<AppProps> = ({ Component, pageProps }) => {
   useEffect(() => {
     AOS.init()
-    TagManager.initialize({ gtmId: 'GTM-P29VFML' })
+    TagManager.initialize({ gtmId: "GTM-P29VFML" })
   }, [])
 
   return (

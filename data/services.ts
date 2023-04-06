@@ -1,12 +1,12 @@
 export const servicesData = {
   site_web: {
-    iconName: 'pe-7s-display2 bg-6610f2',
+    iconName: "pe-7s-display2 bg-6610f2",
     shortText:
-      'À la pointe de la technologie, nous avons une longueur d’avance en matière de référencement, d’optimisation et de sécurité.',
-    viewDetails: '/service/creation-site-web/',
-    aosDelay: '200',
-    pageTitle: 'Création de site web',
-    BGImage: '/images/hero-banner3.jpg',
+      "À la pointe de la technologie, nous avons une longueur d’avance en matière de référencement, d’optimisation et de sécurité.",
+    viewDetails: "/service/creation-site-web/",
+    aosDelay: "200",
+    pageTitle: "Création de site web",
+    BGImage: "/images/hero-banner3.jpg",
     method:
       "<p>Nos services de création de sites web comprennent :</p> \
         <ul> \
@@ -22,13 +22,13 @@ export const servicesData = {
         <p>Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons vous aider à créer un site web qui impressionnera votre public cible et renforcera votre présence en ligne.</p>",
   },
   app_dev: {
-    iconName: 'pe-7s-phone bg-fc3549',
+    iconName: "pe-7s-phone bg-fc3549",
     shortText:
-      'Confier le développement de votre application à des spécialistes, capables de combler toutes vos attentes, est en garantir le succès.',
-    viewDetails: '/service/application-android-et-ios/',
-    aosDelay: '400',
-    pageTitle: 'Application Android et iOS',
-    BGImage: '/images/hero-banner4.jpg',
+      "Confier le développement de votre application à des spécialistes, capables de combler toutes vos attentes, est en garantir le succès.",
+    viewDetails: "/service/application-android-et-ios/",
+    aosDelay: "400",
+    pageTitle: "Application Android et iOS",
+    BGImage: "/images/hero-banner4.jpg",
     method:
       "<p>Nos services de conception d'applications mobiles comprennent :</p> \
       <ul> \
@@ -44,13 +44,13 @@ export const servicesData = {
         <p>Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons vous aider à concevoir et à développer une application mobile pour Android ou iOS qui impressionnera vos utilisateurs et renforcera votre présence sur le marché.</p>",
   },
   e_commerce: {
-    iconName: 'pe-7s-cart bg-00d280',
+    iconName: "pe-7s-cart bg-00d280",
     shortText:
-      'Un site e-commerce est le principal allié des commerçants qui décident d’élargir la portée de la divulgation et de la vente de leurs produits.',
-    viewDetails: '/service/e-commerce/',
-    aosDelay: '500',
-    pageTitle: 'E-Commerce',
-    BGImage: '/images/hero-banner10.jpg',
+      "Un site e-commerce est le principal allié des commerçants qui décident d’élargir la portée de la divulgation et de la vente de leurs produits.",
+    viewDetails: "/service/e-commerce/",
+    aosDelay: "500",
+    pageTitle: "E-Commerce",
+    BGImage: "/images/hero-banner10.jpg",
     method:
       "<p>Nos services de création de sites e-commerce comprennent :</p> \
       <ul> \
@@ -67,13 +67,13 @@ export const servicesData = {
         <p>Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons vous aider à créer une boutique en ligne qui impressionnera votre public cible et augmentera vos ventes en ligne.</p>",
   },
   digital_marketing: {
-    iconName: 'pe-7s-light bg-ffb700',
+    iconName: "pe-7s-light bg-ffb700",
     shortText:
-      'Investissez en action commerciale avec un fort potentiel de gain tout en contribuant à l’édification et au positionnement de votre marque.',
-    viewDetails: '/service/marketing-digital/',
-    aosDelay: '300',
-    pageTitle: 'Marketing Digital',
-    BGImage: '/images/hero-banner12.jpg',
+      "Investissez en action commerciale avec un fort potentiel de gain tout en contribuant à l’édification et au positionnement de votre marque.",
+    viewDetails: "/service/marketing-digital/",
+    aosDelay: "300",
+    pageTitle: "Marketing Digital",
+    BGImage: "/images/hero-banner12.jpg",
     method:
       "<p>Nos services de marketing digital comprennent :</p> \
         <ul> \
@@ -89,22 +89,22 @@ export const servicesData = {
         <p>Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons vous aider à améliorer la visibilité de votre entreprise en ligne et à attirer plus de clients potentiels.</p>",
   },
   devops: {
-    iconName: 'pe-7s-settings bg-13c4a1',
+    iconName: "pe-7s-settings bg-13c4a1",
     shortText:
-      'Laissez nous vous montrer comment Amazon Web Services peut mettre votre startup en avant dans votre domaine en combinant securité et haute disponiblité.',
-    viewDetails: '/service/devops-solution/',
-    aosDelay: '100',
-    pageTitle: 'DevOps Solution',
-    BGImage: '/images/hero-banner14.jpg',
+      "Laissez nous vous montrer comment Amazon Web Services peut mettre votre startup en avant dans votre domaine en combinant securité et haute disponiblité.",
+    viewDetails: "/service/devops-solution/",
+    aosDelay: "100",
+    pageTitle: "DevOps Solution",
+    BGImage: "/images/hero-banner14.jpg",
     method:
-      '<p>Nos experts en DevOps vous aideront à :</p> \
+      "<p>Nos experts en DevOps vous aideront à :</p> \
       <ul> \
       <li>Mettre en place des processus de développement agiles et des pratiques DevOps</li> \
       <li>Utiliser les derniers outils et technologies pour automatiser votre chaîne de développement</li> \
       <li>Optimiser vos environnements de production pour une performance maximale et une disponibilité élevée</li> \
       <li>Gérer la sécurité de votre application et protéger vos données</li> \
       <li>Évaluer les performances de votre application et les améliorer en continu</li> \
-      </ul>',
+      </ul>",
     description:
       "<p>Vous êtes à la recherche d'une solution pour accélérer votre cycle de développement et améliorer la qualité de vos logiciels ? Notre équipe de DevOps est là pour vous aider !</p> \
         <p>Nous offrons des services de DevOps personnalisés pour répondre aux besoins de votre entreprise. Nous travaillons en étroite collaboration avec votre équipe de développement pour automatiser le déploiement, les tests, l'intégration continue et la livraison continue, ce qui permet de réduire le temps de mise sur le marché de vos applications et d'augmenter leur qualité.</p> \
@@ -112,13 +112,13 @@ export const servicesData = {
         <p>Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons vous aider à accélérer votre cycle de développement et à améliorer la qualité de vos logiciels avec notre service de DevOps personnalisé.</p>",
   },
   web_hosting: {
-    iconName: 'pe-7s-cloud bg-ff612f',
+    iconName: "pe-7s-cloud bg-ff612f",
     shortText:
       "Vous avez déjà créé votre site et tout fonctionne parfaitement sur votre ordinateur? Le monde entier mérite d'apprécier votre savoir-faire. Allons-y!",
-    viewDetails: '/service/hebergement-web/',
-    aosDelay: '600',
-    pageTitle: 'Hébergement web',
-    BGImage: '/images/hero-banner9.jpg',
+    viewDetails: "/service/hebergement-web/",
+    aosDelay: "600",
+    pageTitle: "Hébergement web",
+    BGImage: "/images/hero-banner9.jpg",
     method:
       "<p>Nos services d'hébergement web comprennent :</p> \
       <ul> \

@@ -1,7 +1,7 @@
-import React from 'react'
-import Link from 'next/link'
+import React from "react"
+import Link from "next/link"
 
-const ErrorContent = () =>
+const ErrorContent = () => (
   <div className="error-area ptb-100">
     <div className="container">
       <div className="error-content">
@@ -16,5 +16,6 @@ const ErrorContent = () =>
       </div>
     </div>
   </div>
+)
 
 export default ErrorContent

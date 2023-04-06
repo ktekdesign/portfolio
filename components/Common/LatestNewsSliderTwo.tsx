@@ -1,9 +1,9 @@
-import React from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay, Pagination } from 'swiper'
-import { latestNewsData } from '../../data/news'
-import { saira } from '../../utils/fonts'
-import BlogPost from '../Blog/BlogPost'
+import React from "react"
+import { Swiper, SwiperSlide } from "swiper/react"
+import { Autoplay, Pagination } from "swiper"
+import { latestNewsData } from "../../data/news"
+import { saira } from "../../utils/fonts"
+import BlogPost from "../Blog/BlogPost"
 
 const LatestNewsSliderTwo = () => {
   return (
@@ -40,9 +40,7 @@ const LatestNewsSliderTwo = () => {
           >
             {latestNewsData?.slice(0, 5).map((post, i) => (
               <SwiperSlide key={i}>
-                <BlogPost
-                  post={post}
-                />
+                <BlogPost post={post} />
               </SwiperSlide>
             ))}
           </Swiper>

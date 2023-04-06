@@ -1,25 +1,30 @@
-import React from 'react'
+import React from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
-import Image from 'next/image'
-import { newsletterUrl } from '../../utils/urls'
-import axios from 'axios'
-import { saira } from '../../utils/fonts'
-import alertContent from '../../utils/alertContent'
+import Image from "next/image"
+import { newsletterUrl } from "../../utils/urls"
+import axios from "axios"
+import { saira } from "../../utils/fonts"
+import alertContent from "../../utils/alertContent"
 
 type Inputs = {
-  name: string,
+  name: string
   email: string
 }
-      
+
 const Newsletter = () => {
-  const { register, handleSubmit, reset, formState: { errors } } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = async(data) => {
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm<Inputs>()
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
       const response = await axios.post(newsletterUrl, data)
       alertContent("Félicitations!", response.data)
       reset({
-        name: '',
-        email: ''
+        name: "",
+        email: "",
       })
     } catch (error) {
       if (error instanceof Error) {
@@ -72,7 +77,9 @@ const Newsletter = () => {
                       placeholder="Votre nome"
                       {...register("name", { required: true })}
                     />
-                    {errors.name && <span className='error'>Veuillez remplir ce champ</span>}
+                    {errors.name && (
+                      <span className="error">Veuillez remplir ce champ</span>
+                    )}
                   </div>
                   <div className="col-lg-7 col-md-6 pos-rel mt-10">
                     <input
@@ -81,7 +88,9 @@ const Newsletter = () => {
                       placeholder="Votre email"
                       {...register("email", { required: true })}
                     />
-                    {errors.email && <span className='error'>Veuillez remplir ce champ</span>}
+                    {errors.email && (
+                      <span className="error">Veuillez remplir ce champ</span>
+                    )}
                     <button type="submit">Je m&apos;inscris!</button>
                   </div>
                 </div>

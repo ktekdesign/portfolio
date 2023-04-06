@@ -2133,7 +2133,7 @@
     font-size: 36px;
   }
   .quotes-content p::before {
-    content: '';
+    content: "";
     width: 140px;
     height: 80px;
     left: 0;

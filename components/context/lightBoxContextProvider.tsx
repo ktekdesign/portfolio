@@ -1,32 +1,39 @@
-import FsLightbox from "fslightbox-react";
-import React, { Dispatch, FC, ReactNode, SetStateAction, useMemo, useState } from "react"
-import LightBoxContext from "./lightBoxContext";
+import FsLightbox from "fslightbox-react"
+import React, {
+  Dispatch,
+  FC,
+  ReactNode,
+  SetStateAction,
+  useMemo,
+  useState,
+} from "react"
+import LightBoxContext from "./lightBoxContext"
 
 type Props = {
-  children: ReactNode;
-};
+  children: ReactNode
+}
 
-const LightBoxContextProvider: FC<Props> = ({children}) => {
+const LightBoxContextProvider: FC<Props> = ({ children }) => {
   const [video, setVideo]: [string[], Dispatch<SetStateAction<string[]>>] =
     useState([""])
   const [toggler, setToggler]: [boolean, Dispatch<SetStateAction<boolean>>] =
-    useState(false);
+    useState(false)
   const value = useMemo(
-    () => ({ toggler, setToggler, video, setVideo }), 
+    () => ({ toggler, setToggler, video, setVideo }),
     [toggler, video]
-  );
-    return (
-      <LightBoxContext.Provider value={value}>
-        {useMemo(() => (
+  )
+  return (
+    <LightBoxContext.Provider value={value}>
+      {useMemo(
+        () => (
           <>
-            <FsLightbox
-            toggler={toggler}
-            sources={video}
-            />
+            <FsLightbox toggler={toggler} sources={video} />
             {children}
           </>
-        ), [toggler, video, children])}
-      </LightBoxContext.Provider>
+        ),
+        [toggler, video, children]
+      )}
+    </LightBoxContext.Provider>
   )
 }
 

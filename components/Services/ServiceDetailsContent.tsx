@@ -1,9 +1,9 @@
-import React, { Dispatch, SetStateAction, useState } from 'react'
-import Image from 'next/image'
-import FsLightbox from 'fslightbox-react'
-import parse from 'html-react-parser'
-import { saira } from '../../utils/fonts'
-import { Service } from '../../data/interfaces/Service'
+import React, { Dispatch, SetStateAction, useState } from "react"
+import Image from "next/image"
+import FsLightbox from "fslightbox-react"
+import parse from "html-react-parser"
+import { saira } from "../../utils/fonts"
+import { Service } from "../../data/interfaces/Service"
 
 const ServiceDetailsContent = ({
   video,
@@ -37,7 +37,7 @@ const ServiceDetailsContent = ({
               </div>
             </div>
 
-            <div className={`col-lg-${method ? '8' : '12'} col-md-12`}>
+            <div className={`col-lg-${method ? "8" : "12"} col-md-12`}>
               <div className="services-details-desc">
                 <h2 className={saira.className}>Description</h2>
                 {parse(description)}

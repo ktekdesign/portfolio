@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
-import { servicesData } from '../../data/services'
-import { saira } from '../../utils/fonts'
+import React from "react"
+import Link from "next/link"
+import { servicesData } from "../../data/services"
+import { saira } from "../../utils/fonts"
 
-const OurServices = ({ title = false }) =>
+const OurServices = ({ title = false }) => (
   <div className="pt-100 pb-70">
     <div className="container">
       {title && (
@@ -38,5 +38,6 @@ const OurServices = ({ title = false }) =>
       </div>
     </div>
   </div>
+)
 
 export default OurServices

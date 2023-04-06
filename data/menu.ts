@@ -1,12 +1,12 @@
-import { servicesData } from './services'
+import { servicesData } from "./services"
 export const menuData = [
   {
-    href: '/',
-    name: 'Accueil',
+    href: "/",
+    name: "Accueil",
   },
   {
-    href: '/service',
-    name: 'Services',
+    href: "/service",
+    name: "Services",
     children: servicesData,
   },
   /*{
@@ -14,11 +14,11 @@ export const menuData = [
         name: "Portfolio"
     }, */
   {
-    href: '/blog',
-    name: 'Blog',
+    href: "/blog",
+    name: "Blog",
   },
   {
-    href: '/contact',
-    name: 'Contact',
+    href: "/contact",
+    name: "Contact",
   },
 ]

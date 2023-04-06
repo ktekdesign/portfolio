@@ -1,11 +1,11 @@
-import React, { useContext } from 'react'
-import Image from 'next/image'
-import { saira } from '../../utils/fonts'
-import LightBoxContext from '../context/lightBoxContext'
+import React, { useContext } from "react"
+import Image from "next/image"
+import { saira } from "../../utils/fonts"
+import LightBoxContext from "../context/lightBoxContext"
 
 const WhyChooseUs = () => {
   const { toggler, setToggler, setVideo } = useContext(LightBoxContext)
-  
+
   return (
     <>
       <section className="about-area ptb-100">
@@ -33,13 +33,13 @@ const WhyChooseUs = () => {
                   <p>
                     Nous avons contribué à la croissance de plusieurs
                     entreprises au plan continental ainsi qu&apos;à
-                    l&apos;international. Notre équipe est lidérée par{' '}
+                    l&apos;international. Notre équipe est lidérée par{" "}
                     <a
                       href="https://www.linkedin.com/in/christian-kpanou/"
                       target="_blank"
                     >
                       <b>Christian Kpanou</b>
-                    </a>{' '}
+                    </a>{" "}
                     qui collabore à l&apos;international avec plusieurs startups
                     dont la capitalisation surpasse le milliard de dollars.
                   </p>
@@ -99,7 +99,7 @@ const WhyChooseUs = () => {
                 <div className="video-box">
                   <div
                     onClick={() => {
-                      setVideo(['https://www.youtube.com/watch?v=mVTeauSR0IA'])
+                      setVideo(["https://www.youtube.com/watch?v=mVTeauSR0IA"])
                       setToggler(!toggler)
                     }}
                     className="video-btn"

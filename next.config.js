@@ -1,13 +1,16 @@
 /** @type {import('next').NextConfig} */
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require('path'),
-  nextConfig = {
+const path = require('path');
+const nextConfig = {
     swcMinify: true,
     trailingSlash: true,
     sassOptions: {
       includePaths: [path.join(__dirname, 'styles')],
     },
     optimizeFonts: false,
+    env: {
+      customKey: 'my-value',
+    }
   }
 
 module.exports = nextConfig

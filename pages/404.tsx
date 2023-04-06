@@ -1,10 +1,10 @@
-import React from 'react'
-import NavbarDark from '../components/Layouts/NavbarDark'
-import PageBanner from '../components/Common/PageBanner'
-import ErrorContent from '../components/Error/ErrorContent'
-import Footer from '../components/Layouts/FooterDark'
+import React from "react"
+import NavbarDark from "../components/Layouts/NavbarDark"
+import PageBanner from "../components/Common/PageBanner"
+import ErrorContent from "../components/Error/ErrorContent"
+import Footer from "../components/Layouts/FooterDark"
 
-const Error = () =>
+const Error = () => (
   <>
     <NavbarDark />
 
@@ -14,5 +14,6 @@ const Error = () =>
 
     <Footer />
   </>
+)
 
 export default Error

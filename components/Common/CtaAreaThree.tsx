@@ -1,9 +1,9 @@
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { saira } from '../../utils/fonts'
+import React from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { saira } from "../../utils/fonts"
 
-const CtaAreaThree = () =>
+const CtaAreaThree = () => (
   <>
     <div className="cta-area-two dark-style ptb-100">
       <Image
@@ -32,12 +32,12 @@ const CtaAreaThree = () =>
           data-aos-delay="400"
         >
           <Link href="/contact" className="default-btn-two">
-            Solliciter une réunion{' '}
-            <i className="fa-solid fa-chevron-right"></i>
+            Solliciter une réunion <i className="fa-solid fa-chevron-right"></i>
           </Link>
         </div>
       </div>
     </div>
   </>
+)
 
 export default CtaAreaThree
