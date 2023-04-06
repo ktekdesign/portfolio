@@ -20,4 +20,4 @@ const ServiceDetails: FC<{ service: Service }> = ({ service }) => (
   </>
 )
 
-export default ServiceDetails
+export default React.memo(ServiceDetails)

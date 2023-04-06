@@ -86,4 +86,4 @@ const MainBanner = () => {
   )
 }
 
-export default MainBanner
+export default React.memo(MainBanner)

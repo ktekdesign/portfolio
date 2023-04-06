@@ -232,4 +232,4 @@ const ServiceStyleTwo = () => (
   </>
 )
 
-export default ServiceStyleTwo
+export default React.memo(ServiceStyleTwo)

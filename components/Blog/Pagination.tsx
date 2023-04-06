@@ -40,4 +40,4 @@ const Pagination: FC<{ page: number; pages: number[]; totalPage: number }> = ({
   </div>
 )
 
-export default Pagination
+export default React.memo(Pagination)

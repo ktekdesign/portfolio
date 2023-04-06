@@ -46,7 +46,7 @@ const NavbarDark = () => {
       <div id="navbar" className="navbar-area dark-navbar">
         <nav className="navbar navbar-expand-md">
           <div className="container-fluid">
-            <Logo className="navbar-brand" priority />
+            <Logo className="navbar-brand" />
 
             {/* Toggle navigation */}
             <button
@@ -114,4 +114,4 @@ const NavbarDark = () => {
   )
 }
 
-export default NavbarDark
+export default React.memo(NavbarDark)

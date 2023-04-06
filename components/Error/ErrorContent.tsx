@@ -18,4 +18,4 @@ const ErrorContent = () => (
   </div>
 )
 
-export default ErrorContent
+export default React.memo(ErrorContent)

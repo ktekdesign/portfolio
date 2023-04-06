@@ -48,4 +48,4 @@ const ContactInfo = () => (
   </div>
 )
 
-export default ContactInfo
+export default React.memo(ContactInfo)

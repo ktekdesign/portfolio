@@ -41,4 +41,4 @@ const SocialLinks = () => (
   </ul>
 )
 
-export default SocialLinks
+export default React.memo(SocialLinks)

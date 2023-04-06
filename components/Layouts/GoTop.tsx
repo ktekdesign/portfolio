@@ -1,6 +1,6 @@
 import React, { Dispatch, SetStateAction, useEffect, useState } from "react"
 
-const App = () => {
+const GoTop = () => {
   // The back-to-top button is hidden at the beginning
   const [showButton, setShowButton]: [
     boolean,
@@ -36,4 +36,4 @@ const App = () => {
   )
 }
 
-export default App
+export default React.memo(GoTop)

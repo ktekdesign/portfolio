@@ -24,4 +24,4 @@ const PageBanner: FC<{ pageTitle: string; BGImage: string }> = ({
   </div>
 )
 
-export default PageBanner
+export default React.memo(PageBanner)

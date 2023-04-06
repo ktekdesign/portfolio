@@ -54,4 +54,4 @@ const FunFactsTwo = () => (
   </>
 )
 
-export default FunFactsTwo
+export default React.memo(FunFactsTwo)

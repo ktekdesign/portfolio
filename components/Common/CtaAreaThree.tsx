@@ -40,4 +40,4 @@ const CtaAreaThree = () => (
   </>
 )
 
-export default CtaAreaThree
+export default React.memo(CtaAreaThree)

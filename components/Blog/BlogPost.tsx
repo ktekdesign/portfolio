@@ -10,6 +10,7 @@ const BlogPost: FC<{
 }> = ({ post }) => {
   const { toggler, setToggler, setVideo } = useContext(LightBoxContext)
   const { video, image, title, readMoreLink, category, date, shortText } = post
+  
   return (
     <>
       <div className="single-blog-item bg-fcfbfb">
@@ -69,4 +70,4 @@ const BlogPost: FC<{
   )
 }
 
-export default BlogPost
+export default React.memo(BlogPost)

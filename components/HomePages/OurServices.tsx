@@ -40,4 +40,4 @@ const OurServices = ({ title = false }) => (
   </div>
 )
 
-export default OurServices
+export default React.memo(OurServices)

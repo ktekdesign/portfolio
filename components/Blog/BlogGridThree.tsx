@@ -11,9 +11,9 @@ const BlogGrid = () => {
   const totalPage = Math.ceil(latestNewsData.length / POSTS_PER_PAGE)
   const pages: number[] = []
   const [posts, setPosts]: [
-    Post[] | undefined,
-    Dispatch<SetStateAction<Post[] | undefined>>
-  ] = useState()
+    Post[],
+    Dispatch<SetStateAction<Post[]>>
+  ] = useState([{} as Post])
   const [page, setPage]: [number, Dispatch<SetStateAction<number>>] =
     useState(1)
 
@@ -47,7 +47,7 @@ const BlogGrid = () => {
                 data-aos-duration="1200"
                 data-aos-delay={post?.aosDelay}
               >
-                <BlogPost post={post} />
+                {post?.readMoreLink && <BlogPost post={post} />}
               </div>
             ))}
             <Pagination page={page} pages={pages} totalPage={totalPage} />
@@ -58,4 +58,4 @@ const BlogGrid = () => {
   )
 }
 
-export default BlogGrid
+export default React.memo(BlogGrid)

@@ -1,9 +1,9 @@
-import React, { Dispatch, SetStateAction, useState } from "react"
+import React, { useContext } from "react"
 import Image from "next/image"
-import FsLightbox from "fslightbox-react"
 import parse from "html-react-parser"
 import { saira } from "../../utils/fonts"
 import { Service } from "../../data/interfaces/Service"
+import LightBoxContext from "../context/lightBoxContext"
 
 const ServiceDetailsContent = ({
   video,
@@ -11,13 +11,10 @@ const ServiceDetailsContent = ({
   method,
   description,
 }: Service) => {
-  const [toggler, setToggler]: [boolean, Dispatch<SetStateAction<boolean>>] =
-    useState(false)
+  const { toggler, setToggler, setVideo } = useContext(LightBoxContext)
 
   return (
     <>
-      {video && <FsLightbox toggler={toggler} sources={[video]} />}
-
       <div className="services-details-area ptb-100">
         <div className="container">
           <div className="row">
@@ -27,7 +24,10 @@ const ServiceDetailsContent = ({
                 {video && (
                   <div className="video-box">
                     <div
-                      onClick={() => setToggler(!toggler)}
+                      onClick={() => {
+                        setVideo([video])
+                        setToggler(!toggler)
+                      }}
                       className="video-btn"
                     >
                       <i className="fa-solid fa-play"></i>
@@ -58,4 +58,4 @@ const ServiceDetailsContent = ({
   )
 }
 
-export default ServiceDetailsContent
+export default React.memo(ServiceDetailsContent)
