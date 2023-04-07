@@ -11,9 +11,9 @@ const Contact = () => (
     <Head>
       <title>Contact - KTEKDESIGN</title>
       <meta
-          name="description"
-          content="Contactez l'agence web digitale KTEKDESIGN pour créer vos sites web"
-        />
+        name="description"
+        content="Contactez l'agence web digitale KTEKDESIGN pour créer vos sites web"
+      />
     </Head>
     <NavbarDark />
 

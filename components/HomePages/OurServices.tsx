@@ -12,8 +12,8 @@ const OurServices = ({ title = false }) => (
           <p>
             Première iniciative de notre groupe lancée en Octobre 2015, notre
             objectif est d&apos;offrir une alternative crédible aux porteurs de
-            projets numériques qui n&apos;ont pas le savoir-faire technique requis
-            pour en assurer l&apos;exécution.
+            projets numériques qui n&apos;ont pas le savoir-faire technique
+            requis pour en assurer l&apos;exécution.
           </p>
         </div>
       )}

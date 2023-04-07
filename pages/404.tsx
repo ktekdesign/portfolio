@@ -10,9 +10,9 @@ const Error = () => (
     <Head>
       <title>Page introuvable - KTEKDESIGN</title>
       <meta
-          name="description"
-          content="Page introuvable sur le site web de l'agence digitale KTEKDESIGN"
-        />
+        name="description"
+        content="Page introuvable sur le site web de l'agence digitale KTEKDESIGN"
+      />
     </Head>
     <NavbarDark />
 

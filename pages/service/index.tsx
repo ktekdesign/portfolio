@@ -11,11 +11,11 @@ const ServicesPage = () => (
     <Head>
       <title>Nos Services - KTEKDESIGN</title>
       <meta
-          name="description"
-          content="Notre objectif est d&apos;offrir une alternative crédible aux porteurs de
-          projets numériques qui n&apos;ont pas le savoir-faire technique requis
-          pour en assurer l&apos;exécution."
-        />
+        name="description"
+        content="Notre objectif est d'offrir une alternative crédible aux porteurs de
+          projets numériques qui n'ont pas le savoir-faire technique requis
+          pour en assurer l'exécution."
+      />
     </Head>
     <NavbarDark />
 

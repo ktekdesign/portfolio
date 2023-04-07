@@ -11,9 +11,9 @@ const Blog = () => (
     <Head>
       <title>Blog d&apos;actualités - KTEKDESIGN</title>
       <meta
-          name="description"
-          content="Suivez les dernières vidéos de formation en programmation web de KTEKDESIGN"
-        />
+        name="description"
+        content="Suivez les dernières vidéos de formation en programmation web de KTEKDESIGN"
+      />
     </Head>
     <NavbarDark />
 
