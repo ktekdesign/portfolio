@@ -28,15 +28,8 @@ const LightBoxContextProvider: FC<Props> = ({ children }) => {
   )
   return (
     <LightBoxContext.Provider value={value}>
-      {useMemo(
-        () => (
-          <>
-            {video && <FsLightbox toggler={toggler} sources={video} />}
-            {children}
-          </>
-        ),
-        [toggler, video, children]
-      )}
+      <FsLightbox toggler={toggler} sources={video} />
+      {children}
     </LightBoxContext.Provider>
   )
 }

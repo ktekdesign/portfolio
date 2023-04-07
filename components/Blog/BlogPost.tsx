@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { saira } from "../../utils/fonts"
 import { Post } from "../../data/interfaces/Post"
-import LightBoxContext from "../context/lightBoxContext"
+import LightBoxContext from "../../context/lightBoxContext"
 
 const BlogPost: FC<{
   post: Post

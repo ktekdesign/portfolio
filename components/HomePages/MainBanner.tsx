@@ -2,7 +2,7 @@ import React, { useContext } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { saira } from "../../utils/fonts"
-import LightBoxContext from "../context/lightBoxContext"
+import LightBoxContext from "../../context/lightBoxContext"
 
 const MainBanner = () => {
   const { toggler, setToggler, setVideo } = useContext(LightBoxContext)

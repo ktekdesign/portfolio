@@ -1,7 +1,7 @@
 import React, { useContext } from "react"
 import Image from "next/image"
 import { saira } from "../../utils/fonts"
-import LightBoxContext from "../context/lightBoxContext"
+import LightBoxContext from "../../context/lightBoxContext"
 
 const WhyChooseUs = () => {
   const { toggler, setToggler, setVideo } = useContext(LightBoxContext)

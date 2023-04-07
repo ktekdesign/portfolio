@@ -11,9 +11,9 @@ const OurServices = ({ title = false }) => (
           <h2 className={saira.className}>Nos Services</h2>
           <p>
             Première iniciative de notre groupe lancée en Octobre 2015, notre
-            objectif est d’offrir une alternative crédible aux porteurs de
-            projets numériques qui n’ont pas le savoir-faire technique requis
-            pour en assurer l’exécution.
+            objectif est d&apos;offrir une alternative crédible aux porteurs de
+            projets numériques qui n&apos;ont pas le savoir-faire technique requis
+            pour en assurer l&apos;exécution.
           </p>
         </div>
       )}

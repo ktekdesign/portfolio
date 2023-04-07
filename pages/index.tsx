@@ -8,9 +8,17 @@ import FunFactsTwo from "../components/Common/FunFactsTwo"
 import LatestNewsSliderTwo from "../components/Common/LatestNewsSliderTwo"
 import Newsletter from "../components/Common/Newsletter"
 import Footer from "../components/Layouts/FooterDark"
+import Head from "next/head"
 
 const Home = () => (
   <>
+    <Head>
+      <title>Agence Web Digitale - KTEKDESIGN</title>
+      <meta
+          name="description"
+          content="Nous sommes spécialisés dans la création de sites web, de stratégies de marketing digital et de développement d'applications mobiles"
+        />
+    </Head>
     <NavbarDark />
 
     <MainBanner />

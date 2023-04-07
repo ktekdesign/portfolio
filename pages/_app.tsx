@@ -18,7 +18,7 @@ import Head from "next/head"
 import GoTop from "../components/Layouts/GoTop"
 import TagManager from "react-gtm-module"
 import { Open_Sans } from "next/font/google"
-import LightBoxContextProvider from "../components/context/lightBoxContextProvider"
+import LightBoxContextProvider from "../context/lightBoxContextProvider"
 
 const openSans = Open_Sans({ subsets: ["latin"] })
 

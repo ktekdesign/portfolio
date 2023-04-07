@@ -3,7 +3,7 @@ import Image from "next/image"
 import parse from "html-react-parser"
 import { saira } from "../../utils/fonts"
 import { Service } from "../../data/interfaces/Service"
-import LightBoxContext from "../context/lightBoxContext"
+import LightBoxContext from "../../context/lightBoxContext"
 
 const ServiceDetailsContent = ({
   video,
