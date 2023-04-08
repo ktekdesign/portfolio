@@ -40,7 +40,7 @@ const ServiceDetailsContent = ({
             <div className={`col-lg-${method ? "8" : "12"} col-md-12`}>
               <div className="services-details-desc">
                 <h2 className={saira.className}>Description</h2>
-                {parse(description)}
+                {description && parse(description)}
               </div>
             </div>
             {method && (

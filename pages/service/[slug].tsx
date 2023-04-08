@@ -17,13 +17,13 @@ export const getStaticProps: GetStaticProps<Props> = (ctx) => {
   const slug = ctx?.params?.slug || ""
   const key = (Array.isArray(slug) ? slug[0] : slug).replaceAll("-", "_")
   const service = getService(key)
-  
+
   if (!service) {
     return {
       notFound: true,
     }
   }
-  
+
   return {
     props: {
       service,
