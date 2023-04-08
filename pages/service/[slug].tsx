@@ -42,8 +42,8 @@ export async function getStaticPaths() {
 const ServicePage = ({ service }: Props) => (
   <>
     <Head>
-      <title>{`${service.pageTitle} - KTEKDESIGN`}</title>
-      <meta name="description" content={service.shortText} />
+      <title>{`${service?.pageTitle} - KTEKDESIGN`}</title>
+      <meta name="description" content={service?.shortText} />
     </Head>
 
     <NavbarDark />
