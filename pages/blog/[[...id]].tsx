@@ -26,8 +26,8 @@ type Props = {
 }
 
 export async function getStaticPaths() {
-  const paths = pages.map(id => ({ params: { id: [id] }}))
-  
+  const paths = pages.map((id) => ({ params: { id: [id] } }))
+
   return {
     paths,
     fallback: true,
@@ -35,11 +35,11 @@ export async function getStaticPaths() {
 }
 export const getStaticProps: GetStaticProps<Props> = (ctx) => {
   const id = ctx?.params?.id || "1"
-  const currentPage = parseInt((Array.isArray(id) ? id[0] : id))
+  const currentPage = parseInt(Array.isArray(id) ? id[0] : id)
   const end = currentPage * POSTS_PER_PAGE
   const start = end - POSTS_PER_PAGE
-  const posts =  getPosts(start, end)
-  
+  const posts = getPosts(start, end)
+
   if (!posts.length) {
     return {
       notFound: true,
@@ -50,11 +50,11 @@ export const getStaticProps: GetStaticProps<Props> = (ctx) => {
     props: {
       posts,
       currentPage,
-      pages
+      pages,
     },
-  } 
+  }
 }
-const Blog = ({posts, currentPage, pages}: Props) => (
+const Blog = ({ posts, currentPage, pages }: Props) => (
   <>
     <Head>
       <title>{`Blog d'actualités - Page ${currentPage} - KTEKDESIGN`}</title>
@@ -70,7 +70,9 @@ const Blog = ({posts, currentPage, pages}: Props) => (
 
     <BlogGridThree posts={posts} />
 
-    {pages?.length > 1 && <Pagination currentPage={currentPage} pages={pages} />}
+    {pages?.length > 1 && (
+      <Pagination currentPage={currentPage} pages={pages} />
+    )}
 
     <Newsletter />
 

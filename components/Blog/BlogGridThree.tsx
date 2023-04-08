@@ -2,7 +2,7 @@ import React, { FC } from "react"
 import BlogPost from "./BlogPost"
 import { Post } from "../../data/interfaces/Post"
 
-const BlogGrid: FC<{posts: Post[]}> = ({posts}) => {
+const BlogGrid: FC<{ posts: Post[] }> = ({ posts }) => {
   return (
     <>
       <div className="blog-area ptb-100">

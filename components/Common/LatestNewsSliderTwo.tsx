@@ -7,13 +7,14 @@ import BlogPost from "../Blog/BlogPost"
 import { Post } from "../../data/interfaces/Post"
 
 const blog: Post = {
-    title: "Découvrez toute notre actualité et vidéos de formation sur notre blog",
-    image: "/images/code.jpg",
-    date: "01 Mars 2023",
-    category: "Blog",
-    shortText:
-      "Toutes nos vidéos de formations et nos astuces pour apprendre à programmer comme de vrais professionnels.",
-    readMoreLink: "/blog",
+  title:
+    "Découvrez toute notre actualité et vidéos de formation sur notre blog",
+  image: "/images/code.jpg",
+  date: "01 Mars 2023",
+  category: "Blog",
+  shortText:
+    "Toutes nos vidéos de formations et nos astuces pour apprendre à programmer comme de vrais professionnels.",
+  readMoreLink: "/blog",
 }
 const LatestNewsSliderTwo = () => (
   <>
@@ -47,7 +48,7 @@ const LatestNewsSliderTwo = () => (
           modules={[Pagination]}
           className="blog-slides"
         >
-          {getPosts(0,3).map((post, i) => (
+          {getPosts(0, 3).map((post, i) => (
             <SwiperSlide key={i}>
               <BlogPost post={post} />
             </SwiperSlide>

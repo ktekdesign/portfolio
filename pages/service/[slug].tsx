@@ -17,35 +17,35 @@ export const getStaticProps: GetStaticProps<Props> = (ctx) => {
   const slug = ctx?.params?.slug || ""
   const key = (Array.isArray(slug) ? slug[0] : slug).replaceAll("-", "_")
   const service = getService(key)
-  
+
   return {
     props: {
-      service
+      service,
     },
-  } 
+  }
 }
 
 export async function getStaticPaths() {
   return {
     paths: [
-      { params: { slug: 'creation-site-web' } },
-      { params: { slug: 'application-android-et-ios' } },
-      { params: { slug: 'e-commerce' } },
-      { params: { slug: 'marketing-digital' } },
-      { params: { slug: 'devops-solution' } },
-      { params: { slug: 'hebergement-web' } },
+      { params: { slug: "creation-site-web" } },
+      { params: { slug: "application-android-et-ios" } },
+      { params: { slug: "e-commerce" } },
+      { params: { slug: "marketing-digital" } },
+      { params: { slug: "devops-solution" } },
+      { params: { slug: "hebergement-web" } },
     ],
     fallback: true,
   }
 }
 
-const ServicePage = ({service}: Props) => (
+const ServicePage = ({ service }: Props) => (
   <>
     <Head>
       <title>{`${service.pageTitle} - KTEKDESIGN`}</title>
       <meta name="description" content={service.shortText} />
     </Head>
-    
+
     <NavbarDark />
 
     <PageBanner {...service} />
