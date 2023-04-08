@@ -61,7 +61,7 @@ const BlogPost: FC<{
           <p>{shortText}</p>
 
           <Link href={readMoreLink} className="read-more-btn feature-list">
-            Voir la vidéo
+            {video ? "Voir la vidéo" : "En savoir plus"}
             <i className="fa-solid fa-angles-right"></i>
           </Link>
         </div>

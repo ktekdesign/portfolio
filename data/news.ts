@@ -32,3 +32,11 @@ export const latestNewsData: Post[] = [
     readMoreLink: "https://www.youtube.com/watch?v=QKdxeHlbpHQ",
   },
 ]
+
+export const getPosts = (start: number, postsPerPage: number) => {
+  return latestNewsData.slice(start, postsPerPage)
+}
+
+export const getPostsCount = () => {
+  return latestNewsData.length
+}

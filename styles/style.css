@@ -5900,4 +5900,10 @@ span.new {
 .pos-rel {
   position: relative;
 }
+.hero-banner .main-banner-content h1 {
+  background: url("/images/hero-banner10.webp");
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 /*# sourceMappingURL=style.css.map */

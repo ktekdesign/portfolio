@@ -1,43 +1,39 @@
 import React, { FC } from "react"
 
-const Pagination: FC<{ page: number; pages: number[]; totalPage: number }> = ({
-  page,
+const Pagination: FC<{ currentPage: number; pages: string[] }> = ({
+  currentPage,
   pages,
-  totalPage,
-}) => (
-  <div className="col-lg-12 col-md-12">
-    <div className="pagination-area">
-      {page > 1 && (
+}) =>
+    <div className="pagination-area pb-100">
+        {currentPage > 1 && (
         <a
-          className="prev page-numbers"
-          href={`/blog/${page == 2 ? "" : page - 1}`}
+            className="prev page-numbers"
+            href={`/blog/${currentPage == 2 ? "" : currentPage - 1}`}
         >
-          <i className="fa-solid fa-angles-left"></i>
+            <i className="fa-solid fa-angles-left"></i>
         </a>
-      )}
-      {pages.map((value) =>
-        page == value ? (
-          <span key={value} className="page-numbers current">
+        )}
+        {pages?.map((value) =>
+        currentPage === parseInt(value) ? (
+            <span key={value} className="page-numbers current">
             {value}
-          </span>
+            </span>
         ) : (
-          <a
+            <a
             className="page-numbers"
-            href={`/blog/${value > 1 ? value : ""}`}
+            href={`/blog/${value === "1" ? "" : value}`}
             key={value}
-          >
+            >
             {value}
-          </a>
+            </a>
         )
-      )}
+        )}
 
-      {page < totalPage && (
-        <a className="next page-numbers" href={`/blog/${page + 1}`}>
-          <i className="fa-solid fa-angles-right"></i>
+        {currentPage < pages?.length && (
+        <a className="next page-numbers" href={`/blog/${currentPage + 1}`}>
+            <i className="fa-solid fa-angles-right"></i>
         </a>
-      )}
+        )}
     </div>
-  </div>
-)
 
 export default React.memo(Pagination)

@@ -1,5 +1,7 @@
+import { Service } from "./interfaces/Service"
+
 export const servicesData = {
-  site_web: {
+  creation_site_web: {
     iconName: "pe-7s-display2 bg-6610f2",
     shortText:
       "À la pointe de la technologie, nous avons une longueur d’avance en matière de référencement, d’optimisation et de sécurité.",
@@ -21,7 +23,7 @@ export const servicesData = {
         <p>Nous sommes passionnés par la création de sites web qui offrent une expérience utilisateur exceptionnelle et qui aident les entreprises à atteindre leurs objectifs en ligne. Nous travaillons avec des clients dans une variété de secteurs d'activité pour créer des sites web qui répondent à leurs besoins spécifiques.</p> \
         <p>Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons vous aider à créer un site web qui impressionnera votre public cible et renforcera votre présence en ligne.</p>",
   },
-  app_dev: {
+  application_android_et_ios: {
     iconName: "pe-7s-phone bg-fc3549",
     shortText:
       "Confier le développement de votre application à des spécialistes, capables de combler toutes vos attentes, est en garantir le succès.",
@@ -66,7 +68,7 @@ export const servicesData = {
         <p>Nous sommes passionnés par la création de boutiques en ligne qui offrent une expérience d'achat exceptionnelle et qui aident les entreprises à atteindre leurs objectifs en ligne. Nous travaillons avec des clients dans une variété de secteurs d'activité pour créer des boutiques en ligne qui répondent à leurs besoins spécifiques.</p> \
         <p>Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons vous aider à créer une boutique en ligne qui impressionnera votre public cible et augmentera vos ventes en ligne.</p>",
   },
-  digital_marketing: {
+  marketing_digital: {
     iconName: "pe-7s-light bg-ffb700",
     shortText:
       "Investissez en action commerciale avec un fort potentiel de gain tout en contribuant à l’édification et au positionnement de votre marque.",
@@ -88,7 +90,7 @@ export const servicesData = {
         <p>Nous sommes passionnés par la création de stratégies de marketing digital efficaces qui aident les entreprises à atteindre leurs objectifs en ligne. Nous travaillons avec des clients dans une variété de secteurs d'activité pour créer des stratégies de marketing personnalisées qui répondent à leurs besoins spécifiques.</p> \
         <p>Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons vous aider à améliorer la visibilité de votre entreprise en ligne et à attirer plus de clients potentiels.</p>",
   },
-  devops: {
+  devops_solution: {
     iconName: "pe-7s-settings bg-13c4a1",
     shortText:
       "Laissez nous vous montrer comment Amazon Web Services peut mettre votre startup en avant dans votre domaine en combinant securité et haute disponiblité.",
@@ -111,7 +113,7 @@ export const servicesData = {
         <p>Notre équipe de DevOps possède une expérience approfondie dans la mise en place de solutions DevOps pour une variété de clients dans divers secteurs d'activité. Nous sommes passionnés par l'amélioration des processus de développement et de livraison de logiciels, ce qui vous permettra de vous concentrer sur la création de valeur pour vos clients.</p> \
         <p>Contactez-nous dès aujourd'hui pour découvrir comment nous pouvons vous aider à accélérer votre cycle de développement et à améliorer la qualité de vos logiciels avec notre service de DevOps personnalisé.</p>",
   },
-  web_hosting: {
+  hebergement_web: {
     iconName: "pe-7s-cloud bg-ff612f",
     shortText:
       "Vous avez déjà créé votre site et tout fonctionne parfaitement sur votre ordinateur? Le monde entier mérite d'apprécier votre savoir-faire. Allons-y!",
@@ -135,4 +137,12 @@ export const servicesData = {
       <p>Notre équipe de support technique est disponible 24h/24 et 7j/7 pour répondre à vos questions et résoudre tout problème que vous pourriez rencontrer. Nous sommes passionnés par la satisfaction de nos clients et nous nous engageons à offrir un service d'hébergement web de première qualité.</p> \
       <p>Contactez-nous dès maintenant pour en savoir plus sur nos services d'hébergement web et découvrir comment nous pouvons vous aider à héberger votre site ou votre application en ligne avec succès.</p>",
   },
+}
+
+export const getService = (id: string) => {
+  const service: Service = Object.entries(servicesData)
+    .filter(([key]) => key === id)
+    .map((data) => data[1])[0]
+
+  return service
 }
