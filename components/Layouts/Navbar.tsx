@@ -13,18 +13,18 @@ const Navbar = () => {
   const [menu, setMenu]: [boolean, Dispatch<SetStateAction<boolean>>] =
     useState(true)
   const [isSticky, setIsSticky]: [boolean, Dispatch<SetStateAction<boolean>>] =
-  useState(false)
+    useState(false)
   const toggleNavbar = () => {
     setMenu(!menu)
   }
-  
+
   const classOne = menu
     ? "collapse navbar-collapse mean-menu"
     : "collapse navbar-collapse show"
   const classTwo = menu
     ? "navbar-toggler navbar-toggler-right collapsed"
     : "navbar-toggler navbar-toggler-right"
-  
+
   useEffect(() => {
     setCurrentPath(router.asPath)
   }, [router])
@@ -35,10 +35,13 @@ const Navbar = () => {
     })
   })
 
-  if(!menuData) return <></>
+  if (!menuData) return <></>
 
   return (
-    <div id="navbar" className={`navbar-area dark-navbar ${isSticky && "is-sticky"}`}>
+    <div
+      id="navbar"
+      className={`navbar-area dark-navbar ${isSticky && "is-sticky"}`}
+    >
       <nav className="navbar navbar-expand-md">
         <div className="container-fluid">
           <Logo className="navbar-brand" />

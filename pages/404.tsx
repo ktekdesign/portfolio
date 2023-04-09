@@ -14,7 +14,7 @@ const Error = () => (
         content="Page introuvable sur le site web de l'agence digitale KTEKDESIGN"
       />
     </Head>
-    
+
     <Navbar />
 
     <PageBanner pageTitle="404 Error" BGImage="/images/page-banner3.jpg" />

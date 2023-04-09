@@ -10,9 +10,9 @@ const BlogPost: FC<{
 }> = ({ post }) => {
   const { toggler, setToggler, setVideo } = useContext(LightBoxContext)
   const { video, image, title, readMoreLink, category, date, shortText } = post
-  
-  if(!readMoreLink) return <></>
-  
+
+  if (!readMoreLink) return <></>
+
   return (
     <>
       <div className="single-blog-item bg-fcfbfb">

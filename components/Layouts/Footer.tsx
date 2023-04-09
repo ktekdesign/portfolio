@@ -23,10 +23,9 @@ const Footer = () => (
             </div>
 
             <p>
-              Vous êtes indépendant, petite, moyenne ou grande entreprise ?
-              Vous êtes au bon endroit. Laissez nous vous émerveiller avec la
-              qualité de nos services en facilitant la croissance de votre
-              entreprise.
+              Vous êtes indépendant, petite, moyenne ou grande entreprise ? Vous
+              êtes au bon endroit. Laissez nous vous émerveiller avec la qualité
+              de nos services en facilitant la croissance de votre entreprise.
             </p>
           </div>
         </div>
@@ -100,7 +99,9 @@ const Footer = () => (
               </li>
               <li className="pt-2">
                 <i className="fa-solid fa-envelope"></i>
-                <Link href="mailto:hello@pungent.com">contact@ktekdesign.com</Link>
+                <Link href="mailto:hello@pungent.com">
+                  contact@ktekdesign.com
+                </Link>
               </li>
             </ul>
             <SocialLinks />
@@ -112,9 +113,9 @@ const Footer = () => (
     <div className="copyright-area">
       <div className="container">
         <p>
-          Tous Droits Réservés. Copyright &copy; 2015 - {currentYear} | 
+          Tous Droits Réservés. Copyright &copy; 2015 - {currentYear} |
           Développé par :&nbsp;
-          <Link href="https://ktekdesign.com" target="_blank">
+          <Link href="https://ktekdesign.com">
             KTEKDESIGN
           </Link>
         </p>

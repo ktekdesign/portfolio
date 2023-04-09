@@ -4,7 +4,7 @@ import Image from "next/image"
 import { funFactsData } from "../../data/funfacts"
 import { saira } from "../../utils/fonts"
 
-const FunFacts = () =>
+const FunFacts = () => (
   <div className="funfacts-area ptb-100 bg-fcfbfb">
     <Image src="/images/map.png" alt="map" fill />
     <div className="container">
@@ -14,8 +14,8 @@ const FunFacts = () =>
           Nous vous faisons des recommandations en accord avec vos attentes et
           votre capacité d&apos;investissement. Peu importe la taille de votre
           projet, prenez la peine d&apos;échanger avec nous. Parfois, il est
-          très difficile de savoir où commencer. Nous avons une large
-          expérience pour vous apporter quelques conseils utiles.
+          très difficile de savoir où commencer. Nous avons une large expérience
+          pour vous apporter quelques conseils utiles.
         </p>
       </div>
 
@@ -50,5 +50,6 @@ const FunFacts = () =>
       </div>
     </div>
   </div>
+)
 
 export default React.memo(FunFacts)

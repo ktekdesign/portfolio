@@ -19,7 +19,7 @@ const Home = () => (
         content="Nous sommes spécialisés dans la création de sites web, de stratégies de marketing digital et de développement d'applications mobiles"
       />
     </Head>
-    
+
     <Navbar />
 
     <MainBanner />

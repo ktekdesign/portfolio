@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { saira } from "../../utils/fonts"
 
-const CtaAreaThree = () =>
+const CtaAreaThree = () => (
   <div className="cta-area-two dark-style ptb-100">
     <Image
       src="/images/cta-bg.jpg"
@@ -36,5 +36,6 @@ const CtaAreaThree = () =>
       </div>
     </div>
   </div>
+)
 
 export default React.memo(CtaAreaThree)

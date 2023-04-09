@@ -6,7 +6,7 @@ import { saira } from "../../utils/fonts"
 const OurServices = ({ title = false }) => (
   <div className="pt-100 pb-70">
     <div className="container">
-      {title &&
+      {title && (
         <div className="section-title">
           <h2 className={saira.className}>Nos Services</h2>
           <p>
@@ -16,9 +16,9 @@ const OurServices = ({ title = false }) => (
             requis pour en assurer l&apos;exécution.
           </p>
         </div>
-      }
+      )}
       <div className="row justify-content-center">
-        {Object.entries(servicesData).map(([key, service]) =>
+        {Object.entries(servicesData).map(([key, service]) => (
           <div
             className="col-lg-4 col-sm-6"
             key={key}
@@ -34,7 +34,7 @@ const OurServices = ({ title = false }) => (
               <p>{service.shortText}</p>
             </div>
           </div>
-        )}
+        ))}
       </div>
     </div>
   </div>

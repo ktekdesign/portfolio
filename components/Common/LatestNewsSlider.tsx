@@ -17,7 +17,7 @@ const blog: Post = {
   readMoreLink: "/blog/",
 }
 
-const LatestNewsSlider = () =>
+const LatestNewsSlider = () => (
   <div className="blog-area ptb-100">
     <div className="container">
       <div className="section-title">
@@ -59,5 +59,6 @@ const LatestNewsSlider = () =>
       </Swiper>
     </div>
   </div>
+)
 
 export default React.memo(LatestNewsSlider)

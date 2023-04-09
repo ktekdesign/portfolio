@@ -15,7 +15,7 @@ const Contact = () => (
         content="Contactez l'agence web digitale KTEKDESIGN pour créer vos sites web"
       />
     </Head>
-    
+
     <Navbar />
 
     <PageBanner pageTitle="Contact" BGImage="/images/hero-banner6.jpg" />

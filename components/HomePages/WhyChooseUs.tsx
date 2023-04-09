@@ -22,8 +22,8 @@ const WhyChooseUs = () => {
                 <h2 className={saira.className}>Pourquoi nous choisir?</h2>
                 <p>
                   Nous pouvons vous dire que si vous n&apos;êtes pas satisfait
-                  vous serez automatiquement remboursé mais tous nos clients
-                  ont toujours été satisfaits alors nous allons vous énumerez
+                  vous serez automatiquement remboursé mais tous nos clients ont
+                  toujours été satisfaits alors nous allons vous énumerez
                   d&apos;autres raisons.
                 </p>
               </div>
@@ -31,17 +31,18 @@ const WhyChooseUs = () => {
               <div className="about-text">
                 <h3 className={saira.className}>Qui sommes-nous?</h3>
                 <p>
-                  Nous avons contribué à la croissance de plusieurs
-                  entreprises au plan continental ainsi qu&apos;à
-                  l&apos;international. Notre équipe est lidérée par&nbsp;
+                  Nous avons contribué à la croissance de plusieurs entreprises
+                  au plan continental ainsi qu&apos;à l&apos;international.
+                  Notre équipe est lidérée par&nbsp;
                   <Link
                     href="https://www.linkedin.com/in/christian-kpanou/"
                     target="_blank"
                   >
                     <b>Christian Kpanou</b>
-                  </Link> 
-                  &nbsp;qui collabore à l&apos;international avec plusieurs startups
-                  dont la capitalisation surpasse le milliard de dollars.
+                  </Link>
+                  &nbsp;qui collabore à l&apos;international avec plusieurs
+                  startups dont la capitalisation surpasse le milliard de
+                  dollars.
                 </p>
               </div>
 
@@ -49,18 +50,17 @@ const WhyChooseUs = () => {
                 <h3 className={saira.className}>Notre Histoire</h3>
                 <p>
                   En 8 ans d&apos;activité, nous avons developpé plusieurs
-                  grands projets en Afrique dont les applications web et
-                  Android TchadCarriere qui totalisent plus 25.000
-                  téléchargements dans la PlayStore et plus de 500.000 visites
-                  par mois sur le site. Notre savoir-faire et notre réputation
-                  ne sont plus à démontrer auprès de nos clients qui sont
-                  satisfaits de nos services.
+                  grands projets en Afrique dont les applications web et Android
+                  TchadCarriere qui totalisent plus 25.000 téléchargements dans
+                  la PlayStore et plus de 500.000 visites par mois sur le site.
+                  Notre savoir-faire et notre réputation ne sont plus à
+                  démontrer auprès de nos clients qui sont satisfaits de nos
+                  services.
                 </p>
                 <p>
-                  Et vous? Quel est votre projet? En terceriser le
-                  développement pourrait être plus avantageux aussi bien
-                  techniquement que financièrement que de recruter des
-                  developpeurs à temps plein.
+                  Et vous? Quel est votre projet? En terceriser le développement
+                  pourrait être plus avantageux aussi bien techniquement que
+                  financièrement que de recruter des developpeurs à temps plein.
                 </p>
               </div>
 
@@ -73,9 +73,9 @@ const WhyChooseUs = () => {
                 </p>
                 <p>
                   Notre ambition est de donner à tous les porteurs de projets
-                  l&apos;opportunité de débuter ou continuer l&apos;aventure
-                  du web avec des professionnels réellement qualifiés pour
-                  soutenir la croissance de leurs projets.
+                  l&apos;opportunité de débuter ou continuer l&apos;aventure du
+                  web avec des professionnels réellement qualifiés pour soutenir
+                  la croissance de leurs projets.
                 </p>
               </div>
             </div>

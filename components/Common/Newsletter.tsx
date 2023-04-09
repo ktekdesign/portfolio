@@ -32,7 +32,7 @@ const Newsletter = () => {
       }
     }
   }
-  
+
   return (
     <div className="newsletter-area">
       <Image

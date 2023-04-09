@@ -17,7 +17,7 @@ const ServicesPage = () => (
           pour en assurer l'exécution."
       />
     </Head>
-    
+
     <Navbar />
 
     <PageBanner pageTitle="Nos services" BGImage="/images/hero-banner2.jpg" />

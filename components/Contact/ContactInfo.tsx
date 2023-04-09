@@ -14,7 +14,9 @@ const ContactInfo = () => (
             </div>
             <h3 className={saira.className}>Envoyez un email à</h3>
             <p>
-              <Link href="mailto:contact@ktekdesign.com">contact@ktekdesign.com</Link>
+              <Link href="mailto:contact@ktekdesign.com">
+                contact@ktekdesign.com
+              </Link>
             </p>
           </div>
         </div>
