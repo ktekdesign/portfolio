@@ -115,9 +115,7 @@ const Footer = () => (
         <p>
           Tous Droits Réservés. Copyright &copy; 2015 - {currentYear} |
           Développé par :&nbsp;
-          <Link href="https://ktekdesign.com">
-            KTEKDESIGN
-          </Link>
+          <Link href="https://ktekdesign.com">KTEKDESIGN</Link>
         </p>
       </div>
     </div>
