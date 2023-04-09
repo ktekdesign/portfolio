@@ -1,9 +1,9 @@
 import React from "react"
 import Link from "next/link"
 import Logo from "../Common/Logo"
-import { saira } from "../../utils/fonts"
 import SocialLinks from "./SocialLinks"
 import { getPosts } from "../../data/news"
+import Heading from "../Common/Heading"
 
 const currentYear = new Date().getFullYear()
 
@@ -37,7 +37,7 @@ const Footer = () => (
             data-aos-duration="1200"
             data-aos-delay="200"
           >
-            <h3 className={saira.className}>Nos Entreprises</h3>
+            <Heading type="h3">Nos Entreprises</Heading>
 
             <ul className="list">
               <li>
@@ -68,7 +68,7 @@ const Footer = () => (
             data-aos-duration="1200"
             data-aos-delay="300"
           >
-            <h3 className={saira.className}>Publications Récentes</h3>
+            <Heading type="h3">Publications Récentes</Heading>
             <ul className="list">
               {getPosts(0, 3)?.map((post, key) => (
                 <li key={key}>
@@ -88,7 +88,7 @@ const Footer = () => (
             data-aos-duration="1200"
             data-aos-delay="400"
           >
-            <h3 className={saira.className}>Contact</h3>
+            <Heading type="h3">Contact</Heading>
 
             <ul className="get-in-touch">
               <li className="pt-2">

@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { saira } from "../../utils/fonts"
+import Heading from "./Heading"
 
 const CtaAreaThree = () => (
   <div className="cta-area-two dark-style ptb-100">
@@ -19,9 +19,9 @@ const CtaAreaThree = () => (
         data-aos-delay="200"
       >
         <span>Quelle est la prochaîne étape?</span>
-        <h3 className={saira.className}>
+        <Heading type="h3">
           Êtes-vous prêt? Réalisons ensemble votre projet!
-        </h3>
+        </Heading>
       </div>
 
       <div

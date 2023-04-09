@@ -2,9 +2,9 @@ import React from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
 import { getPosts } from "../../data/news"
-import { saira } from "../../utils/fonts"
 import BlogPost from "../Blog/BlogPost"
 import { Post } from "../../data/interfaces/Post"
+import Heading from "./Heading"
 
 const blog: Post = {
   title:
@@ -21,7 +21,7 @@ const LatestNewsSlider = () => (
   <div className="blog-area ptb-100">
     <div className="container">
       <div className="section-title">
-        <h2 className={saira.className}>Actualités</h2>
+        <Heading type="h2">Actualités</Heading>
       </div>
 
       <Swiper

@@ -1,8 +1,8 @@
 import React, { useContext } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { saira } from "../../utils/fonts"
 import LightBoxContext from "../../context/lightBoxContext"
+import Heading from "../Common/Heading"
 
 const MainBanner = () => {
   const { toggler, setToggler, setVideo } = useContext(LightBoxContext)
@@ -21,14 +21,14 @@ const MainBanner = () => {
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <div className="main-banner-content">
-                  <h1
+                  <Heading
+                    type="h1"
                     data-aos="fade-in"
                     data-aos-duration="1200"
                     data-aos-delay="100"
-                    className={saira.className}
                   >
                     Bienvenue à KTEKDESIGN
-                  </h1>
+                  </Heading>
 
                   <p
                     data-aos="zoom-in"

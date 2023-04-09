@@ -1,7 +1,7 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { saira } from "../../utils/fonts"
+import Heading from "../Common/Heading"
 
 const ServiceStyle = () => (
   <>
@@ -11,9 +11,9 @@ const ServiceStyle = () => (
           <div className="col-lg-6">
             <div className="service-info pr-50">
               <div className="info-head">
-                <h2 className={`title ${saira.className}`}>
+                <Heading type="h2" className="title">
                   Web & Mobile Development
-                </h2>
+                </Heading>
                 <p>
                   Que vous faut-il pour avoir plus de chance de votre côté pour
                   réussir sur internet? Sans hésiter, nous pouvons vous dire
@@ -101,9 +101,9 @@ const ServiceStyle = () => (
           <div className="col-lg-6">
             <div className="service-info pl-50">
               <div className="info-head">
-                <h2 className={`title ${saira.className}`}>
+                <Heading type="h2" className="title">
                   Digital Marketing
-                </h2>
+                </Heading>
                 <p>
                   Positionnez vous où se trouvent vos clients. Apparaîssez et
                   vendez!
@@ -159,9 +159,9 @@ const ServiceStyle = () => (
           <div className="col-lg-6">
             <div className="service-info pr-50">
               <div className="info-head">
-                <h2 className={`title ${saira.className}`}>
+                <Heading type="h2" className="title">
                   Cloud Hosting Services
-                </h2>
+                </Heading>
                 <p>
                   Prenez controle du Cloud pour fournir une haute disponibilité
                   de vos applications.

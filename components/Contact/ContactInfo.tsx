@@ -1,6 +1,6 @@
 import Link from "next/link"
 import React from "react"
-import { saira } from "../../utils/fonts"
+import Heading from "../Common/Heading"
 import SocialLinks from "../Layouts/SocialLinks"
 
 const ContactInfo = () => (
@@ -12,7 +12,7 @@ const ContactInfo = () => (
             <div className="icon">
               <i className="pe-7s-mail"></i>
             </div>
-            <h3 className={saira.className}>Envoyez un email à</h3>
+            <Heading type="h3">Envoyez un email à</Heading>
             <p>
               <Link href="mailto:contact@ktekdesign.com">
                 contact@ktekdesign.com
@@ -26,7 +26,7 @@ const ContactInfo = () => (
             <div className="icon">
               <i className="pe-7s-map-2"></i>
             </div>
-            <h3 className={saira.className}>Nos Réseaux sociaux</h3>
+            <Heading type="h3">Nos Réseaux sociaux</Heading>
             <div className="single-footer-widget">
               <SocialLinks />
             </div>
@@ -38,7 +38,7 @@ const ContactInfo = () => (
             <div className="icon">
               <i className="pe-7s-call"></i>
             </div>
-            <h3 className={saira.className}>Whatsapp</h3>
+            <Heading type="h3">Whatsapp</Heading>
             <p>
               <Link href="https://api.whatsapp.com/send?phone=5541997527702">
                 +55 (41) 997-527-702

@@ -1,9 +1,9 @@
 import React, { useContext } from "react"
 import Image from "next/image"
 import parse from "html-react-parser"
-import { saira } from "../../utils/fonts"
 import { Service } from "../../data/interfaces/Service"
 import LightBoxContext from "../../context/lightBoxContext"
+import Heading from "../Common/Heading"
 
 const ServiceDetailsContent = ({
   video,
@@ -12,6 +12,8 @@ const ServiceDetailsContent = ({
   description,
 }: Service) => {
   const { toggler, setToggler, setVideo } = useContext(LightBoxContext)
+
+  if (!description) return <></>
 
   return (
     <div className="services-details-area ptb-100">
@@ -38,14 +40,14 @@ const ServiceDetailsContent = ({
 
           <div className={`col-lg-${method ? "8" : "12"} col-md-12`}>
             <div className="services-details-desc">
-              <h2 className={saira.className}>Description</h2>
-              {description && parse(description)}
+              <Heading type="h2">Description</Heading>
+              {parse(description)}
             </div>
           </div>
           {method && (
             <div className="col-lg-4 col-md-12">
               <div className="services-details-info">
-                <h2 className={saira.className}>Notre méthodologie</h2>
+                <Heading type="h2">Notre méthodologie</Heading>
                 {parse(method)}
               </div>
             </div>

@@ -2,14 +2,14 @@ import React from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { funFactsData } from "../../data/funfacts"
-import { saira } from "../../utils/fonts"
+import Heading from "./Heading"
 
 const FunFacts = () => (
   <div className="funfacts-area ptb-100 bg-fcfbfb">
     <Image src="/images/map.png" alt="map" fill />
     <div className="container">
       <div className="section-title">
-        <h2 className={saira.className}>Quelles sont vos attentes?</h2>
+        <Heading type="h2">Quelles sont vos attentes?</Heading>
         <p>
           Nous vous faisons des recommandations en accord avec vos attentes et
           votre capacité d&apos;investissement. Peu importe la taille de votre
@@ -29,7 +29,7 @@ const FunFacts = () => (
               data-aos-delay={funFact.aosDelay}
             >
               <i className={funFact.iconName}></i>
-              <h3 className={saira.className}>{funFact.number}</h3>
+              <Heading type="h3">{funFact.number}</Heading>
               <p>{funFact.shortText}</p>
             </div>
           </div>
@@ -42,7 +42,7 @@ const FunFacts = () => (
         data-aos-duration="1200"
         data-aos-delay="500"
       >
-        <h3 className={saira.className}>Avez-vous des questions?</h3>
+        <Heading type="h3">Avez-vous des questions?</Heading>
         <p>N&apos;hésitez à nous contacter</p>
         <Link href="/contact" className="btn btn-primary">
           Contact

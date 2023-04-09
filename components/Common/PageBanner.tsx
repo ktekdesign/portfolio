@@ -1,6 +1,6 @@
 import React, { FC } from "react"
 import Image from "next/image"
-import { saira } from "../../utils/fonts"
+import Heading from "./Heading"
 
 const PageBanner: FC<{ pageTitle: string; BGImage: string }> = ({
   pageTitle,
@@ -17,7 +17,9 @@ const PageBanner: FC<{ pageTitle: string; BGImage: string }> = ({
     <div className="d-table">
       <div className="d-table-cell">
         <div className="container">
-          <h1 className={`page-title ${saira.className}`}>{pageTitle}</h1>
+          <Heading className="page-title" type="h1">
+            {pageTitle}
+          </Heading>
         </div>
       </div>
     </div>

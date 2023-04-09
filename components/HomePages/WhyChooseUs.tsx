@@ -1,8 +1,8 @@
 import React, { useContext } from "react"
 import Image from "next/image"
-import { saira } from "../../utils/fonts"
 import LightBoxContext from "../../context/lightBoxContext"
 import Link from "next/link"
+import Heading from "../Common/Heading"
 
 const WhyChooseUs = () => {
   const { toggler, setToggler, setVideo } = useContext(LightBoxContext)
@@ -19,7 +19,7 @@ const WhyChooseUs = () => {
               data-aos-delay="100"
             >
               <div className="section-title">
-                <h2 className={saira.className}>Pourquoi nous choisir?</h2>
+                <Heading type="h2">Pourquoi nous choisir?</Heading>
                 <p>
                   Nous pouvons vous dire que si vous n&apos;êtes pas satisfait
                   vous serez automatiquement remboursé mais tous nos clients ont
@@ -29,7 +29,7 @@ const WhyChooseUs = () => {
               </div>
 
               <div className="about-text">
-                <h3 className={saira.className}>Qui sommes-nous?</h3>
+                <Heading type="h3">Qui sommes-nous?</Heading>
                 <p>
                   Nous avons contribué à la croissance de plusieurs entreprises
                   au plan continental ainsi qu&apos;à l&apos;international.
@@ -47,7 +47,7 @@ const WhyChooseUs = () => {
               </div>
 
               <div className="about-text">
-                <h3 className={saira.className}>Notre Histoire</h3>
+                <Heading type="h3">Notre Histoire</Heading>
                 <p>
                   En 8 ans d&apos;activité, nous avons developpé plusieurs
                   grands projets en Afrique dont les applications web et Android
@@ -65,7 +65,7 @@ const WhyChooseUs = () => {
               </div>
 
               <div className="about-text">
-                <h3 className={saira.className}>Nos Ambitions</h3>
+                <Heading type="h3">Nos Ambitions</Heading>
                 <p>
                   Commencer un business en ligne est souvent beaucoup plus
                   compliqué que ce qui est décrit par les influenceurs. Vous

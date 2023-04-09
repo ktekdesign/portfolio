@@ -1,9 +1,9 @@
 import React, { FC, useContext } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { saira } from "../../utils/fonts"
 import { Post } from "../../data/interfaces/Post"
 import LightBoxContext from "../../context/lightBoxContext"
+import Heading from "../Common/Heading"
 
 const BlogPost: FC<{
   post: Post
@@ -56,9 +56,9 @@ const BlogPost: FC<{
 
         <div className="blog-post-content">
           <span>{date}</span>
-          <h3 className={saira.className}>
+          <Heading type="h3">
             <Link href={readMoreLink}>{title}</Link>
-          </h3>
+          </Heading>
 
           <p>{shortText}</p>
 

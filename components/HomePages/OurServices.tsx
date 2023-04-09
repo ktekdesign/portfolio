@@ -1,14 +1,14 @@
 import React from "react"
 import Link from "next/link"
 import { servicesData } from "../../data/services"
-import { saira } from "../../utils/fonts"
+import Heading from "../Common/Heading"
 
 const OurServices = ({ title = false }) => (
   <div className="pt-100 pb-70">
     <div className="container">
       {title && (
         <div className="section-title">
-          <h2 className={saira.className}>Nos Services</h2>
+          <Heading type="h2">Nos Services</Heading>
           <p>
             Première iniciative de notre groupe lancée en Octobre 2015, notre
             objectif est d&apos;offrir une alternative crédible aux porteurs de
@@ -28,9 +28,9 @@ const OurServices = ({ title = false }) => (
           >
             <div className="service-card-one bg-fcfbfb">
               <i className={service.iconName}></i>
-              <h3 className={saira.className}>
+              <Heading type="h3">
                 <Link href={service.viewDetails}>{service.pageTitle}</Link>
-              </h3>
+              </Heading>
               <p>{service.shortText}</p>
             </div>
           </div>

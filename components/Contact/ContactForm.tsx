@@ -2,8 +2,8 @@ import React from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 import axios from "axios"
 import { newsletterUrl, contactUrl } from "../../utils/urls"
-import { saira } from "../../utils/fonts"
 import alertContent from "../../utils/alertContent"
+import Heading from "../Common/Heading"
 
 type Inputs = {
   name: string
@@ -55,7 +55,7 @@ const ContactForm = () => {
   return (
     <div className="contact-form">
       <div className="contact-title">
-        <h2 className={saira.className}>Contactez-nous</h2>
+        <Heading type="h2">Contactez-nous</Heading>
         <p>Nous serons ravis de discuter de votre projet avec vous.</p>
       </div>
 

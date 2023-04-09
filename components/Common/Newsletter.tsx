@@ -3,8 +3,8 @@ import { useForm, SubmitHandler } from "react-hook-form"
 import Image from "next/image"
 import { newsletterUrl } from "../../utils/urls"
 import axios from "axios"
-import { saira } from "../../utils/fonts"
 import alertContent from "../../utils/alertContent"
+import Heading from "./Heading"
 
 type Inputs = {
   name: string
@@ -52,14 +52,14 @@ const Newsletter = () => {
             Restons en contact!
           </span>
 
-          <h2
+          <Heading
             data-aos="fade-in"
             data-aos-duration="1200"
             data-aos-delay="200"
-            className={saira.className}
+            type="h2"
           >
             Ne ratez aucune de nos actualisations et promotions
-          </h2>
+          </Heading>
 
           <form
             className="newsletter-form"
