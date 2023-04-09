@@ -31,17 +31,17 @@ const MainBanner = () => {
                   </h1>
 
                   <p
-                    data-aos="fade-in"
+                    data-aos="zoom-in"
                     data-aos-duration="1200"
                     data-aos-delay="200"
                   >
-                    Agence Web Digitale
+                    Agence Web Digitale - Vous imaginez, nous créons!
                   </p>
 
                   <Link
                     href="/contact"
                     className="btn btn-primary"
-                    data-aos="fade-in"
+                    data-aos="zoom-in"
                     data-aos-duration="1200"
                     data-aos-delay="300"
                   >

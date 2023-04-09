@@ -4,8 +4,6 @@ type LightBoxContextData = {
   setToggler: Dispatch<SetStateAction<boolean>>
   video: string[]
   setVideo: Dispatch<SetStateAction<string[]>>
-  showButton: boolean
-  setShowButton: Dispatch<SetStateAction<boolean>>
 }
 const LightBoxContext = createContext({} as LightBoxContextData)
 

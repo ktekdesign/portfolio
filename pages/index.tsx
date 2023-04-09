@@ -1,13 +1,13 @@
 import React from "react"
-import NavbarDark from "../components/Layouts/NavbarDark"
+import Navbar from "../components/Layouts/Navbar"
 import MainBanner from "../components/HomePages/MainBanner"
 import OurServices from "../components/HomePages/OurServices"
-import ServiceStyleTwo from "../components/HomePages/ServiceStyleTwo"
+import ServiceStyle from "../components/HomePages/ServiceStyle"
 import WhyChooseUs from "../components/HomePages/WhyChooseUs"
-import FunFactsTwo from "../components/Common/FunFactsTwo"
-import LatestNewsSliderTwo from "../components/Common/LatestNewsSliderTwo"
+import FunFacts from "../components/Common/FunFacts"
+import LatestNewsSlider from "../components/Common/LatestNewsSlider"
 import Newsletter from "../components/Common/Newsletter"
-import Footer from "../components/Layouts/FooterDark"
+import Footer from "../components/Layouts/Footer"
 import Head from "next/head"
 
 const Home = () => (
@@ -19,19 +19,20 @@ const Home = () => (
         content="Nous sommes spécialisés dans la création de sites web, de stratégies de marketing digital et de développement d'applications mobiles"
       />
     </Head>
-    <NavbarDark />
+    
+    <Navbar />
 
     <MainBanner />
 
-    <OurServices title={true} />
+    <OurServices title />
 
-    <ServiceStyleTwo />
+    <ServiceStyle />
 
     <WhyChooseUs />
 
-    <FunFactsTwo />
+    <FunFacts />
 
-    <LatestNewsSliderTwo />
+    <LatestNewsSlider />
 
     <Newsletter />
 

@@ -1,7 +1,7 @@
 import React from "react"
-import NavbarDark from "../../components/Layouts/NavbarDark"
+import Navbar from "../../components/Layouts/Navbar"
 import PageBanner from "../../components/Common/PageBanner"
-import Footer from "../../components/Layouts/FooterDark"
+import Footer from "../../components/Layouts/Footer"
 import OurServices from "../../components/HomePages/OurServices"
 import Newsletter from "../../components/Common/Newsletter"
 import Head from "next/head"
@@ -17,7 +17,8 @@ const ServicesPage = () => (
           pour en assurer l'exécution."
       />
     </Head>
-    <NavbarDark />
+    
+    <Navbar />
 
     <PageBanner pageTitle="Nos services" BGImage="/images/hero-banner2.jpg" />
 

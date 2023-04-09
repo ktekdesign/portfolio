@@ -3,7 +3,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { saira } from "../../utils/fonts"
 
-const ServiceStyleTwo = () => (
+const ServiceStyle = () => (
   <>
     <div className="service-style-two ptb-100 bg-fcfbfb">
       <div className="container">
@@ -232,4 +232,4 @@ const ServiceStyleTwo = () => (
   </>
 )
 
-export default React.memo(ServiceStyleTwo)
+export default React.memo(ServiceStyle)

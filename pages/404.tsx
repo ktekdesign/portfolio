@@ -1,8 +1,8 @@
 import React from "react"
-import NavbarDark from "../components/Layouts/NavbarDark"
+import Navbar from "../components/Layouts/Navbar"
 import PageBanner from "../components/Common/PageBanner"
 import ErrorContent from "../components/Error/ErrorContent"
-import Footer from "../components/Layouts/FooterDark"
+import Footer from "../components/Layouts/Footer"
 import Head from "next/head"
 
 const Error = () => (
@@ -14,7 +14,8 @@ const Error = () => (
         content="Page introuvable sur le site web de l'agence digitale KTEKDESIGN"
       />
     </Head>
-    <NavbarDark />
+    
+    <Navbar />
 
     <PageBanner pageTitle="404 Error" BGImage="/images/page-banner3.jpg" />
 

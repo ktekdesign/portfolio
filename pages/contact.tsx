@@ -1,9 +1,9 @@
 import React from "react"
-import NavbarDark from "../components/Layouts/NavbarDark"
+import Navbar from "../components/Layouts/Navbar"
 import PageBanner from "../components/Common/PageBanner"
 import ContactInfo from "../components/Contact/ContactInfo"
 import ContactForm from "../components/Contact/ContactForm"
-import Footer from "../components/Layouts/FooterDark"
+import Footer from "../components/Layouts/Footer"
 import Head from "next/head"
 
 const Contact = () => (
@@ -15,7 +15,8 @@ const Contact = () => (
         content="Contactez l'agence web digitale KTEKDESIGN pour créer vos sites web"
       />
     </Head>
-    <NavbarDark />
+    
+    <Navbar />
 
     <PageBanner pageTitle="Contact" BGImage="/images/hero-banner6.jpg" />
 

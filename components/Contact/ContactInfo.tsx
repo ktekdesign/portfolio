@@ -1,3 +1,4 @@
+import Link from "next/link"
 import React from "react"
 import { saira } from "../../utils/fonts"
 import SocialLinks from "../Layouts/SocialLinks"
@@ -13,7 +14,7 @@ const ContactInfo = () => (
             </div>
             <h3 className={saira.className}>Envoyez un email à</h3>
             <p>
-              <a href="mailto:contact@ktekdesign.com">contact@ktekdesign.com</a>
+              <Link href="mailto:contact@ktekdesign.com">contact@ktekdesign.com</Link>
             </p>
           </div>
         </div>
@@ -37,9 +38,9 @@ const ContactInfo = () => (
             </div>
             <h3 className={saira.className}>Whatsapp</h3>
             <p>
-              <a href="https://api.whatsapp.com/send?phone=5541997527702">
+              <Link href="https://api.whatsapp.com/send?phone=5541997527702">
                 +55 (41) 997-527-702
-              </a>
+              </Link>
             </p>
           </div>
         </div>

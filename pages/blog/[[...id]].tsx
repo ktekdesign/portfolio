@@ -1,8 +1,8 @@
 import React from "react"
-import NavbarDark from "../../components/Layouts/NavbarDark"
+import Navbar from "../../components/Layouts/Navbar"
 import PageBanner from "../../components/Common/PageBanner"
-import BlogGridThree from "../../components/Blog/BlogGridThree"
-import Footer from "../../components/Layouts/FooterDark"
+import BlogGrid from "../../components/Blog/BlogGrid"
+import Footer from "../../components/Layouts/Footer"
 import Newsletter from "../../components/Common/Newsletter"
 import Head from "next/head"
 import { getPosts, getPostsCount } from "../../data/news"
@@ -64,15 +64,13 @@ const Blog = ({ posts, currentPage, pages }: Props) => (
       />
     </Head>
 
-    <NavbarDark />
+    <Navbar />
 
     <PageBanner pageTitle="Blog" BGImage="/images/hero-banner5.jpg" />
 
-    <BlogGridThree posts={posts} />
+    <BlogGrid posts={posts} />
 
-    {pages?.length > 1 && (
-      <Pagination currentPage={currentPage} pages={pages} />
-    )}
+    <Pagination currentPage={currentPage} pages={pages} />
 
     <Newsletter />
 

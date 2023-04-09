@@ -18,13 +18,9 @@ const LightBoxContextProvider: FC<Props> = ({ children }) => {
     useState([""])
   const [toggler, setToggler]: [boolean, Dispatch<SetStateAction<boolean>>] =
     useState(false)
-  const [showButton, setShowButton]: [
-    boolean,
-    Dispatch<SetStateAction<boolean>>
-  ] = useState(false)
   const value = useMemo(
-    () => ({ toggler, setToggler, video, setVideo, showButton, setShowButton }),
-    [showButton, toggler, video]
+    () => ({ toggler, setToggler, video, setVideo }),
+    [toggler, video]
   )
   return (
     <LightBoxContext.Provider value={value}>

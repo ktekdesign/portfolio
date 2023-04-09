@@ -1,13 +1,13 @@
 import React from "react"
-import { getService } from "../../data/services"
 import Head from "next/head"
-import { Service } from "../../data/interfaces/Service"
-import { GetStaticProps } from "next"
-import NavbarDark from "../../components/Layouts/NavbarDark"
+import Navbar from "../../components/Layouts/Navbar"
 import PageBanner from "../../components/Common/PageBanner"
 import ServiceDetailsContent from "../../components/Services/ServiceDetailsContent"
-import CtaAreaThree from "../../components/Common/CtaAreaThree"
-import Footer from "../../components/Layouts/FooterDark"
+import CtaArea from "../../components/Common/CtaArea"
+import Footer from "../../components/Layouts/Footer"
+import { Service } from "../../data/interfaces/Service"
+import { GetStaticProps } from "next"
+import { getService } from "../../data/services"
 
 type Props = {
   service: Service
@@ -52,13 +52,13 @@ const ServicePage = ({ service }: Props) => (
       <meta name="description" content={service?.shortText} />
     </Head>
 
-    <NavbarDark />
+    <Navbar />
 
     <PageBanner {...service} />
 
     <ServiceDetailsContent {...service} />
 
-    <CtaAreaThree />
+    <CtaArea />
 
     <Footer />
   </>
