@@ -146,3 +146,13 @@ export const getService = (id: string) => {
 
   return service
 }
+
+export const getServices = () => {
+  return Object.values(servicesData)
+}
+
+export const getServicesRoutes = () => {
+  return Object.keys(servicesData).map((route) => ({
+    params: { slug: route.replaceAll("_", "-") },
+  }))
+}

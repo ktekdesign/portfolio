@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import Heading from "../Common/Heading"
@@ -232,4 +232,4 @@ const ServiceStyle = () => (
   </>
 )
 
-export default React.memo(ServiceStyle)
+export default memo(ServiceStyle)

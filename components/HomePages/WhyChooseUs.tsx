@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { memo, useContext } from "react"
 import Image from "next/image"
 import LightBoxContext from "../../context/lightBoxContext"
 import Link from "next/link"
@@ -115,4 +115,4 @@ const WhyChooseUs = () => {
   )
 }
 
-export default React.memo(WhyChooseUs)
+export default memo(WhyChooseUs)

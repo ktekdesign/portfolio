@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -15,4 +15,4 @@ const Logo = ({ ...linkProps }) => (
   </Link>
 )
 
-export default React.memo(Logo)
+export default memo(Logo)

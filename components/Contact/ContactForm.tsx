@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 import axios from "axios"
 import { newsletterUrl, contactUrl } from "../../utils/urls"
@@ -133,4 +133,4 @@ const ContactForm = () => {
   )
 }
 
-export default React.memo(ContactForm)
+export default memo(ContactForm)

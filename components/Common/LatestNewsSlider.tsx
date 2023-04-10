@@ -1,7 +1,6 @@
-import React from "react"
+import React, { FC, memo } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
-import { getPosts } from "../../data/news"
 import BlogPost from "../Blog/BlogPost"
 import { Post } from "../../data/interfaces/Post"
 import Heading from "./Heading"
@@ -11,13 +10,13 @@ const blog: Post = {
     "Découvrez toute notre actualité et vidéos de formation sur notre blog",
   image: "/images/code.jpg",
   date: "01 Mars 2023",
-  category: "Blog",
+  category: { name: "Blog" },
   shortText:
     "Toutes nos vidéos de formations et nos astuces pour apprendre à programmer comme de vrais professionnels.",
   readMoreLink: "/blog/",
 }
 
-const LatestNewsSlider = () => (
+const LatestNewsSlider: FC<{ posts: Post[] }> = ({ posts }) => (
   <div className="blog-area ptb-100">
     <div className="container">
       <div className="section-title">
@@ -48,17 +47,17 @@ const LatestNewsSlider = () => (
         modules={[Pagination]}
         className="blog-slides"
       >
-        {getPosts(0, 3)?.map((post, i) => (
-          <SwiperSlide key={i}>
-            <BlogPost post={post} />
+        {posts.map((post, key) => (
+          <SwiperSlide key={key}>
+            <BlogPost {...post} />
           </SwiperSlide>
         ))}
         <SwiperSlide key="blog">
-          <BlogPost post={blog} />
+          <BlogPost {...blog} />
         </SwiperSlide>
       </Swiper>
     </div>
   </div>
 )
 
-export default React.memo(LatestNewsSlider)
+export default memo(LatestNewsSlider)

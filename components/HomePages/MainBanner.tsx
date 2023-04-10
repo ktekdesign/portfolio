@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { memo, useContext } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import LightBoxContext from "../../context/lightBoxContext"
@@ -86,4 +86,4 @@ const MainBanner = () => {
   )
 }
 
-export default React.memo(MainBanner)
+export default memo(MainBanner)

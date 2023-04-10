@@ -9,8 +9,35 @@ import LatestNewsSlider from "../components/Common/LatestNewsSlider"
 import Newsletter from "../components/Common/Newsletter"
 import Footer from "../components/Layouts/Footer"
 import Head from "next/head"
+import { GetStaticProps } from "next"
+import { Service } from "../data/interfaces/Service"
+import { getServices } from "../data/services"
+import { FunFact } from "../data/interfaces/FunFact"
+import { getFunFacts } from "../data/funfacts"
+import { Post } from "../data/interfaces/Post"
+import { getLatestPosts } from "../data/news"
 
-const Home = () => (
+type Props = {
+  services: Service[]
+  funFacts: FunFact[]
+  posts: Post[]
+}
+
+export const getStaticProps: GetStaticProps<Props> = () => {
+  const services = getServices()
+  const funFacts = getFunFacts()
+  const posts = getLatestPosts()
+
+  return {
+    props: {
+      services,
+      funFacts,
+      posts,
+    },
+  }
+}
+
+const Home = ({ services, funFacts, posts }: Props) => (
   <>
     <Head>
       <title>Agence Web Digitale - KTEKDESIGN</title>
@@ -24,19 +51,19 @@ const Home = () => (
 
     <MainBanner />
 
-    <OurServices title />
+    <OurServices title services={services} />
 
     <ServiceStyle />
 
     <WhyChooseUs />
 
-    <FunFacts />
+    <FunFacts funFacts={funFacts} />
 
-    <LatestNewsSlider />
+    <LatestNewsSlider posts={posts} />
 
     <Newsletter />
 
-    <Footer />
+    <Footer posts={posts} />
   </>
 )
 

@@ -5,7 +5,7 @@ import BlogGrid from "../../components/Blog/BlogGrid"
 import Footer from "../../components/Layouts/Footer"
 import Newsletter from "../../components/Common/Newsletter"
 import Head from "next/head"
-import { getPosts, getPostsCount } from "../../data/news"
+import { getLatestPosts, getPosts, getPostsCount } from "../../data/news"
 import { GetStaticProps } from "next"
 import { Post } from "../../data/interfaces/Post"
 import Pagination from "../../components/Blog/Pagination"
@@ -23,6 +23,7 @@ type Props = {
   posts: Post[]
   currentPage: number
   pages: string[]
+  latestPosts: Post[]
 }
 
 export async function getStaticPaths() {
@@ -39,6 +40,7 @@ export const getStaticProps: GetStaticProps<Props> = (ctx) => {
   const end = currentPage * POSTS_PER_PAGE
   const start = end - POSTS_PER_PAGE
   const posts = getPosts(start, end)
+  const latestPosts = getLatestPosts()
 
   if (!posts.length) {
     return {
@@ -51,10 +53,11 @@ export const getStaticProps: GetStaticProps<Props> = (ctx) => {
       posts,
       currentPage,
       pages,
+      latestPosts,
     },
   }
 }
-const Blog = ({ posts, currentPage, pages }: Props) => (
+const Blog = ({ posts, currentPage, pages, latestPosts }: Props) => (
   <>
     <Head>
       <title>{`Blog d'actualités - Page ${currentPage} - KTEKDESIGN`}</title>
@@ -74,7 +77,7 @@ const Blog = ({ posts, currentPage, pages }: Props) => (
 
     <Newsletter />
 
-    <Footer />
+    <Footer posts={latestPosts} />
   </>
 )
 

@@ -1,15 +1,20 @@
-import React, { FC, useContext } from "react"
+import React, { memo, useContext } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Post } from "../../data/interfaces/Post"
 import LightBoxContext from "../../context/lightBoxContext"
 import Heading from "../Common/Heading"
 
-const BlogPost: FC<{
-  post: Post
-}> = ({ post }) => {
+const BlogPost = ({
+  video,
+  image,
+  title,
+  readMoreLink,
+  category,
+  date,
+  shortText,
+}: Post) => {
   const { toggler, setToggler, setVideo } = useContext(LightBoxContext)
-  const { video, image, title, readMoreLink, category, date, shortText } = post
 
   if (!readMoreLink) return <></>
 
@@ -50,7 +55,11 @@ const BlogPost: FC<{
             </Link>
           )}
           <div className="post-tag">
-            <Link href={readMoreLink}>{category}</Link>
+            {category?.link ? (
+              <Link href={category.link}>{category.name}</Link>
+            ) : (
+              <span>{category?.name}</span>
+            )}
           </div>
         </div>
 
@@ -72,4 +81,4 @@ const BlogPost: FC<{
   )
 }
 
-export default React.memo(BlogPost)
+export default memo(BlogPost)

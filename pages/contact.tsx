@@ -5,8 +5,25 @@ import ContactInfo from "../components/Contact/ContactInfo"
 import ContactForm from "../components/Contact/ContactForm"
 import Footer from "../components/Layouts/Footer"
 import Head from "next/head"
+import { GetStaticProps } from "next"
+import { getLatestPosts } from "../data/news"
+import { Post } from "../data/interfaces/Post"
 
-const Contact = () => (
+type Props = {
+  posts: Post[]
+}
+
+export const getStaticProps: GetStaticProps<Props> = () => {
+  const posts = getLatestPosts()
+
+  return {
+    props: {
+      posts,
+    },
+  }
+}
+
+const Contact = ({ posts }: Props) => (
   <>
     <Head>
       <title>Contact - KTEKDESIGN</title>
@@ -24,7 +41,7 @@ const Contact = () => (
 
     <ContactForm />
 
-    <Footer />
+    <Footer posts={posts} />
   </>
 )
 

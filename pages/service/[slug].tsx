@@ -7,16 +7,20 @@ import CtaArea from "../../components/Common/CtaArea"
 import Footer from "../../components/Layouts/Footer"
 import { Service } from "../../data/interfaces/Service"
 import { GetStaticProps } from "next"
-import { getService } from "../../data/services"
+import { getService, getServicesRoutes } from "../../data/services"
+import { Post } from "../../data/interfaces/Post"
+import { getLatestPosts } from "../../data/news"
 
 type Props = {
   service: Service
+  posts: Post[]
 }
 
 export const getStaticProps: GetStaticProps<Props> = (ctx) => {
   const slug = ctx?.params?.slug || ""
   const key = (Array.isArray(slug) ? slug[0] : slug).replaceAll("-", "_")
   const service = getService(key)
+  const posts = getLatestPosts()
 
   if (!service) {
     return {
@@ -27,25 +31,21 @@ export const getStaticProps: GetStaticProps<Props> = (ctx) => {
   return {
     props: {
       service,
+      posts,
     },
   }
 }
 
 export async function getStaticPaths() {
+  const paths = getServicesRoutes()
+
   return {
-    paths: [
-      { params: { slug: "creation-site-web" } },
-      { params: { slug: "application-android-et-ios" } },
-      { params: { slug: "e-commerce" } },
-      { params: { slug: "marketing-digital" } },
-      { params: { slug: "devops-solution" } },
-      { params: { slug: "hebergement-web" } },
-    ],
+    paths,
     fallback: true,
   }
 }
 
-const ServicePage = ({ service }: Props) => (
+const ServicePage = ({ service, posts }: Props) => (
   <>
     <Head>
       <title>{`${service?.pageTitle} - KTEKDESIGN`}</title>
@@ -54,13 +54,13 @@ const ServicePage = ({ service }: Props) => (
 
     <Navbar />
 
-    <PageBanner {...service} />
+    <PageBanner pageTitle={service?.pageTitle} BGImage={service?.BGImage} />
 
     <ServiceDetailsContent {...service} />
 
     <CtaArea />
 
-    <Footer />
+    <Footer posts={posts} />
   </>
 )
 

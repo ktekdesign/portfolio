@@ -5,8 +5,36 @@ import Footer from "../../components/Layouts/Footer"
 import OurServices from "../../components/HomePages/OurServices"
 import Newsletter from "../../components/Common/Newsletter"
 import Head from "next/head"
+import { getServices } from "../../data/services"
+import { GetStaticProps } from "next"
+import { Service } from "../../data/interfaces/Service"
+import { Post } from "../../data/interfaces/Post"
+import { getLatestPosts } from "../../data/news"
 
-const ServicesPage = () => (
+type Props = {
+  services: Service[]
+  posts: Post[]
+}
+
+export const getStaticProps: GetStaticProps<Props> = () => {
+  const services = getServices()
+  const posts = getLatestPosts()
+
+  if (!services.length) {
+    return {
+      notFound: true,
+    }
+  }
+
+  return {
+    props: {
+      services,
+      posts,
+    },
+  }
+}
+
+const ServicesPage = ({ services, posts }: Props) => (
   <>
     <Head>
       <title>Nos Services - KTEKDESIGN</title>
@@ -22,11 +50,11 @@ const ServicesPage = () => (
 
     <PageBanner pageTitle="Nos services" BGImage="/images/hero-banner2.jpg" />
 
-    <OurServices />
+    <OurServices services={services} />
 
     <Newsletter />
 
-    <Footer />
+    <Footer posts={posts} />
   </>
 )
 

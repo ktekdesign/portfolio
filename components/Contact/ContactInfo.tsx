@@ -1,5 +1,5 @@
 import Link from "next/link"
-import React from "react"
+import React, { memo } from "react"
 import Heading from "../Common/Heading"
 import SocialLinks from "../Layouts/SocialLinks"
 
@@ -51,4 +51,4 @@ const ContactInfo = () => (
   </div>
 )
 
-export default React.memo(ContactInfo)
+export default memo(ContactInfo)

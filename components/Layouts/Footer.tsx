@@ -1,13 +1,13 @@
-import React from "react"
+import React, { FC, memo } from "react"
 import Link from "next/link"
 import Logo from "../Common/Logo"
 import SocialLinks from "./SocialLinks"
-import { getPosts } from "../../data/news"
 import Heading from "../Common/Heading"
+import { Post } from "../../data/interfaces/Post"
 
 const currentYear = new Date().getFullYear()
 
-const Footer = () => (
+const Footer: FC<{ posts: Post[] }> = ({ posts }) => (
   <footer className="footer-area footer-dark">
     <div className="container">
       <div className="row justify-content-center">
@@ -70,10 +70,10 @@ const Footer = () => (
           >
             <Heading type="h3">Publications Récentes</Heading>
             <ul className="list">
-              {getPosts(0, 3)?.map((post, key) => (
+              {posts.map(({ readMoreLink, title }, key) => (
                 <li key={key}>
-                  <Link href={post.readMoreLink} target="_blank">
-                    {post.title}
+                  <Link href={readMoreLink} target="_blank">
+                    {title}
                   </Link>
                 </li>
               ))}
@@ -122,4 +122,4 @@ const Footer = () => (
   </footer>
 )
 
-export default React.memo(Footer)
+export default memo(Footer)

@@ -1,10 +1,10 @@
-import React from "react"
+import React, { FC, memo } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { funFactsData } from "../../data/funfacts"
+import { FunFact } from "../../data/interfaces/FunFact"
 import Heading from "./Heading"
 
-const FunFacts = () => (
+const FunFacts: FC<{ funFacts: FunFact[] }> = ({ funFacts }) => (
   <div className="funfacts-area ptb-100 bg-fcfbfb">
     <Image src="/images/map.png" alt="map" fill />
     <div className="container">
@@ -20,17 +20,16 @@ const FunFacts = () => (
       </div>
 
       <div className="row justify-content-center">
-        {funFactsData?.slice(0, 4).map((funFact, i) => (
-          <div className="col-lg-3 col-sm-6" key={i}>
+        {funFacts.map(({ iconName, number, shortText }, key) => (
+          <div className="col-lg-3 col-sm-6" key={key}>
             <div
               className="funfact"
               data-aos="fade-up"
               data-aos-duration="1200"
-              data-aos-delay={funFact.aosDelay}
             >
-              <i className={funFact.iconName}></i>
-              <Heading type="h3">{funFact.number}</Heading>
-              <p>{funFact.shortText}</p>
+              <i className={iconName}></i>
+              <Heading type="h3">{number}</Heading>
+              <p>{shortText}</p>
             </div>
           </div>
         ))}
@@ -52,4 +51,4 @@ const FunFacts = () => (
   </div>
 )
 
-export default React.memo(FunFacts)
+export default memo(FunFacts)

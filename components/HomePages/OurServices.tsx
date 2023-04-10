@@ -1,9 +1,12 @@
-import React from "react"
+import React, { FC, memo } from "react"
 import Link from "next/link"
-import { servicesData } from "../../data/services"
 import Heading from "../Common/Heading"
+import { Service } from "../../data/interfaces/Service"
 
-const OurServices = ({ title = false }) => (
+const OurServices: FC<{ title?: boolean; services: Service[] }> = ({
+  title,
+  services,
+}) => (
   <div className="pt-100 pb-70">
     <div className="container">
       {title && (
@@ -18,26 +21,28 @@ const OurServices = ({ title = false }) => (
         </div>
       )}
       <div className="row justify-content-center">
-        {Object.entries(servicesData).map(([key, service]) => (
-          <div
-            className="col-lg-4 col-sm-6"
-            key={key}
-            data-aos="fade-in"
-            data-aos-duration="1200"
-            data-aos-delay={service.aosDelay}
-          >
-            <div className="service-card-one bg-fcfbfb">
-              <i className={service.iconName}></i>
-              <Heading type="h3">
-                <Link href={service.viewDetails}>{service.pageTitle}</Link>
-              </Heading>
-              <p>{service.shortText}</p>
+        {services.map((service, key) => {
+          const { iconName, viewDetails, pageTitle, shortText } = service
+          return (
+            <div
+              className="col-lg-4 col-sm-6"
+              key={key}
+              data-aos="fade-in"
+              data-aos-duration="1200"
+            >
+              <div className="service-card-one bg-fcfbfb">
+                <i className={iconName}></i>
+                <Heading type="h3">
+                  <Link href={viewDetails}>{pageTitle}</Link>
+                </Heading>
+                <p>{shortText}</p>
+              </div>
             </div>
-          </div>
-        ))}
+          )
+        })}
       </div>
     </div>
   </div>
 )
 
-export default React.memo(OurServices)
+export default memo(OurServices)

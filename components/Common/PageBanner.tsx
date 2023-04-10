@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import React, { FC, memo } from "react"
 import Image from "next/image"
 import Heading from "./Heading"
 
@@ -26,4 +26,4 @@ const PageBanner: FC<{ pageTitle: string; BGImage: string }> = ({
   </div>
 )
 
-export default React.memo(PageBanner)
+export default memo(PageBanner)

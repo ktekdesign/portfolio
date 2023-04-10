@@ -1,4 +1,4 @@
-import React from "react"
+import React, { memo } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
 import Image from "next/image"
 import { newsletterUrl } from "../../utils/urls"
@@ -102,4 +102,4 @@ const Newsletter = () => {
   )
 }
 
-export default React.memo(Newsletter)
+export default memo(Newsletter)
