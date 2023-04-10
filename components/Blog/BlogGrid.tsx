@@ -1,5 +1,5 @@
 import React, { FC, memo } from "react"
-import BlogPost from "./BlogPost"
+import BlogPost from "../Post/BlogPost"
 import { Post } from "../../data/interfaces/Post"
 
 const BlogGrid: FC<{ posts: Post[] }> = ({ posts }) => {

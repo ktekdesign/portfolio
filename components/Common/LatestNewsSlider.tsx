@@ -1,7 +1,7 @@
 import React, { FC, memo } from "react"
 import { Swiper, SwiperSlide } from "swiper/react"
 import { Pagination } from "swiper"
-import BlogPost from "../Blog/BlogPost"
+import BlogPost from "../Post/BlogPost"
 import { Post } from "../../data/interfaces/Post"
 import Heading from "./Heading"
 import Container from "./Container"

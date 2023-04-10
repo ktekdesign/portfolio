@@ -5,6 +5,7 @@ import SocialLinks from "./SocialLinks"
 import Heading from "../Common/Heading"
 import { Post } from "../../data/interfaces/Post"
 import Container from "../Common/Container"
+import LightPost from "../Post/LightPost"
 
 const currentYear = new Date().getFullYear()
 
@@ -70,12 +71,8 @@ const Footer: FC<{ posts: Post[] }> = ({ posts }) => (
         >
           <Heading type="h3">Publications Récentes</Heading>
           <ul className="list">
-            {posts?.map(({ readMoreLink, title }, key) => (
-              <li key={key}>
-                <Link href={readMoreLink} target="_blank">
-                  {title}
-                </Link>
-              </li>
+            {posts?.map((post, key) => (
+              <LightPost post={post} key={key} />
             ))}
           </ul>
         </div>
