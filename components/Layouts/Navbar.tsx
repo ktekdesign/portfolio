@@ -40,7 +40,7 @@ const Navbar = () => {
   return (
     <div
       id="navbar"
-      className={`navbar-area dark-navbar ${isSticky && "is-sticky"}`}
+      className={`navbar-area dark-navbar${isSticky ? " is-sticky" : ""}`}
     >
       <nav className="navbar navbar-expand-md">
         <div className="container-fluid">

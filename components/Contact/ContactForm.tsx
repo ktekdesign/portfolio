@@ -4,6 +4,7 @@ import axios from "axios"
 import { newsletterUrl, contactUrl } from "../../utils/urls"
 import alertContent from "../../utils/alertContent"
 import Heading from "../Common/Heading"
+import Container from "../Common/Container"
 
 type Inputs = {
   name: string
@@ -60,74 +61,72 @@ const ContactForm = () => {
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="container">
-          <div className="contact-form-box">
-            <div className="row">
-              <div className="col-lg-6">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    placeholder="Nom"
-                    className="form-control"
-                    {...register("name", { required: true })}
-                  />
-                  {errors.name && (
-                    <span className="error">Veuillez remplir ce champ</span>
-                  )}
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    placeholder="Email"
-                    className="form-control"
-                    {...register("email", { required: true })}
-                  />
-                  {errors.email && <span>Veuillez remplir ce champ</span>}
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    placeholder="Téléphone"
-                    className="form-control"
-                    {...register("number")}
-                  />
-                </div>
-              </div>
-              <div className="col-lg-6">
-                <div className="form-group">
-                  <input
-                    type="text"
-                    placeholder="Sujet"
-                    className="form-control"
-                    {...register("subject", { required: true })}
-                  />
-                  {errors.subject && <span>Veuillez remplir ce champ</span>}
-                </div>
-              </div>
-              <div className="col-lg-12 col-md-12">
-                <div className="form-group">
-                  <textarea
-                    cols={30}
-                    rows={6}
-                    placeholder="Votre message..."
-                    className="form-control"
-                    {...register("text", { required: true })}
-                  />
-                  {errors.text && <span>Veuillez remplir ce champ</span>}
-                </div>
-              </div>
-              <div className="col-lg-12 col-sm-12">
-                <button type="submit" className="btn btn-primary">
-                  Envoyer
-                </button>
+        <Container className="contact-form-box">
+          <div className="row">
+            <div className="col-lg-6">
+              <div className="form-group">
+                <input
+                  type="text"
+                  placeholder="Nom"
+                  className="form-control"
+                  {...register("name", { required: true })}
+                />
+                {errors.name && (
+                  <span className="error">Veuillez remplir ce champ</span>
+                )}
               </div>
             </div>
+            <div className="col-lg-6">
+              <div className="form-group">
+                <input
+                  type="text"
+                  placeholder="Email"
+                  className="form-control"
+                  {...register("email", { required: true })}
+                />
+                {errors.email && <span>Veuillez remplir ce champ</span>}
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="form-group">
+                <input
+                  type="text"
+                  placeholder="Téléphone"
+                  className="form-control"
+                  {...register("number")}
+                />
+              </div>
+            </div>
+            <div className="col-lg-6">
+              <div className="form-group">
+                <input
+                  type="text"
+                  placeholder="Sujet"
+                  className="form-control"
+                  {...register("subject", { required: true })}
+                />
+                {errors.subject && <span>Veuillez remplir ce champ</span>}
+              </div>
+            </div>
+            <div className="col-lg-12 col-md-12">
+              <div className="form-group">
+                <textarea
+                  cols={30}
+                  rows={6}
+                  placeholder="Votre message..."
+                  className="form-control"
+                  {...register("text", { required: true })}
+                />
+                {errors.text && <span>Veuillez remplir ce champ</span>}
+              </div>
+            </div>
+            <div className="col-lg-12 col-sm-12">
+              <button type="submit" className="btn btn-primary">
+                Envoyer
+              </button>
+            </div>
           </div>
-        </div>
+        </Container>
       </form>
     </div>
   )

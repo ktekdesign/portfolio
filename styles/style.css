@@ -861,6 +861,10 @@ Main Banner CSS
   background-size: cover;
   background-repeat: no-repeat;
 }
+.hero-banner .container {
+  height: 100vh;
+  display: flex;
+}
 .hero-banner.overly::before {
   content: "";
   background-color: #18181b;
@@ -4046,7 +4050,8 @@ Blog CSS
   top: 40px;
   transition: all 0.5s ease;
 }
-.single-blog-item .blog-image .post-tag a {
+.single-blog-item .blog-image .post-tag a,
+.single-blog-item .blog-image .post-tag span {
   background: #ff2c9c;
   color: #ffffff;
   padding: 9px 28px;
@@ -5439,7 +5444,6 @@ Footer CSS
 =================================================*/
 .footer-area {
   background-color: #f6f9fc;
-  padding-top: 100px;
   position: relative;
   z-index: 1;
 }
@@ -5627,11 +5631,10 @@ Footer CSS
 }
 
 .copyright-area {
-  background-color: #000000;
+  background-color: #000000 !important;
   text-align: center;
-  margin-top: 95px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .copyright-area p {
   color: #ffffff;
@@ -5868,7 +5871,8 @@ span.new {
 .hero-banner-img,
 .newsletter-background,
 .page-title-img,
-.cta-area-two-img {
+.cta-area-two-img,
+.background {
   position: absolute;
   height: 100%;
   width: 100%;

@@ -1,10 +1,10 @@
 import React, { memo } from "react"
 import { useForm, SubmitHandler } from "react-hook-form"
-import Image from "next/image"
 import { newsletterUrl } from "../../utils/urls"
 import axios from "axios"
 import alertContent from "../../utils/alertContent"
 import Heading from "./Heading"
+import Container from "./Container"
 
 type Inputs = {
   name: string
@@ -34,71 +34,67 @@ const Newsletter = () => {
   }
 
   return (
-    <div className="newsletter-area">
-      <Image
-        src="/images/newsletter-bg.jpg"
-        className="newsletter-background"
-        alt="Newsletter image de fond"
-        fill
-      />
-      <div className="newsletter-inner-area">
-        <div className="newsletter-content">
-          <span
-            className="sub-title"
-            data-aos="fade-in"
-            data-aos-duration="1200"
-            data-aos-delay="100"
-          >
-            Restons en contact!
-          </span>
+    <Container
+      className="newsletter-inner-area"
+      background={{
+        src: "/images/newsletter-bg.jpg",
+        alt: "Newsletter background",
+      }}
+    >
+      <div className="newsletter-content">
+        <span
+          className="sub-title"
+          data-aos="fade-in"
+          data-aos-duration="1200"
+          data-aos-delay="100"
+        >
+          Restons en contact!
+        </span>
 
-          <Heading
-            data-aos="fade-in"
-            data-aos-duration="1200"
-            data-aos-delay="200"
-            type="h2"
-          >
-            Ne ratez aucune de nos actualisations et promotions
-          </Heading>
+        <Heading
+          data-aos="fade-in"
+          data-aos-duration="1200"
+          data-aos-delay="200"
+          type="h2"
+        >
+          Ne ratez aucune de nos actualisations et promotions
+        </Heading>
 
-          <form
-            className="newsletter-form"
-            onSubmit={handleSubmit(onSubmit)}
-            data-aos="fade-in"
-            data-aos-duration="1200"
-            data-aos-delay="400"
-          >
-            <div className="container">
-              <div className="row justify-content-center">
-                <div className="col-lg-5 col-md-6 mt-10">
-                  <input
-                    type="text"
-                    className="form-control"
-                    placeholder="Votre nome"
-                    {...register("name", { required: true })}
-                  />
-                  {errors.name && (
-                    <span className="error">Veuillez remplir ce champ</span>
-                  )}
-                </div>
-                <div className="col-lg-7 col-md-6 pos-rel mt-10">
-                  <input
-                    type="email"
-                    className="form-control"
-                    placeholder="Votre email"
-                    {...register("email", { required: true })}
-                  />
-                  {errors.email && (
-                    <span className="error">Veuillez remplir ce champ</span>
-                  )}
-                  <button type="submit">Je m&apos;inscris!</button>
-                </div>
-              </div>
+        <form
+          className="newsletter-form"
+          onSubmit={handleSubmit(onSubmit)}
+          data-aos="fade-in"
+          data-aos-duration="1200"
+          data-aos-delay="400"
+        >
+          <div className="row justify-content-center">
+            <div className="col-lg-5 col-md-6 mt-10">
+              <input
+                type="text"
+                className="form-control"
+                placeholder="Votre nome"
+                {...register("name", { required: true })}
+              />
+              {errors.name && (
+                <span className="error">Veuillez remplir ce champ</span>
+              )}
             </div>
-          </form>
-        </div>
+            <div className="col-lg-7 col-md-6 pos-rel mt-10">
+              <input
+                type="email"
+                className="form-control"
+                placeholder="Votre email"
+                {...register("email", { required: true })}
+              />
+              {errors.email && (
+                <span className="error">Veuillez remplir ce champ</span>
+              )}
+              <button type="submit">Je m&apos;inscris!</button>
+            </div>
+          </div>
+        </form>
       </div>
-    </div>
+    </Container>
   )
 }
 
