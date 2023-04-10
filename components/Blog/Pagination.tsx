@@ -5,7 +5,7 @@ const Pagination: FC<{ currentPage: number; pages: string[] }> = ({
   currentPage,
   pages,
 }) => {
-  if (pages.length == 1) return <></>
+  if (!pages || pages.length == 1) return <></>
 
   return (
     <div className="pagination-area pb-100">

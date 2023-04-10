@@ -3,7 +3,7 @@ import BlogPost from "./BlogPost"
 import { Post } from "../../data/interfaces/Post"
 
 const BlogGrid: FC<{ posts: Post[] }> = ({ posts }) => {
-  if (!posts.length) return <></>
+  if (!posts || !posts.length) return <></>
 
   return (
     <div className="blog-area ptb-100">
