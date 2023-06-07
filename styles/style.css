@@ -5896,3 +5896,14 @@ span.new {
   color: transparent;
 }
 /*# sourceMappingURL=style.css.map */
+.link_whatsapp {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  border-radius: 50%;
+  padding: 15px;
+  background-color: white;
+  z-index: 9;
+  border: solid 1px black;
+  box-shadow: 0px 0px 8px black;
+}
