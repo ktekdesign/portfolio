@@ -8,7 +8,7 @@ const nonce = crypto
 const isDev = process.env.NODE_ENV !== "production"
 const ContentSecurityPolicy = `
   base-uri 'self';
-  default-src 'self'${isDev ? " http:" : ""} https:;
+  default-src 'self' *.ktekdesign.com *.facebook.com *.google-analytics.com;
   script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https: 'unsafe-inline'${
   isDev ? " 'unsafe-eval' http:" : ""
 };
