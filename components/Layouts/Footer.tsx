@@ -8,7 +8,7 @@ import LatestNewsList from "../Common/LatestNewsList"
 
 const currentYear = new Date().getFullYear()
 
-const Footer = () => 
+const Footer = () => (
   <Container className="footer-area footer-dark" as="footer">
     <div className="row justify-content-center ptb-100">
       <div className="col-lg-3 col-sm-6">
@@ -109,5 +109,6 @@ const Footer = () =>
       </p>
     </div>
   </Container>
+)
 
 export default memo(Footer)

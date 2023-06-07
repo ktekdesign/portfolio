@@ -1,18 +1,16 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-const crypto = require('crypto')
+const crypto = require("crypto")
 
 const nonce = crypto
-  .createHash('sha256')
+  .createHash("sha256")
   .update(crypto.randomUUID())
-  .digest('base64')
-const isDev = process.env.NODE_ENV !== 'production'
+  .digest("base64")
+const isDev = process.env.NODE_ENV !== "production"
 const ContentSecurityPolicy = `
   base-uri 'self';
-  default-src 'self'${
-    isDev ? " http:" : ''
-  } https:;
+  default-src 'self'${isDev ? " http:" : ""} https:;
   script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https: 'unsafe-inline'${
-  isDev ? " 'unsafe-eval' http:" : ''
+  isDev ? " 'unsafe-eval' http:" : ""
 };
   style-src 'self' 'unsafe-inline';
   font-src 'self' data:;
@@ -33,11 +31,11 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/(.*)',
+        source: "/(.*)",
         headers: [
           {
-            key: 'Content-Security-Policy',
-            value: ContentSecurityPolicy.replace(/\s{2,}/g, ' ').trim(),
+            key: "Content-Security-Policy",
+            value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
           },
         ],
       },

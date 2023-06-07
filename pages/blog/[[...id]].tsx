@@ -50,7 +50,7 @@ export const getStaticProps: GetStaticProps<Props> = (ctx) => {
     props: {
       posts,
       currentPage,
-      pages
+      pages,
     },
   }
 }

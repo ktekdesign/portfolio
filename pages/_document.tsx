@@ -1,11 +1,6 @@
-import {
-  Html,
-  Head,
-  Main,
-  NextScript,
-} from "next/document"
+import { Html, Head, Main, NextScript } from "next/document"
 
-import { cloneElement } from 'react'
+import { cloneElement } from "react"
 
 class CSPNextScript extends NextScript {
   getScripts(files) {

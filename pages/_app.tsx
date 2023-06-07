@@ -35,7 +35,7 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="KTEKDESIGN SARL" />
-        <meta name="theme-color" content="#3367D6"/>
+        <meta name="theme-color" content="#3367D6" />
         <meta
           name="description"
           content="Nous sommes spécialisés dans la création de sites web, de stratégies de marketing digital et de développement d'applications mobiles"

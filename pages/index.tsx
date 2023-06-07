@@ -27,7 +27,7 @@ export const getStaticProps: GetStaticProps<Props> = () => {
   return {
     props: {
       services,
-      funFacts
+      funFacts,
     },
   }
 }

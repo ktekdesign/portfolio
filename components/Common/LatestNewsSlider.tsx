@@ -8,7 +8,7 @@ import LatestPostsContext from "../../context/latestPostsContext"
 
 const LatestNewsSlider = () => {
   const { posts } = useContext(LatestPostsContext)
-  
+
   return (
     <Container className="blog-area ptb-100">
       <Heading type="h2" isSectionHeader>

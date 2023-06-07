@@ -4,7 +4,7 @@ import LightPost from "../Post/LightPost"
 
 const LatestNewsList = () => {
   const { posts } = useContext(LatestPostsContext)
-  
+
   return (
     <ul className="list">
       {posts.map((post, key) => (

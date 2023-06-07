@@ -26,7 +26,7 @@ export const getStaticProps: GetStaticProps<Props> = (ctx) => {
 
   return {
     props: {
-      service
+      service,
     },
   }
 }

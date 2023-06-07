@@ -15,7 +15,7 @@ type Props = {
 
 export const getStaticProps: GetStaticProps<Props> = () => {
   const services = getServices()
-  
+
   if (!services.length) {
     return {
       notFound: true,
@@ -24,7 +24,7 @@ export const getStaticProps: GetStaticProps<Props> = () => {
 
   return {
     props: {
-      services
+      services,
     },
   }
 }
