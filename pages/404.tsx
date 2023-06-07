@@ -4,25 +4,8 @@ import PageBanner from "../components/Common/PageBanner"
 import ErrorContent from "../components/Error/ErrorContent"
 import Footer from "../components/Layouts/Footer"
 import Head from "next/head"
-import { Post } from "../data/interfaces/Post"
-import { GetStaticProps } from "next"
-import { getLatestPosts } from "../data/news"
 
-type Props = {
-  posts: Post[]
-}
-
-export const getStaticProps: GetStaticProps<Props> = () => {
-  const posts = getLatestPosts()
-
-  return {
-    props: {
-      posts,
-    },
-  }
-}
-
-const Error = ({ posts }: Props) => (
+const Error = () => (
   <>
     <Head>
       <title>Page introuvable - KTEKDESIGN</title>
@@ -38,7 +21,7 @@ const Error = ({ posts }: Props) => (
 
     <ErrorContent />
 
-    <Footer posts={posts} />
+    <Footer />
   </>
 )
 

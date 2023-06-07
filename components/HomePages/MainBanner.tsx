@@ -61,8 +61,9 @@ const MainBanner = () => {
         <div className="col-lg-6">
           <div
             className="animate-banner-image"
-            data-aos="fade-left"
+            data-aos="zoom-in"
             data-aos-duration="1200"
+            data-aos-delay="800"
           >
             <Image
               src="/images/christian-kpanou.png"

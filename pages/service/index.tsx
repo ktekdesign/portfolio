@@ -8,18 +8,14 @@ import Head from "next/head"
 import { getServices } from "../../data/services"
 import { GetStaticProps } from "next"
 import { Service } from "../../data/interfaces/Service"
-import { Post } from "../../data/interfaces/Post"
-import { getLatestPosts } from "../../data/news"
 
 type Props = {
   services: Service[]
-  posts: Post[]
 }
 
 export const getStaticProps: GetStaticProps<Props> = () => {
   const services = getServices()
-  const posts = getLatestPosts()
-
+  
   if (!services.length) {
     return {
       notFound: true,
@@ -28,13 +24,12 @@ export const getStaticProps: GetStaticProps<Props> = () => {
 
   return {
     props: {
-      services,
-      posts,
+      services
     },
   }
 }
 
-const ServicesPage = ({ services, posts }: Props) => (
+const ServicesPage = ({ services }: Props) => (
   <>
     <Head>
       <title>Nos Services - KTEKDESIGN</title>
@@ -54,7 +49,7 @@ const ServicesPage = ({ services, posts }: Props) => (
 
     <Newsletter />
 
-    <Footer posts={posts} />
+    <Footer />
   </>
 )
 

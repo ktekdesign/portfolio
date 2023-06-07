@@ -8,19 +8,15 @@ import Footer from "../../components/Layouts/Footer"
 import { Service } from "../../data/interfaces/Service"
 import { GetStaticProps } from "next"
 import { getService, getServicesRoutes } from "../../data/services"
-import { Post } from "../../data/interfaces/Post"
-import { getLatestPosts } from "../../data/news"
 
 type Props = {
   service: Service
-  posts: Post[]
 }
 
 export const getStaticProps: GetStaticProps<Props> = (ctx) => {
   const slug = ctx?.params?.slug || ""
   const key = (Array.isArray(slug) ? slug[0] : slug).replaceAll("-", "_")
   const service = getService(key)
-  const posts = getLatestPosts()
 
   if (!service) {
     return {
@@ -30,8 +26,7 @@ export const getStaticProps: GetStaticProps<Props> = (ctx) => {
 
   return {
     props: {
-      service,
-      posts,
+      service
     },
   }
 }
@@ -45,7 +40,7 @@ export async function getStaticPaths() {
   }
 }
 
-const ServicePage = ({ service, posts }: Props) => (
+const ServicePage = ({ service }: Props) => (
   <>
     <Head>
       <title>{`${service?.pageTitle} - KTEKDESIGN`}</title>
@@ -60,7 +55,7 @@ const ServicePage = ({ service, posts }: Props) => (
 
     <CtaArea />
 
-    <Footer posts={posts} />
+    <Footer />
   </>
 )
 

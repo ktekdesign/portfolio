@@ -1,15 +1,14 @@
-import React, { FC, memo } from "react"
+import React, { memo } from "react"
 import Link from "next/link"
 import Logo from "../Common/Logo"
 import SocialLinks from "./SocialLinks"
 import Heading from "../Common/Heading"
-import { Post } from "../../data/interfaces/Post"
 import Container from "../Common/Container"
-import LightPost from "../Post/LightPost"
+import LatestNewsList from "../Common/LatestNewsList"
 
 const currentYear = new Date().getFullYear()
 
-const Footer: FC<{ posts: Post[] }> = ({ posts }) => (
+const Footer = () => 
   <Container className="footer-area footer-dark" as="footer">
     <div className="row justify-content-center ptb-100">
       <div className="col-lg-3 col-sm-6">
@@ -70,11 +69,7 @@ const Footer: FC<{ posts: Post[] }> = ({ posts }) => (
           data-aos-delay="300"
         >
           <Heading type="h3">Publications Récentes</Heading>
-          <ul className="list">
-            {posts?.map((post, key) => (
-              <LightPost post={post} key={key} />
-            ))}
-          </ul>
+          <LatestNewsList />
         </div>
       </div>
 
@@ -96,7 +91,7 @@ const Footer: FC<{ posts: Post[] }> = ({ posts }) => (
             </li>
             <li className="pt-2">
               <i className="fa-solid fa-envelope"></i>
-              <Link href="mailto:hello@pungent.com">
+              <Link href="mailto:contact@ktekdesign.com">
                 contact@ktekdesign.com
               </Link>
             </li>
@@ -114,6 +109,5 @@ const Footer: FC<{ posts: Post[] }> = ({ posts }) => (
       </p>
     </div>
   </Container>
-)
 
 export default memo(Footer)

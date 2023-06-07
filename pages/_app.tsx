@@ -19,6 +19,7 @@ import GoTop from "../components/Layouts/GoTop"
 import TagManager from "react-gtm-module"
 import { Open_Sans } from "next/font/google"
 import LightBoxContextProvider from "../context/lightBoxContextProvider"
+import LatestPostsContextProvider from "../context/latestPostsContextProvider"
 
 const openSans = Open_Sans({ subsets: ["latin"] })
 
@@ -34,18 +35,23 @@ const App: FC<AppProps> = ({ Component, pageProps }) => {
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="KTEKDESIGN SARL" />
+        <meta name="theme-color" content="#3367D6"/>
         <meta
           name="description"
           content="Nous sommes spécialisés dans la création de sites web, de stratégies de marketing digital et de développement d'applications mobiles"
         />
+        <link rel="manifest" href="/manifest.json"></link>
+        <link rel="apple-touch-icon" href="/logo-white.png"></link>
         <link rel="preconnect" href="https://connect.facebook.net"></link>
         <link rel="preconnect" href="https://www.googletagmanager.com"></link>
         <title>KTEKDESIGN - Agence Web Digitale</title>
       </Head>
       <main className={openSans.className}>
-        <LightBoxContextProvider>
-          <Component {...pageProps} />
-        </LightBoxContextProvider>
+        <LatestPostsContextProvider>
+          <LightBoxContextProvider>
+            <Component {...pageProps} />
+          </LightBoxContextProvider>
+        </LatestPostsContextProvider>
       </main>
       <GoTop />
     </>

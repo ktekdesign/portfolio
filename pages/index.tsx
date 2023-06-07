@@ -14,30 +14,25 @@ import { Service } from "../data/interfaces/Service"
 import { getServices } from "../data/services"
 import { FunFact } from "../data/interfaces/FunFact"
 import { getFunFacts } from "../data/funfacts"
-import { Post } from "../data/interfaces/Post"
-import { getLatestPosts } from "../data/news"
 
 type Props = {
   services: Service[]
   funFacts: FunFact[]
-  posts: Post[]
 }
 
 export const getStaticProps: GetStaticProps<Props> = () => {
   const services = getServices()
   const funFacts = getFunFacts()
-  const posts = getLatestPosts()
 
   return {
     props: {
       services,
-      funFacts,
-      posts,
+      funFacts
     },
   }
 }
 
-const Home = ({ services, funFacts, posts }: Props) => (
+const Home = ({ services, funFacts }: Props) => (
   <>
     <Head>
       <title>Agence Web Digitale - KTEKDESIGN</title>
@@ -59,11 +54,11 @@ const Home = ({ services, funFacts, posts }: Props) => (
 
     <FunFacts funFacts={funFacts} />
 
-    <LatestNewsSlider posts={posts} />
+    <LatestNewsSlider />
 
     <Newsletter />
 
-    <Footer posts={posts} />
+    <Footer />
   </>
 )
 

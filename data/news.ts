@@ -36,6 +36,20 @@ export const latestNewsData: Post[] = [
 export const getPosts = (start: number, postsPerPage: number) =>
   latestNewsData.slice(start, postsPerPage)
 
-export const getLatestPosts = () => getPosts(0, 3)
+export const getLatestPosts = () => {
+  return [
+    ...getPosts(0, 3),
+    {
+      title:
+        "Découvrez toute notre actualité et vidéos de formation sur notre blog",
+      image: "/images/code.jpg",
+      date: "01 Mars 2023",
+      category: { name: "Blog" },
+      shortText:
+        "Toutes nos vidéos de formations et nos astuces pour apprendre à programmer comme de vrais professionnels.",
+      readMoreLink: "/blog/",
+    },
+  ]
+}
 
 export const getPostsCount = () => latestNewsData.length
